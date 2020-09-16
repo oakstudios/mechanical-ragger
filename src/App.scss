@@ -1,0 +1,173 @@
+html {
+  font-size: 18px;
+  line-height: calc(20 / 18);
+  /* background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" height="100px" width="100px"> <g> <line x1="0" y1="0" x2="100" y2="0" stroke="black" stroke-width="5px" /> </g> </svg>'); */
+  background-repeat: repeat-y;
+  background-size: 100% 20px;
+}
+body {
+  background: #8f9b00;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+blockquote,
+ul,
+ol {
+  font: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  hyphens: auto;
+}
+
+.App {
+  text-align: left;
+  padding: 20px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px;
+}
+
+.column-span-1 {
+  grid-column: span 1;
+}
+.column-span-2 {
+  grid-column: span 2;
+}
+.column-span-3 {
+  grid-column: span 3;
+}
+.column-span-4 {
+  grid-column: span 4;
+}
+.column-span-5 {
+  grid-column: span 5;
+}
+.column-span-6 {
+  grid-column: span 6;
+}
+.column-span-7 {
+  grid-column: span 7;
+}
+
+section {
+  padding: 20px 0;
+}
+
+.minimal-hr {
+  // height: 100px;
+  border: 1px solid currentColor;
+  // border-left: 0px solid transparent;
+}
+
+.flourish-hr {
+  margin-top: 20px;
+  height: 150px;
+  border: 20px solid currentColor;
+  // border-left: 0px solid transparent;
+}
+
+.flourish-hr-2 {
+  height: 130px;
+  border: 20px solid currentColor;
+  // border-right: 0px solid transparent;
+  // border-top: 0px solid transparent;
+}
+
+.App-header {
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.button-section {
+  height: 340px;
+}
+.button-container {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  transition: transform 0.5s ease-out;
+  perspective: 1px;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  &.ragged {
+    transform: rotateY(180deg);
+  }
+}
+.circle-button {
+  width: 100%;
+  height: 100%;
+  border-radius: 300px;
+  border: 1px solid black;
+  position: absolute;
+  left: 0;
+  backface-visibility: hidden;
+  font: inherit;
+
+  &.rag-on {
+    background: black;
+    color: white;
+  }
+  &.rag-off {
+    background: white;
+    transform: rotateY(180deg);
+  }
+}
+article {
+  padding-right: 20px;
+}
+
+.articleBody {
+  border-right: 1px solid currentColor;
+  padding-right: 20px;
+  padding-top: 20px;
+  * + * {
+    margin-top: 20px;
+  }
+}
+
+.ellipses-hr {
+  border: none;
+  margin: 0;
+  margin-top: 20px;
+  &::before {
+    content: "[...]";
+  }
+}
