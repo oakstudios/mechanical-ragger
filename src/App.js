@@ -8,16 +8,15 @@ function App() {
     <div className="App">
       <header className="grid">
         <div className="column-span-4">
-          Mechanical Ragging Component
-          <br />
-          First Edition
+          <h1>Mechanical Ragging Component</h1>
+          <h1>First Edition</h1>
         </div>
         <div className="column-span-3">
-          Developed by <a href="https://oak.is/">Oak Studios LLC</a>
+          <h1>
+            Developed by <a href="https://oak.is/">Oak Studios LLC</a>
+          </h1>
         </div>
       </header>
-      <div className="flourish-hr" />
-      <div className="flourish-hr-2" />
       <section className="grid">
         <h1 className="column-span-2">Overview</h1>
         <p className="column-span-5">
@@ -31,72 +30,69 @@ function App() {
       <div className="minimal-hr" />
       <section className="grid">
         <h1 className="column-span-2">Reference</h1>
-        <div className="column-span-5">
-          <img src="" alt="" />
+        <div className="column-span-2">
+          <div class="slideshow-container">
+            <div class="mySlides"></div>
+            <img
+              src="/Images/FOL_Chengcheng Hou.jpg"
+              alt="FOL by Chengcheng Hou"
+            ></img>
+            <div class="text"></div>
+          </div>
           <p>
-            This site serves as a portfolio for the Mechanical Ragging Component
-            developed by Oak Studios. The Ragging component adjusts paragraphs
-            to be balanced, following the long-short-long-short sequence. This
-            ragging style has a strong influence on printing media, and we
-            decided to cut off the boundary and deliver it to the digital design
-            world.
+            This site serves as a portfolio for the Mechanical Ragging
+            Componentyarn developed by Oak Studios. The Ragging component
+            adjusts paragraphs to be balanced, following the
+            long-short-long-short sequence. This ragging style has a strong
+            influence on printing media, and we decided to cut off the boundary
+            and deliver it to the digital design world.
           </p>
         </div>
       </section>
       <div className="minimal-hr" />
-      <section className="button-section">
-        <div className={"button-container " + (ragged && " ragged")}>
-          <button
-            className="circle-button rag-on"
-            onClick={() => setRagging(true)}
-          >
-            Rag Text
-          </button>
-          <button
-            className="circle-button rag-off"
-            onClick={() => setRagging(false)}
-          >
-            Unrag Text
-          </button>
+      <section className="grid button-section">
+        <div className="column-span-1">
+          <h1>Toggle</h1>
+          <h1>
+            (Flip the circle to see the difference between ragged paragraph and
+            default paragraph on the essay below.)
+          </h1>
+        </div>
+        <div className="column-span-1"></div>
+        <div className="column-span-3">
+          <div className={"button-container " + (ragged && " ragged")}>
+            <button
+              className="circle-button rag-on"
+              onClick={() => setRagging(true)}
+            >
+              Rag
+            </button>
+            <button
+              className="circle-button rag-off"
+              onClick={() => setRagging(false)}
+            >
+              Unrag
+            </button>
+          </div>
         </div>
       </section>
+      <div className="minimal-hr" />
       <article className="grid">
-        <div className="articleBody column-span-5">
+        <div className="articleBody column-span-4">
           <header>
-            Exposition of Text Ragged & Expansion in the Digital World
-            <time>September, 2020</time>
+            <h1>Exposition of Text Ragged & Expansion in the Digital World</h1>
+            <h1>
+              <time>September, 2020</time>
+            </h1>
           </header>
-          <TextRagger width={ragged ? "4rem" : "0px"}>
-            <aside>
-              <p>
-                1. Adobe After Effects is a digital visual effects, motion
-                graphics, and compositing application developed by Adobe Systems
-                and used in the post-production process of film making, video
-                games and television production. Among other things, After
-                Effects can be used for keying, tracking, compositing, and
-                animation.
-              </p>
-              <p>
-                2. Both Glyph and FontLab are the current popular digital font
-                design software.
-              </p>
-            </aside>
+          <TextRagger width={ragged ? "2rem" : "0px"}>
             <p>
               From Stop-motion to animating graphics with After Effects1,
               carving letters on wood blocks to generate scalable vectorized
               letters with Glyphs and FontLab Studios2, design inventories
               accelerates faster than at any other time in history.
             </p>
-            <aside>
-              <p>
-                3. Figma is a vector graphics editor and prototyping tool which
-                is primarily web-based, with additional offline features enabled
-                by desktop applications for macOS and Windows. The Figma Mirror
-                companion apps for Android and iOS allow viewing Figma
-                prototypes on mobile devices.
-              </p>
-            </aside>
-            <p>
+            <p className="paragraph-indent">
               A couple of years ago, collaboration on UI or any other design
               project that requires an alliance of designers was daring. One
               designer might focus on the design, and the rest might be there
@@ -113,7 +109,7 @@ function App() {
               Every media is advancing in godspeed internationally and globally.
             </p>
             <hr className="ellipses-hr" />
-            <p>
+            <p className="paragraph-indent">
               However, typesetting design has been standing considerably distant
               from the modern design circles and lost its relevance. From our
               view, typesetting has only been embedded in the realm of print and
@@ -131,7 +127,7 @@ function App() {
               alignment, etc. However, we do not have any authority over the
               flow of a paragraph.
             </p>
-            <p>
+            <p className="paragraph-indent">
               The flow of a paragraph is related to only left-alignment,
               right-alignment, and align-center text; it does not relate to
               justified text, in which the length of each line of the text stays
@@ -160,14 +156,14 @@ function App() {
               paragraph would be divided into multiple lines, making it a
               difficult reading material regardless of its actual content.{" "}
             </p>
-            <p>
+            <p className="paragraph-indent">
               The idea was inspired by book designs—specifically, regulated and
               balanced text ragging examples from modern swiss book designs.
               Examples of good typesetting from Excavating in Future City
               designed by Studio Lin, all editorial works from Kasper Florio and
-              Sarah Discours. Understanding text ragging was straightforward, so
-              our process started investigating the technical end—finding the
-              right vehicle to establish the result.{" "}
+              Sarah Discours. Understanding text ragging was
+              straight&shy;forward, so our process started investigating the
+              technical end—finding the right vehicle to establish the result.{" "}
             </p>
             <p>
               It turns out that it was easier than we expected. The component's
@@ -179,7 +175,7 @@ function App() {
               exact line spacing with the text, and here it goes our ragging
               component.{" "}
             </p>
-            <p>
+            <p className="paragraph-indent">
               What we did was only a small step in the design industry. There
               are many pros and cons to the current ragging component. In the
               future, hopefully, ragging text would be much simpler. Perhaps
