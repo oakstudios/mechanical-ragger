@@ -1,65 +1,46 @@
 import React, { useState } from "react";
 import "./App.scss";
 import TextRagger from "./components/TextRagger";
+import InvertCursor from "./components/InvertCursor.js";
 
 function App() {
   const [ragged, setRagging] = useState(true);
   return (
     <div className="App">
+      <span class="cursor"></span>
       <header className="grid">
         <div className="column-span-4">
           <h1>Mechanical Ragging Component</h1>
           <h1>First Edition</h1>
         </div>
         <div className="column-span-3">
-          <h1>
-            Developed by <a href="https://oak.is/">Oak Studios LLC</a>
-          </h1>
+          <h1>About, Home</h1>
         </div>
       </header>
       <section className="grid">
-        <h1 className="column-span-2">Overview</h1>
-        <p className="column-span-5">
-          This site serves as a portfolio for the Mechanical Ragging Component
-          developed by Oak Studios. The Ragging component adjusts paragraphs to
-          be balanced, following the long-short-long-short sequence. This
-          ragging style has a strong influence on printing media, and we decided
-          to cut off the boundary and deliver it to the digital design world.
+        <p className="column-span-4 overview">
+          This site serves as a portfolio for{" "}
+          <em>Mechanical Ragging Component</em> developed by{" "}
+          <em>Oak Studios</em>. The Ragging component adjusts paragraphs to be
+          balanced, following the long-short-long-short sequence. Paragraph
+          ragging has a strong influence on printing media, and we decided to
+          cut off the boundary and deliver it to the digital design world.
         </p>
       </section>
       <div className="minimal-hr" />
       <section className="grid">
         <h1 className="column-span-2">Reference</h1>
-        <div className="column-span-2">
-          <div class="slideshow-container">
-            <div class="mySlides"></div>
-            <img
-              src="/Images/FOL_Chengcheng Hou.jpg"
-              alt="FOL by Chengcheng Hou"
-            ></img>
-            <div class="text"></div>
-          </div>
-          <p>
-            This site serves as a portfolio for the Mechanical Ragging
-            Componentyarn developed by Oak Studios. The Ragging component
-            adjusts paragraphs to be balanced, following the
-            long-short-long-short sequence. This ragging style has a strong
-            influence on printing media, and we decided to cut off the boundary
-            and deliver it to the digital design world.
-          </p>
-        </div>
       </section>
       <div className="minimal-hr" />
       <section className="grid button-section">
-        <div className="column-span-1">
+        <div className="column-span-2">
           <h1>Toggle</h1>
           <h1>
             (Flip the circle to see the difference between ragged paragraph and
             default paragraph on the essay below.)
           </h1>
         </div>
-        <div className="column-span-1"></div>
-        <div className="column-span-3">
+        <div className="column-span-5">
           <div className={"button-container " + (ragged && " ragged")}>
             <button
               className="circle-button rag-on"
@@ -82,8 +63,9 @@ function App() {
           <header>
             <h1>Exposition of Text Ragged & Expansion in the Digital World</h1>
             <h1>
-              <time>September, 2020</time>
+              <time>September 18, 2020</time>
             </h1>
+            <br></br>
           </header>
           <TextRagger width={ragged ? "2rem" : "0px"}>
             <p>
@@ -186,7 +168,51 @@ function App() {
             </p>
           </TextRagger>
         </div>
+        <div className="footnote column-span-3">
+          <p>
+            [1] Adobe After Effects is a digital visual effects, motion
+            graphics, and compositing application developed by Adobe Systems and
+            used in the post-production process of film making, video games and
+            television production. Among other things, After Effects can be used
+            for keying, tracking, compositing, and animation.
+          </p>
+          <p>
+            [2] Both Glyph and FontLab are the current popular digital font
+            design software.
+          </p>
+          <p>
+            [3] Figma is a vector graphics editor and prototyping tool which is
+            primarily web-based, with additional offline features enabled by
+            desktop applications for macOS and Windows. The Figma Mirror
+            companion apps for Android and iOS allow viewing Figma prototypes on
+            mobile devices.
+          </p>
+          <p>
+            [4] Typesetting is the composition of text by means of arranging
+            physical types or the digital equivalents. Stored letters and other
+            symbols are retrieved and ordered according to a language's
+            orthography for visual display.
+          </p>
+          <p>
+            [5] The principle of sufficient reason states that everything must
+            have a reason or a cause. The modern formulation of the principle is
+            usually attributed to Gottfried Leibniz, although the idea was
+            conceived of and utilized by various philosophers who preceded him,
+            including Anaximander, Parmenides, Archimedes, Plato and Aristotle,
+            Cicero, Avicenna, Thomas Aquinas, and Spinoza. Some philosophers
+            have associated the principle of sufficient reason with “ex nihilo
+            nihil fit”. Hamilton identified the laws of inference modus ponens
+            with the “law of Sufficient Reason, or of Reason and Consequent” and
+            modus tollens with its contrapositive expression.
+          </p>
+          <p>
+            [6] Gottfried Wilhelm Leibniz was a prominent German polymath and
+            one of the most important logicians, mathematicians and natural
+            philosophers of the Enlightenment.
+          </p>
+        </div>
       </article>
+      <div className="minimal-hr" />
     </div>
   );
 }
