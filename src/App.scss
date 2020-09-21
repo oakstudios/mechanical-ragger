@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  background: whitesmoke;
+  background: #67645e;
 }
 *,
 *::before,
@@ -78,6 +78,7 @@ ol {
   font-family: "Union-Bold", sans-serif;
   line-height: inherit;
   font-size: inherit;
+  color: #d1f0fd;
   hyphens: auto;
   margin: 0;
 }
@@ -93,7 +94,7 @@ a {
   line-height: inherit;
   font-size: inherit;
   hyphens: auto;
-  color: black;
+  color: #d1f0fd;
 }
 
 .App {
@@ -141,7 +142,7 @@ section {
 
 .minimal-hr {
   // height: 100px;
-  border: 1px solid currentColor;
+  border: 1px solid #d1f0fd;
   margin-left: -20px;
   margin-right: -20px;
   // border-left: 0px solid transparent;
@@ -181,7 +182,7 @@ section {
   width: 100%;
   height: 100%;
   border-radius: 300px;
-  border: 2px solid black;
+  border: 2px solid #d1f0fd;
   position: absolute;
   left: 0;
   backface-visibility: hidden;
@@ -189,12 +190,13 @@ section {
 
   &.rag-on {
     font-family: "Union-Bold", sans-serif;
-    background: black;
-    color: whitesmoke;
+    background: #d1f0fd;
+    color: #67645e;
   }
   &.rag-off {
     font-family: "Union-Bold", sans-serif;
-    background: whitesmoke;
+    background: #d1f0fd;
+    color: #67645e;
     transform: rotateY(180deg);
   }
 }
@@ -210,7 +212,7 @@ article {
 }
 
 .articleBody {
-  border-right: 2px solid currentColor;
+  border-right: 2px solid #d1f0fd;
   padding-right: 20px;
   padding-top: 20px;
   // padding-top: 20px;
@@ -229,6 +231,7 @@ article {
 
 .ellipses-hr {
   font-family: "Union-Bold", sans-serif;
+  color: #d1f0fd;
   text-align: center;
   border: none;
   margin: 0;
@@ -246,38 +249,7 @@ article {
 /* text highlight */
 ::selection {
   background: rgba(0, 0, 0, 0.99);
-  color: #000000;
-}
-
-.active,
-.dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
+  color: black;
 }
 
 /* invert cursor */
@@ -301,6 +273,19 @@ a.link {
   z-index: 10;
   mix-blend-mode: difference;
   pointer-events: none;
+}
+
+/* styling for example section of the site */
+.exmaple {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* image setting */
+img {
+  padding-right: 20px;
+  width: 30%;
+  height: auto;
 }
 
 /* Mobile Screen Size Adjustment */
@@ -328,7 +313,7 @@ a.link {
 
   .footnote {
     padding-right: 0px;
-    border-top: 2px dotted currentColor;
+    border-top: 2px dotted #d1f0fd;
     margin-bottom: 20pt;
     grid-column: span 7;
   }

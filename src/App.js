@@ -28,7 +28,7 @@ function App() {
         </p>
       </section>
       <div className="minimal-hr" />
-      <section className="grid reference">
+      <section className="grid">
         <h1 className="column-span-2">Reference</h1>
       </section>
       <div className="minimal-hr" />
@@ -213,6 +213,45 @@ function App() {
         </div>
       </article>
       <div className="minimal-hr" />
+      <section className="grid">
+        <h1 className="column-span-2">Examples</h1>
+      </section>
+      <div className="minimal-hr" />
+      <article className="grid">
+        <div className="exmaple column-span-1">
+          <p>Freundschaft / Friendship</p>
+        </div>
+        <div className="exmaple column-span-3">
+          <p>FHello Me</p>
+          <p>T144 pages, 135 × 203 mm</p>
+          <p>ISBN 978-3-7356-0640-2</p>
+        </div>
+        <div className="exmaple column-span-3">
+          <img
+            src="/Images/friendship.jpg"
+            alt="Freundschaft / Friendship by Hello Me"
+          ></img>
+          <img
+            src="/Images/friendship2.jpg"
+            alt="Freundschaft / Friendship by Hello Me"
+          ></img>
+        </div>
+      </article>
+      <div className="minimal-hr" />
+      <article className="grid">
+        <div className="exmaple column-span-1">
+          <p>KALEIDOSCOPE</p>
+        </div>
+        <div className="exmaple column-span-3">
+          <p>Kasper Florio</p>
+          <p>230 × 300 mm, 348 p</p>
+          <p>ISSN 2038-4807</p>
+        </div>
+        <div className="exmaple column-span-3">
+          <img src="/Images/KALEIDOSCOPE.jpg" alt="KALEIDOSCOPE"></img>
+          <img src="/Images/KALEIDOSCOPE2.jpg" alt="KALEIDOSCOPE"></img>
+        </div>
+      </article>
     </div>
   );
 }
