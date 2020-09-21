@@ -14,7 +14,7 @@ function App() {
           <h1>First Edition</h1>
         </div>
         <div className="column-span-3">
-          <h1>About, Home</h1>
+          <h1>Home, Examples</h1>
         </div>
       </header>
       <section className="grid">
@@ -28,7 +28,7 @@ function App() {
         </p>
       </section>
       <div className="minimal-hr" />
-      <section className="grid">
+      <section className="grid reference">
         <h1 className="column-span-2">Reference</h1>
       </section>
       <div className="minimal-hr" />

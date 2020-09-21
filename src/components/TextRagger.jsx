@@ -2,19 +2,21 @@ import React from "react";
 import useMeasure from "react-use-measure";
 import mergeRefs from "react-merge-refs";
 
-const TextRagger = props => {
+const TextRagger = (props) => {
   const containerEl = React.useRef(null);
   const [containerBoundsRef, containerBounds] = useMeasure();
 
   if (containerEl.current) {
-    const lineHeight = Math.floor(parseFloat(
-      document.defaultView
-        .getComputedStyle(containerEl.current, null)
-        .getPropertyValue("line-height")
-    ));
+    const lineHeight = Math.floor(
+      parseFloat(
+        document.defaultView
+          .getComputedStyle(containerEl.current, null)
+          .getPropertyValue("line-height")
+      )
+    );
 
     const lineCount = Math.floor(containerBounds.height / lineHeight);
-    console.log({lineCount, containerBounds, lineHeight})
+    console.log({ lineCount, containerBounds, lineHeight });
     const lineArray = Array(lineCount).fill();
     const shapeAuto = `${lineArray
       .map((line, i) => {
@@ -38,8 +40,8 @@ const TextRagger = props => {
             shapeOutside: `polygon(${shapeAuto})`,
             width: props.width,
             height: `${containerBounds.height}px`,
-            // background: "#eee",
-            float: "right"
+            // background: "#000000",
+            float: "right",
           }}
         />
         {props.children}
