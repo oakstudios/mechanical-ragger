@@ -218,17 +218,17 @@ function App() {
       </section>
       <div className="minimal-hr" />
       <article className="grid">
-        <div className="exmaple column-span-1">
+        <div className="exmaple column-span-2">
           <p>Freundschaft / Friendship</p>
         </div>
-        <div className="exmaple column-span-3">
-          <p>FHello Me</p>
-          <p>T144 pages, 135 × 203 mm</p>
+        <div className="exmaple column-span-2">
+          <p>Hello Me Studio</p>
+          <p>144 pages, 135 × 203 mm</p>
           <p>ISBN 978-3-7356-0640-2</p>
         </div>
         <div className="exmaple column-span-3">
           <img
-            src="/Images/friendship.jpg"
+            src="/Images/friendshipCover.jpg"
             alt="Freundschaft / Friendship by Hello Me"
           ></img>
           <img
@@ -239,10 +239,10 @@ function App() {
       </article>
       <div className="minimal-hr" />
       <article className="grid">
-        <div className="exmaple column-span-1">
-          <p>KALEIDOSCOPE</p>
+        <div className="exmaple column-span-2">
+          <p>Kaleidoscope (series)</p>
         </div>
-        <div className="exmaple column-span-3">
+        <div className="exmaple column-span-2">
           <p>Kasper Florio</p>
           <p>230 × 300 mm, 348 p</p>
           <p>ISSN 2038-4807</p>
@@ -252,6 +252,26 @@ function App() {
           <img src="/Images/KALEIDOSCOPE2.jpg" alt="KALEIDOSCOPE"></img>
         </div>
       </article>
+      <div className="minimal-hr" />
+      <article className="grid">
+        <div className="exmaple column-span-2">
+          <p>Spécimen</p>
+        </div>
+        <div className="exmaple column-span-2">
+          <p>Thomas Bizzarri & Alain Rodriguez</p>
+          <p>240 × 310 mm</p>
+          <p>ISBN 978-2-9541294-6-4</p>
+        </div>
+        <div className="exmaple column-span-3">
+          <img src="/Images/Spécimen.jpg" alt="SpécimenCover"></img>
+          <img src="/Images/Spécimen2.jpg" alt="SpécimenSpread"></img>
+        </div>
+      </article>
+      <div className="minimal-hr" />
+      <div className="backtoTop">
+        <a href="#top"> Back to the top</a>
+      </div>
+      <div className="minimal-hr" />
     </div>
   );
 }

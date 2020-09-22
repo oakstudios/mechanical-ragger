@@ -90,7 +90,7 @@ img {
 
 /* Link */
 a {
-  font-family: "Union-BoldItalic", sans-serif;
+  font-family: "Union-Bold", sans-serif;
   line-height: inherit;
   font-size: inherit;
   hyphens: auto;
@@ -195,8 +195,8 @@ section {
   }
   &.rag-off {
     font-family: "Union-Bold", sans-serif;
-    background: #d1f0fd;
-    color: #67645e;
+    background: #67645e;
+    color: #d1f0fd;
     transform: rotateY(180deg);
   }
 }
@@ -275,6 +275,11 @@ a.link {
   pointer-events: none;
 }
 
+.cursor:hover {
+  width: 50px;
+  height: 50px;
+}
+
 /* styling for example section of the site */
 .exmaple {
   padding-top: 20px;
@@ -283,9 +288,17 @@ a.link {
 
 /* image setting */
 img {
+  display: inline;
   padding-right: 20px;
-  width: 30%;
+  width: 20vw;
   height: auto;
+}
+
+/* back to top button */
+.backtoTop {
+  padding-top: 20pt;
+  padding-bottom: 20pt;
+  text-align: center;
 }
 
 /* Mobile Screen Size Adjustment */
@@ -331,6 +344,19 @@ img {
     position: relative;
     width: 255px;
     height: 255px;
+  }
+
+  .exmaple {
+    grid-column: span 7;
+  }
+
+  img {
+    grid-column: span 7;
+    width: 100vw;
+    height: auto;
+    align-items: center;
+    padding-right: 0px;
+    padding-top: 20px;
   }
 }
 
