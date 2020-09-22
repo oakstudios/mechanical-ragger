@@ -3,20 +3,10 @@ import "./App.scss";
 import TextRagger from "./components/TextRagger";
 import InvertCursor from "./components/InvertCursor.js";
 
-function App() {
+const Essay = () => {
   const [ragged, setRagging] = useState(true);
   return (
-    <div className="App">
-      <span class="cursor"></span>
-      <header className="grid">
-        <div className="column-span-4">
-          <h1>Mechanical Ragging Component</h1>
-          <h1>First Edition</h1>
-        </div>
-        <div className="column-span-3">
-          <h1>Home, Examples</h1>
-        </div>
-      </header>
+    <div>
       <section className="grid">
         <p className="column-span-4 overview">
           This site serves as a portfolio for{" "}
@@ -212,66 +202,99 @@ function App() {
           </p>
         </div>
       </article>
-      <div className="minimal-hr" />
-      <section className="grid">
-        <h1 className="column-span-2">Examples</h1>
-      </section>
-      <div className="minimal-hr" />
-      <article className="grid">
-        <div className="exmaple column-span-2">
-          <p>Freundschaft / Friendship</p>
-        </div>
-        <div className="exmaple column-span-2">
-          <p>Hello Me Studio</p>
-          <p>144 pages, 135 × 203 mm</p>
-          <p>ISBN 978-3-7356-0640-2</p>
-        </div>
-        <div className="exmaple column-span-3">
-          <img
-            src="/Images/friendshipCover.jpg"
-            alt="Freundschaft / Friendship by Hello Me"
-          ></img>
-          <img
-            src="/Images/friendship2.jpg"
-            alt="Freundschaft / Friendship by Hello Me"
-          ></img>
-        </div>
-      </article>
-      <div className="minimal-hr" />
-      <article className="grid">
-        <div className="exmaple column-span-2">
-          <p>Kaleidoscope (series)</p>
-        </div>
-        <div className="exmaple column-span-2">
-          <p>Kasper Florio</p>
-          <p>230 × 300 mm, 348 p</p>
-          <p>ISSN 2038-4807</p>
-        </div>
-        <div className="exmaple column-span-3">
-          <img src="/Images/KALEIDOSCOPE.jpg" alt="KALEIDOSCOPE"></img>
-          <img src="/Images/KALEIDOSCOPE2.jpg" alt="KALEIDOSCOPE"></img>
-        </div>
-      </article>
-      <div className="minimal-hr" />
-      <article className="grid">
-        <div className="exmaple column-span-2">
-          <p>Spécimen</p>
-        </div>
-        <div className="exmaple column-span-2">
-          <p>Thomas Bizzarri & Alain Rodriguez</p>
-          <p>240 × 310 mm</p>
-          <p>ISBN 978-2-9541294-6-4</p>
-        </div>
-        <div className="exmaple column-span-3">
-          <img src="/Images/Spécimen.jpg" alt="SpécimenCover"></img>
-          <img src="/Images/Spécimen2.jpg" alt="SpécimenSpread"></img>
-        </div>
-      </article>
-      <div className="minimal-hr" />
-      <div className="backtoTop">
-        <a href="#top"> Back to the top</a>
+    </div>
+  );
+};
+
+const Examples = () => (
+  <div>
+    <section className="grid">
+      <h1 className="column-span-2">Examples</h1>
+    </section>
+    <div className="minimal-hr" />
+    <article className="grid">
+      <div className="exmaple column-span-2">
+        <p>Freundschaft / Friendship</p>
       </div>
-      <div className="minimal-hr" />
+      <div className="exmaple column-span-2">
+        <p>Hello Me Studio</p>
+        <p>144 pages, 135 × 203 mm</p>
+        <p>ISBN 978-3-7356-0640-2</p>
+      </div>
+      <div className="exmaple column-span-3">
+        <img
+          src="/Images/friendshipCover.jpg"
+          alt="Freundschaft / Friendship by Hello Me"
+        ></img>
+        <img
+          src="/Images/friendship2.jpg"
+          alt="Freundschaft / Friendship by Hello Me"
+        ></img>
+      </div>
+    </article>
+    <div className="minimal-hr" />
+    <article className="grid">
+      <div className="exmaple column-span-2">
+        <p>Kaleidoscope (series)</p>
+      </div>
+      <div className="exmaple column-span-2">
+        <p>Kasper Florio</p>
+        <p>230 × 300 mm, 348 p</p>
+        <p>ISSN 2038-4807</p>
+      </div>
+      <div className="exmaple column-span-3">
+        <img src="/Images/KALEIDOSCOPE.jpg" alt="KALEIDOSCOPE"></img>
+        <img src="/Images/KALEIDOSCOPE2.jpg" alt="KALEIDOSCOPE"></img>
+      </div>
+    </article>
+    <div className="minimal-hr" />
+    <article className="grid">
+      <div className="exmaple column-span-2">
+        <p>Spécimen</p>
+      </div>
+      <div className="exmaple column-span-2">
+        <p>Thomas Bizzarri & Alain Rodriguez</p>
+        <p>240 × 310 mm</p>
+        <p>ISBN 978-2-9541294-6-4</p>
+      </div>
+      <div className="exmaple column-span-3">
+        <img src="/Images/Spécimen.jpg" alt="SpécimenCover"></img>
+        <img src="/Images/Spécimen2.jpg" alt="SpécimenSpread"></img>
+      </div>
+    </article>
+    <div className="minimal-hr" />
+    <div className="backtoTop">
+      <a href="#top"> Back to the top</a>
+    </div>
+    <div className="minimal-hr" />
+  </div>
+);
+
+function App() {
+  const tab = window.location.hash;
+  return (
+    <div className="App">
+      <span class="cursor"></span>
+      <header className="grid navigation">
+        <div className="column-span-4">
+          <h1>Mechanical Ragging Component</h1>
+          <h1>First Edition</h1>
+        </div>
+        <div className="column-span-3">
+          <h1>
+            <a href="#essay">Overview</a>, <a href="#examples">Examples</a>
+          </h1>
+        </div>
+      </header>
+      <div className="minimal-hr"></div>
+      <div className="tabs">
+        <div id="essay" className="tab-content">
+          <Essay></Essay>
+        </div>
+        <div id="examples" className="tab-content">
+          <Examples></Examples>
+        </div>
+      </div>
     </div>
   );
 }

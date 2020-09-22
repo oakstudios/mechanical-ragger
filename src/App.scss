@@ -90,11 +90,16 @@ img {
 
 /* Link */
 a {
-  font-family: "Union-Bold", sans-serif;
+  font-family: "Union-BoldItalic", sans-serif;
+  text-decoration: none;
   line-height: inherit;
   font-size: inherit;
   hyphens: auto;
   color: #d1f0fd;
+}
+
+.navigation {
+  padding-bottom: 20px;
 }
 
 .App {
@@ -154,7 +159,7 @@ section {
   hyphens: none;
   -webkit-font-smoothing: antialiased;
   font-size: 28pt;
-  margin-top: 28pt;
+  // margin-top: 28pt;
 }
 
 .App-header {
@@ -195,7 +200,7 @@ section {
   }
   &.rag-off {
     font-family: "Union-Bold", sans-serif;
-    background: #67645e;
+    background: transparent;
     color: #d1f0fd;
     transform: rotateY(180deg);
   }
@@ -215,6 +220,7 @@ article {
   border-right: 2px solid #d1f0fd;
   padding-right: 20px;
   padding-top: 20px;
+  padding-bottom: 20px;
   // padding-top: 20px;
   // * + * {
   //   margin-top: 20px;
@@ -299,6 +305,27 @@ img {
   padding-top: 20pt;
   padding-bottom: 20pt;
   text-align: center;
+}
+
+.tabs {
+  position: relative;
+}
+/* Tab */
+.tab-content {
+  width: 100%;
+  position: absolute;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+  &:target,
+  &:active,
+  &:focus,
+  &:focus-within {
+    position: absolute;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
+  }
 }
 
 /* Mobile Screen Size Adjustment */
