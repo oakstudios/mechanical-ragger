@@ -32,6 +32,7 @@ const TextRagger = (props) => {
         }
       })
       .join("")} 100% ${lineCount * lineHeight}px`;
+
     return (
       <div ref={mergeRefs([containerEl, containerBoundsRef])}>
         <div
@@ -40,12 +41,10 @@ const TextRagger = (props) => {
             shapeOutside: `polygon(${shapeAuto})`,
             width: props.width,
             height: `${containerBounds.height}px`,
-            // background: "#000000",
             float: "right",
           }}
         />
         {props.children}
-        {props.width}
       </div>
     );
   } else {
