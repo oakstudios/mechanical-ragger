@@ -254,8 +254,8 @@ article {
 
 /* text highlight */
 ::selection {
-  background: rgba(0, 0, 0, 0.99);
-  color: black;
+  background: #d1f0fd;
+  color: #d1f0fd;
 }
 
 /* invert cursor */
@@ -269,16 +269,30 @@ a.link {
 
 .cursor {
   position: absolute;
-  width: 80px;
-  height: 80px;
-  background: whitesmoke;
-  border-radius: 50%;
-  top: var(--y, 0);
-  left: var(--x, 0);
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  transform: translate(var(--x, 0), var(--y, 0));
   z-index: 10;
-  mix-blend-mode: difference;
   pointer-events: none;
+  mix-blend-mode: difference;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background: #d1f0fd;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease;
+    will-change: transform;
+  }
+  &.size--large::before {
+    transform: translate(-50%, -50%) scale(0.4, 0.4);
+  }
 }
 
 .cursor:hover {
@@ -314,7 +328,7 @@ img {
 .tab-content {
   width: 100%;
   position: absolute;
-  opacity: 0.05;
+  opacity: 0;
   pointer-events: none;
   z-index: 0;
   &:target,
@@ -326,6 +340,48 @@ img {
     pointer-events: auto;
     z-index: 2;
   }
+}
+
+/* Hover Effect on text to show image overlay */
+.hover-title {
+  font-family: "Union-BoldItalic", sans-serif;
+  text-decoration-line: underline;
+  display: inline;
+  pointer-events: auto;
+  cursor: none;
+}
+
+.hover-image {
+  visibility: hidden;
+}
+
+body:not(.mobile) .hover-title:hover + .hover-image {
+  visibility: visible;
+  pointer-events: none;
+}
+
+.hover-image {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 8;
+  pointer-events: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Change width and height to scale images */
+  width: 50vw;
+  height: 50vh;
+}
+
+.hover-image img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  margin-bottom: 0;
 }
 
 /* Mobile Screen Size Adjustment */

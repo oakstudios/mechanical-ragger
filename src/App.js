@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.scss";
 import TextRagger from "./components/TextRagger";
 import InvertCursor from "./components/InvertCursor.js";
@@ -112,9 +112,26 @@ const Essay = () => {
               flow. B Some designers would prefer not to put a short word at the
               end of each line. For example, like "A, a, an, of, the, are, is"
               should not appear at the end of each line. (There are a few books
-              that I suggest reading if any reader is interested: 1. Detail in
-              Typography, by Jost Hochuli; 2. The Elements of Typographic Style,
-              by Robert Bringhurst)
+              that are recommended for reading if any reader is interested in
+              more information about typography and layout: 1.{" "}
+              <div class="hover-title">Detail in Typography</div>
+              <div class="hover-image">
+                {" "}
+                <img
+                  src="/Images/DetailinTypography.jpg"
+                  alt="Detail in Typography"
+                ></img>
+              </div>
+              , by Jost Hochuli; 2.{" "}
+              <div class="hover-title">The Elements of Typographic Style</div>
+              <div class="hover-image">
+                {" "}
+                <img
+                  src="/Images/ElementsofTypographicStyle.jpg"
+                  alt="ElementsofTypographicStyle"
+                ></img>
+              </div>
+              , by Robert Bringhurst)
             </p>
             <p>
               Back to the point, typesetting in digital media is complicated.
@@ -202,6 +219,7 @@ const Essay = () => {
           </p>
         </div>
       </article>
+      <div className="minimal-hr" />
     </div>
   );
 };
@@ -272,9 +290,19 @@ const Examples = () => (
 
 function App() {
   const tab = window.location.hash;
+  const [cursorSize, setCursorSize] = useState("normal");
+
+  useEffect(() => {
+    const elementList = document.querySelectorAll("img, a, button, :hover");
+    [...elementList].map((element) => {
+      element.addEventListener("mouseenter", () => setCursorSize("large"));
+      element.addEventListener("mouseleave", () => setCursorSize("normal"));
+    });
+  }, []);
+
   return (
     <div className="App">
-      <span class="cursor"></span>
+      <span class={`cursor size--${cursorSize}`}></span>
       <header className="grid navigation">
         <div className="column-span-4">
           <h1>Mechanical Ragging Component</h1>
@@ -282,7 +310,8 @@ function App() {
         </div>
         <div className="column-span-3">
           <h1>
-            <a href="#essay">Overview</a>, <a href="#examples">Examples</a>
+            <a href="#essay">Overview</a>,{" "}
+            <a href="#examples">Editorial Examples</a>
           </h1>
         </div>
       </header>
