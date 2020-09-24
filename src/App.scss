@@ -332,18 +332,9 @@ img {
 .tab-content {
   width: 100%;
   position: absolute;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 0;
   padding-top: var(--header-height);
-  &:target,
-  &:active,
-  &:focus,
-  &:focus-within {
-    position: absolute;
-    opacity: 1;
-    pointer-events: auto;
-    z-index: 2;
+  &:not(:target) {
+    display: none;
   }
 }
 
@@ -352,7 +343,7 @@ img {
   text-decoration: underline solid;
   display: inline;
   pointer-events: auto;
-  cursor: none;
+  cursor: no;
 }
 
 .hover-image {
@@ -390,7 +381,7 @@ body:not(.mobile) .hover-title:hover + .hover-image {
 
 @media (max-width: 800px) {
   .overview {
-    font-weight: bold;
+    font-weight: Normal;
     font-size: 14pt;
     padding-right: 20px;
     grid-column: span 7;

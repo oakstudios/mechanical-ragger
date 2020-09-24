@@ -251,7 +251,7 @@ const Essay = () => {
       </article>
       <div className="minimal-hr" />
       <div className="backtoTop">
-        <a href="#top"> Back to the top</a>
+        <a href="#essay">Back to the top</a>
       </div>
       <div className="minimal-hr" />
     </div>
@@ -260,7 +260,7 @@ const Essay = () => {
 
 const Examples = () => (
   <div>
-    <section className="grid wrapper">
+    <section className="grid wrapper ">
       <h1 className="column-span-2">Title</h1>
       <h1 className="column-span-2">Detail</h1>
     </section>
@@ -335,7 +335,7 @@ const Examples = () => (
     </article>
     <div className="minimal-hr" />
     <div className="backtoTop">
-      <a href="#top"> Back to the top</a>
+      <a href="#xamples"> Back to the top</a>
     </div>
     <div className="minimal-hr" />
   </div>
@@ -349,7 +349,7 @@ function App() {
 
   useEffect(() => {
     if (!window.location.hash) {
-      window.history.replaceState({ tab: "#essay" }, "", "#essay");
+      window.history.pushState({ tab: "#essay" }, "", "#essay");
     }
   }, []);
 
