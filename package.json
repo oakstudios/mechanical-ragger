@@ -1,5 +1,5 @@
 {
-  "name": "ragger",
+  "name": "@oakstudios/mechanical-ragger",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

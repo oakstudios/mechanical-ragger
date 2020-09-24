@@ -1,6 +1,6 @@
 import React, { useState, useLayoutEffect, useEffect } from "react";
 import "./App.scss";
-import TextRagger from "./components/TextRagger";
+import MechanicalRagger from "./components/MechanicalRagger";
 import InvertCursor from "./components/InvertCursor.js";
 import PhotoSwipeRoot from "./components/PhotoSwipe";
 import PhotoSwipe from "photoswipe";
@@ -77,7 +77,7 @@ const Essay = () => {
             </h1>
             <br></br>
           </header>
-          <TextRagger width={ragged ? "2rem" : "0px"}>
+          <MechanicalRagger width={ragged ? "2rem" : "0px"}>
             <p>
               From Stop-motion to animating graphics with After Effects1,
               carving letters on wood blocks to generate scalable vectorized
@@ -203,7 +203,7 @@ const Essay = () => {
               understanding not to put a single letter at the end of each line,
               or solving any other problems that require manual adjustment.{" "}
             </p>
-          </TextRagger>
+          </MechanicalRagger>
         </div>
         <div className="footnote column-span-3">
           <p>
