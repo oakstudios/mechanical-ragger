@@ -11,10 +11,20 @@ const Essay = () => {
         <p className="column-span-4 overview">
           This site serves as a portfolio for{" "}
           <em>Mechanical Ragging Component</em> developed by{" "}
-          <em>Oak Studios</em>. The Ragging component adjusts paragraphs to be
-          balanced, following the long-short-long-short sequence. Paragraph
-          ragging has a strong influence on printing media, and we decided to
-          cut off the boundary and deliver it to the digital design world.
+          <em>Oak Studios</em>. The Ragging component adjusts paragraphs{" "}
+          <div class="hover-title">to be balanced</div>
+          <div class="hover-image">
+            {" "}
+            <img src="/Images/Harmonia.png" alt="Harmonia"></img>
+          </div>
+          , following the <div class="hover-title">long-short-long-short</div>
+          <div class="hover-image">
+            {" "}
+            <img src="/Images/RaggerExample.png" alt="RaggerExample"></img>
+          </div>{" "}
+          sequence. Paragraph ragging has a strong influence on print media, and
+          furthermore we cut off the boundary and deliver it to the digital
+          design world.
         </p>
       </section>
       <div className="minimal-hr" />
@@ -31,7 +41,7 @@ const Essay = () => {
           </h1>
         </div>
         <div className="column-span-5">
-          <div className={"button-container " + (ragged && " ragged")}>
+          <div className={"button-container " + (ragged && "ragged")}>
             <button
               className="circle-button rag-on"
               onClick={() => setRagging(true)}
@@ -109,7 +119,7 @@ const Essay = () => {
               readability of the text. It is just the fundamental instruction of
               paragraph flow, the more advanced typesetting would even consider
               the meaning of the text, associate the actual context and its
-              flow. B Some designers would prefer not to put a short word at the
+              flow. Some designers would prefer not to put a short word at the
               end of each line. For example, like "A, a, an, of, the, are, is"
               should not appear at the end of each line. (There are a few books
               that are recommended for reading if any reader is interested in
@@ -128,7 +138,7 @@ const Essay = () => {
                 {" "}
                 <img
                   src="/Images/ElementsofTypographicStyle.jpg"
-                  alt="ElementsofTypographicStyle"
+                  alt="Elements of Typographic Style"
                 ></img>
               </div>
               , by Robert Bringhurst)
@@ -140,19 +150,29 @@ const Essay = () => {
               website should perform its context functionally in all different
               screen sizes. This vitality brings convenience, but it is
               forbidden for typesetting. In some extreme context, the display
-              screen would show one word at each line. Imagine reading a long
-              article from a 40mm Apple Watch (394x324px); a medium lengthed
-              paragraph would be divided into multiple lines, making it a
-              difficult reading material regardless of its actual content.{" "}
+              screen would show one word at each line. like{" "}
+              <div class="hover-title">
+                reading message from a 40mm Apple Watch (394x324px)
+              </div>
+              <div class="hover-image">
+                {" "}
+                <img
+                  src="/Images/AppleWatchMessage.png"
+                  alt="Apple Watch Message"
+                ></img>
+              </div>
+              ; a medium lengthed paragraph would be divided into multiple
+              lines, making it a difficult reading material regardless of its
+              actual content. Under such conditions, performing more of a
+              balanced paragraph ragging would reduce the difficulty in reading.{" "}
             </p>
             <p className="paragraph-indent">
               The idea was inspired by book designs—specifically, regulated and
               balanced text ragging examples from modern swiss book designs.
-              Examples of good typesetting from Excavating in Future City
-              designed by Studio Lin, all editorial works from Kasper Florio and
-              Sarah Discours. Understanding text ragging was
-              straight&shy;forward, so our process started investigating the
-              technical end—finding the right vehicle to establish the result.{" "}
+              (See good examples of ragged text under Examples tag of the site)
+              Understanding text ragging was straight&shy;forward, so our
+              process started investigating the technical end—finding the right
+              vehicle to establish the result.{" "}
             </p>
             <p>
               It turns out that it was easier than we expected. The component's
@@ -220,6 +240,10 @@ const Essay = () => {
         </div>
       </article>
       <div className="minimal-hr" />
+      <div className="backtoTop">
+        <a href="#top"> Back to the top</a>
+      </div>
+      <div className="minimal-hr" />
     </div>
   );
 };
@@ -239,15 +263,20 @@ const Examples = () => (
         <p>144 pages, 135 × 203 mm</p>
         <p>ISBN 978-3-7356-0640-2</p>
       </div>
-      <div className="exmaple column-span-3">
-        <img
-          src="/Images/friendshipCover.jpg"
-          alt="Freundschaft / Friendship by Hello Me"
-        ></img>
-        <img
-          src="/Images/friendship2.jpg"
-          alt="Freundschaft / Friendship by Hello Me"
-        ></img>
+      <div className="exmaple column-span-3 pswp">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+          <div class="pswp__container">
+            <img
+              src="/Images/friendshipCover.jpg"
+              alt="Freundschaft / Friendship by Hello Me"
+            ></img>
+            <img
+              src="/Images/friendship2.jpg"
+              alt="Freundschaft / Friendship by Hello Me"
+            ></img>
+          </div>
+        </div>
       </div>
     </article>
     <div className="minimal-hr" />
@@ -293,7 +322,9 @@ function App() {
   const [cursorSize, setCursorSize] = useState("normal");
 
   useEffect(() => {
-    const elementList = document.querySelectorAll("img, a, button, :hover");
+    const elementList = document.querySelectorAll(
+      "img, a, button, .hover-title"
+    );
     [...elementList].map((element) => {
       element.addEventListener("mouseenter", () => setCursorSize("large"));
       element.addEventListener("mouseleave", () => setCursorSize("normal"));

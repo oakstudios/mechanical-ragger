@@ -31,32 +31,28 @@ body {
 
 @font-face {
   font-family: "Union-Regular";
-  src: url("/Users/mitchellhou/Documents/ragger-site/public/fonts/Union-Regular.otf")
-    format("otf");
+  src: url("/public/fonts/Union-Regular.otf") format("otf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Union-Italic";
-  src: url("/Users/mitchellhou/Documents/ragger-site/public/fonts/Union-Italic.otf")
-    format("otf");
+  src: url("/public/fonts/Union-Italic.otf") format("otf");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Union-Bold";
-  src: url("/Users/mitchellhou/Documents/ragger-site/public/fonts/union_bold.otf")
-    format("otf");
+  src: url("/public/fonts/union_bold.otf") format("otf");
   font-weight: Bold;
   font-style: Normal;
 }
 
 @font-face {
   font-family: "Union-BoldItalic";
-  src: url("/Users/mitchellhou/Documents/ragger-site/public/fonts/Union-BoldItalic.otf")
-    format("otf");
+  src: url("/public/fonts/Union-BoldItalic.otf") format("otf");
   font-weight: Bold;
   font-style: italic;
 }
@@ -206,7 +202,7 @@ section {
   }
 }
 
-/* cancel the border when hovering */
+/* cancel the circle button border when hovering */
 .circle-button:focus {
   outline: none;
 }
@@ -344,8 +340,7 @@ img {
 
 /* Hover Effect on text to show image overlay */
 .hover-title {
-  font-family: "Union-BoldItalic", sans-serif;
-  text-decoration-line: underline;
+  text-decoration: underline solid;
   display: inline;
   pointer-events: auto;
   cursor: none;
@@ -372,8 +367,8 @@ body:not(.mobile) .hover-title:hover + .hover-image {
   align-items: center;
   justify-content: center;
   /* Change width and height to scale images */
-  width: 50vw;
-  height: 50vh;
+  width: 80vw;
+  height: 80vh;
 }
 
 .hover-image img {
