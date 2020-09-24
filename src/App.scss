@@ -274,31 +274,33 @@ a.link {
   cursor: none;
 }
 
-.cursor {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(var(--x, 0), var(--y, 0));
-  z-index: 10;
-  pointer-events: none;
-  mix-blend-mode: difference;
-
-  &::before {
-    content: "";
-    display: block;
+@media (pointer: fine) {
+  .cursor {
     position: absolute;
     top: 0;
     left: 0;
-    width: 80px;
-    height: 80px;
-    background: #d1f0fd;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: transform 0.2s ease;
-    will-change: transform;
-  }
-  &.state--hovered::before {
-    transform: translate(-50%, -50%) scale(0.4, 0.4);
+    transform: translate(var(--x, 0), var(--y, 0));
+    z-index: 10;
+    pointer-events: none;
+    mix-blend-mode: difference;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      background: #d1f0fd;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.2s ease;
+      will-change: transform;
+    }
+    &.state--hovered::before {
+      transform: translate(-50%, -50%) scale(0.4, 0.4);
+    }
   }
 }
 
@@ -388,6 +390,8 @@ body:not(.mobile) .hover-title:hover + .hover-image {
 
 @media (max-width: 800px) {
   .overview {
+    font-weight: bold;
+    font-size: 14pt;
     padding-right: 20px;
     grid-column: span 7;
   }
@@ -439,6 +443,7 @@ body:not(.mobile) .hover-title:hover + .hover-image {
 
   .siteNav {
     grid-column: span 7;
+    text-align: right;
   }
 }
 

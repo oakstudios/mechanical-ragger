@@ -9,8 +9,6 @@ import useMeasure from "react-use-measure";
 import "photoswipe/dist/photoswipe.css";
 import "photoswipe/src/css/default-skin/default-skin.scss";
 
-console.log({ PhotoSwipe });
-
 const Essay = () => {
   const [ragged, setRagging] = useState(true);
   return (
@@ -410,10 +408,10 @@ function App() {
   }, []);
 
   useLayoutEffect(() => {
-    console.log("bind");
     const elementList = document.querySelectorAll(
       "img, a, button, .hover-title"
     );
+    console.log("bind", elementList.length, elementList);
     const hoverCursor = () => setCursorSize("hovered");
     const resetCursor = () => setCursorSize("normal");
     [...elementList].map((element) => {
@@ -422,7 +420,11 @@ function App() {
     });
 
     return () => {
-      console.log("unbind");
+      const elementList = document.querySelectorAll(
+        "img, a, button, .hover-title"
+      );
+      console.log("unbind", elementList.length);
+
       [...elementList].map((element) => {
         element.removeEventListener("mouseenter", hoverCursor);
         element.removeEventListener("mouseleave", resetCursor);
