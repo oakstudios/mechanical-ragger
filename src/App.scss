@@ -95,7 +95,12 @@ a {
 }
 
 .navigation {
+  border-bottom: 2px solid #d1f0fd;
+  background: #67645e;
   padding-bottom: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
 }
 
 .App {
@@ -328,6 +333,7 @@ img {
   opacity: 0;
   pointer-events: none;
   z-index: 0;
+  padding-top: var(--header-height);
   &:target,
   &:active,
   &:focus,
@@ -425,6 +431,14 @@ body:not(.mobile) .hover-title:hover + .hover-image {
     align-items: center;
     padding-right: 0px;
     padding-top: 20px;
+  }
+
+  .siteTitle {
+    grid-column: span 7;
+  }
+
+  .siteNav {
+    grid-column: span 7;
   }
 }
 

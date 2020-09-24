@@ -5,7 +5,7 @@ import InvertCursor from "./components/InvertCursor.js";
 import PhotoSwipeRoot from "./components/PhotoSwipe";
 import PhotoSwipe from "photoswipe";
 import PhotoSwipeUI_Default from "photoswipe/dist/photoswipe-ui-default.js";
-
+import useMeasure from "react-use-measure";
 import "photoswipe/dist/photoswipe.css";
 import "photoswipe/src/css/default-skin/default-skin.scss";
 
@@ -347,6 +347,8 @@ function App() {
   const tab = window.location.hash;
   const [cursorSize, setCursorSize] = useState("normal");
 
+  const [headerRef, headerBounds] = useMeasure();
+
   useEffect(() => {
     if (!window.location.hash) {
       window.history.replaceState({ tab: "#essay" }, "", "#essay");
@@ -429,21 +431,28 @@ function App() {
   }, [tab]);
 
   return (
-    <div className="App">
-      <span class={`cursor state--${cursorSize}`}></span>
-      <header className="grid navigation wrapper vertical-padder">
-        <div className="column-span-4">
+    <div
+      className="App"
+      style={{
+        "--header-height": `${headerBounds.height}px`,
+      }}
+    >
+      <span class={`cursor state--${cursorSize}`} />
+      <header
+        className="grid navigation wrapper vertical-padder"
+        ref={headerRef}
+      >
+        <div className="column-span-4 siteTitle">
           <h1>Mechanical Ragging Component</h1>
           <h1>First Edition</h1>
         </div>
-        <div className="column-span-3">
+        <div className="column-span-3 siteNav">
           <h1>
             <a href="#essay">Overview</a>,{" "}
             <a href="#examples">Editorial Examples</a>
           </h1>
         </div>
       </header>
-      <div className="minimal-hr"></div>
       <div className="tabs">
         <div id="essay" className="tab-content">
           <Essay></Essay>
