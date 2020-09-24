@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.scss";
 import TextRagger from "./components/TextRagger";
 import InvertCursor from "./components/InvertCursor.js";
+import photoswipe from "photoswipe";
 
 const Essay = () => {
   const [ragged, setRagging] = useState(true);
@@ -9,9 +10,13 @@ const Essay = () => {
     <div>
       <section className="grid">
         <p className="column-span-4 overview">
-          This site serves as a portfolio for{" "}
-          <em>Mechanical Ragging Component</em> developed by{" "}
-          <em>Oak Studios</em>. The Ragging component adjusts paragraphs{" "}
+          This site serves as a portfolio for Mechanical Ragging Component
+          developed by <div class="hover-title">Oak Studios</div>
+          <div class="hover-image">
+            {" "}
+            <img src="/Images/OakLogo.png" alt="Oak Logo"></img>
+          </div>
+          . The Ragging component adjusts paragraphs{" "}
           <div class="hover-title">to be balanced</div>
           <div class="hover-image">
             {" "}
