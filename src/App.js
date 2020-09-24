@@ -15,7 +15,7 @@ const Essay = () => {
   const [ragged, setRagging] = useState(true);
   return (
     <div>
-      <section className="grid">
+      <section className="grid wrapper vertical-padder">
         <p className="column-span-4 overview">
           This site serves as a portfolio for Mechanical Ragging Component
           developed by <div class="hover-title">Oak Studios</div>
@@ -40,11 +40,11 @@ const Essay = () => {
         </p>
       </section>
       <div className="minimal-hr" />
-      <section className="grid">
+      <section className="grid wrapper vertical-padder">
         <h1 className="column-span-2">Reference</h1>
       </section>
       <div className="minimal-hr" />
-      <section className="grid button-section">
+      <section className="grid button-section wrapper vertical-padder">
         <div className="column-span-2">
           <h1>Toggle</h1>
           <h1>
@@ -70,7 +70,7 @@ const Essay = () => {
         </div>
       </section>
       <div className="minimal-hr" />
-      <article className="grid">
+      <article className="grid wrapper">
         <div className="articleBody column-span-4">
           <header>
             <h1>Exposition of Text Ragged & Expansion in the Digital World</h1>
@@ -262,12 +262,12 @@ const Essay = () => {
 
 const Examples = () => (
   <div>
-    <section className="grid">
+    <section className="grid wrapper">
       <h1 className="column-span-2">Title</h1>
       <h1 className="column-span-2">Detail</h1>
     </section>
     <div className="minimal-hr" />
-    <article className="grid">
+    <article className="grid wrapper">
       <div className="exmaple column-span-2">
         <p>Freundschaft / Friendship</p>
       </div>
@@ -290,7 +290,7 @@ const Examples = () => (
       </div>
     </article>
     <div className="minimal-hr" />
-    <article className="grid">
+    <article className="grid wrapper">
       <div className="exmaple column-span-2">
         <p>Kaleidoscope (series)</p>
       </div>
@@ -313,7 +313,7 @@ const Examples = () => (
       </div>
     </article>
     <div className="minimal-hr" />
-    <article className="grid">
+    <article className="grid wrapper">
       <div className="exmaple column-span-2">
         <p>Spécimen</p>
       </div>
@@ -431,7 +431,7 @@ function App() {
   return (
     <div className="App">
       <span class={`cursor state--${cursorSize}`}></span>
-      <header className="grid navigation">
+      <header className="grid navigation wrapper vertical-padder">
         <div className="column-span-4">
           <h1>Mechanical Ragging Component</h1>
           <h1>First Edition</h1>
