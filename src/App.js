@@ -335,7 +335,7 @@ const Examples = () => (
     </article>
     <div className="minimal-hr" />
     <div className="backtoTop">
-      <a href="#xamples"> Back to the top</a>
+      <a href="#examples"> Back to the top</a>
     </div>
     <div className="minimal-hr" />
   </div>
