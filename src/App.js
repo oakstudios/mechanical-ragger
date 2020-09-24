@@ -1,8 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useLayoutEffect, useEffect } from "react";
 import "./App.scss";
 import TextRagger from "./components/TextRagger";
 import InvertCursor from "./components/InvertCursor.js";
-import photoswipe from "photoswipe";
+import PhotoSwipeRoot from "./components/PhotoSwipe";
+import PhotoSwipe from "photoswipe";
+import PhotoSwipeUI_Default from "photoswipe/dist/photoswipe-ui-default.js";
+
+import "photoswipe/dist/photoswipe.css";
+import "photoswipe/src/css/default-skin/default-skin.scss";
+
+console.log({ PhotoSwipe });
 
 const Essay = () => {
   const [ragged, setRagging] = useState(true);
@@ -14,18 +21,18 @@ const Essay = () => {
           developed by <div class="hover-title">Oak Studios</div>
           <div class="hover-image">
             {" "}
-            <img src="/Images/OakLogo.png" alt="Oak Logo"></img>
+            <img src="/Images/OakLogo.png" alt="Oak Logo" />
           </div>
           . The Ragging component adjusts paragraphs{" "}
           <div class="hover-title">to be balanced</div>
           <div class="hover-image">
             {" "}
-            <img src="/Images/Harmonia.png" alt="Harmonia"></img>
+            <img src="/Images/Harmonia.png" alt="Harmonia" />
           </div>
           , following the <div class="hover-title">long-short-long-short</div>
           <div class="hover-image">
             {" "}
-            <img src="/Images/RaggerExample.png" alt="RaggerExample"></img>
+            <img src="/Images/RaggerExample.png" alt="RaggerExample" />
           </div>{" "}
           sequence. Paragraph ragging has a strong influence on print media, and
           furthermore we cut off the boundary and deliver it to the digital
@@ -135,7 +142,7 @@ const Essay = () => {
                 <img
                   src="/Images/DetailinTypography.jpg"
                   alt="Detail in Typography"
-                ></img>
+                />
               </div>
               , by Jost Hochuli; 2.{" "}
               <div class="hover-title">The Elements of Typographic Style</div>
@@ -144,7 +151,7 @@ const Essay = () => {
                 <img
                   src="/Images/ElementsofTypographicStyle.jpg"
                   alt="Elements of Typographic Style"
-                ></img>
+                />
               </div>
               , by Robert Bringhurst)
             </p>
@@ -164,7 +171,7 @@ const Essay = () => {
                 <img
                   src="/Images/AppleWatchMessage.png"
                   alt="Apple Watch Message"
-                ></img>
+                />
               </div>
               ; a medium lengthed paragraph would be divided into multiple
               lines, making it a difficult reading material regardless of its
@@ -256,7 +263,8 @@ const Essay = () => {
 const Examples = () => (
   <div>
     <section className="grid">
-      <h1 className="column-span-2">Examples</h1>
+      <h1 className="column-span-2">Title</h1>
+      <h1 className="column-span-2">Detail</h1>
     </section>
     <div className="minimal-hr" />
     <article className="grid">
@@ -268,20 +276,17 @@ const Examples = () => (
         <p>144 pages, 135 × 203 mm</p>
         <p>ISBN 978-3-7356-0640-2</p>
       </div>
-      <div className="exmaple column-span-3 pswp">
-        <div class="pswp__bg"></div>
-        <div class="pswp__scroll-wrap">
-          <div class="pswp__container">
-            <img
-              src="/Images/friendshipCover.jpg"
-              alt="Freundschaft / Friendship by Hello Me"
-            ></img>
-            <img
-              src="/Images/friendship2.jpg"
-              alt="Freundschaft / Friendship by Hello Me"
-            ></img>
-          </div>
-        </div>
+      <div className="exmaple column-span-3">
+        <img
+          className="gallery-image"
+          src="/Images/friendshipCover.jpg"
+          alt="Freundschaft / Friendship by Hello Me"
+        />
+        <img
+          className="gallery-image"
+          src="/Images/friendship2.jpg"
+          alt="Freundschaft / Friendship by Hello Me"
+        />
       </div>
     </article>
     <div className="minimal-hr" />
@@ -295,8 +300,16 @@ const Examples = () => (
         <p>ISSN 2038-4807</p>
       </div>
       <div className="exmaple column-span-3">
-        <img src="/Images/KALEIDOSCOPE.jpg" alt="KALEIDOSCOPE"></img>
-        <img src="/Images/KALEIDOSCOPE2.jpg" alt="KALEIDOSCOPE"></img>
+        <img
+          className="gallery-image"
+          src="/Images/KALEIDOSCOPE.jpg"
+          alt="KALEIDOSCOPE"
+        />
+        <img
+          className="gallery-image"
+          src="/Images/KALEIDOSCOPE2.jpg"
+          alt="KALEIDOSCOPE"
+        />
       </div>
     </article>
     <div className="minimal-hr" />
@@ -310,8 +323,16 @@ const Examples = () => (
         <p>ISBN 978-2-9541294-6-4</p>
       </div>
       <div className="exmaple column-span-3">
-        <img src="/Images/Spécimen.jpg" alt="SpécimenCover"></img>
-        <img src="/Images/Spécimen2.jpg" alt="SpécimenSpread"></img>
+        <img
+          className="gallery-image"
+          src="/Images/Spécimen.jpg"
+          alt="SpécimenCover"
+        />
+        <img
+          className="gallery-image"
+          src="/Images/Spécimen2.jpg"
+          alt="SpécimenSpread"
+        />
       </div>
     </article>
     <div className="minimal-hr" />
@@ -327,18 +348,89 @@ function App() {
   const [cursorSize, setCursorSize] = useState("normal");
 
   useEffect(() => {
-    const elementList = document.querySelectorAll(
-      "img, a, button, .hover-title"
-    );
-    [...elementList].map((element) => {
-      element.addEventListener("mouseenter", () => setCursorSize("large"));
-      element.addEventListener("mouseleave", () => setCursorSize("normal"));
+    if (!window.location.hash) {
+      window.history.replaceState({ tab: "#essay" }, "", "#essay");
+    }
+  }, []);
+
+  useLayoutEffect(() => {
+    var pswpElement = document.querySelectorAll(".pswp")[0];
+
+    // build items array
+    const galleryImages = [...document.querySelectorAll(".gallery-image")];
+
+    const items = galleryImages.map((element) => ({
+      src: element.src,
+      w: 1600,
+      h: 989,
+    }));
+
+    const openPhotoSwipe = (index) => {
+      // define options (if needed)
+      const options = {
+        // optionName: 'option value'
+        // for example:
+        getThumbBoundsFn: function (index) {
+          // find thumbnail element
+          var thumbnail = document.querySelectorAll(".gallery-image")[index];
+
+          // get window scroll Y
+          var pageYScroll =
+            window.pageYOffset || document.documentElement.scrollTop;
+          // optionally get horizontal scroll
+
+          // get position of element relative to viewport
+          var rect = thumbnail.getBoundingClientRect();
+
+          // w = width
+          return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
+
+          // Good guide on how to get element coordinates:
+          // http://javascript.info/tutorial/coordinates
+        },
+        index, // start at first slide
+        shareEl: false,
+      };
+
+      const gallery = new PhotoSwipe(
+        pswpElement,
+        PhotoSwipeUI_Default,
+        items,
+        options
+      );
+
+      gallery.init();
+    };
+
+    galleryImages.forEach((element, index) => {
+      element.addEventListener("click", () => openPhotoSwipe(index));
     });
   }, []);
 
+  useLayoutEffect(() => {
+    console.log("bind");
+    const elementList = document.querySelectorAll(
+      "img, a, button, .hover-title"
+    );
+    const hoverCursor = () => setCursorSize("hovered");
+    const resetCursor = () => setCursorSize("normal");
+    [...elementList].map((element) => {
+      element.addEventListener("mouseenter", hoverCursor);
+      element.addEventListener("mouseleave", resetCursor);
+    });
+
+    return () => {
+      console.log("unbind");
+      [...elementList].map((element) => {
+        element.removeEventListener("mouseenter", hoverCursor);
+        element.removeEventListener("mouseleave", resetCursor);
+      });
+    };
+  }, [tab]);
+
   return (
     <div className="App">
-      <span class={`cursor size--${cursorSize}`}></span>
+      <span class={`cursor state--${cursorSize}`}></span>
       <header className="grid navigation">
         <div className="column-span-4">
           <h1>Mechanical Ragging Component</h1>
@@ -360,6 +452,7 @@ function App() {
           <Examples></Examples>
         </div>
       </div>
+      <PhotoSwipeRoot></PhotoSwipeRoot>
     </div>
   );
 }
