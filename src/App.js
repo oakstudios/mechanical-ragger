@@ -1,7 +1,7 @@
 import React, { useState, useLayoutEffect, useEffect } from "react";
 import "./App.scss";
 import MechanicalRagger from "./components/MechanicalRagger";
-import InvertCursor from "./components/InvertCursor.js";
+import "./components/InvertCursor.js";
 import PhotoSwipeRoot from "./components/PhotoSwipe";
 import PhotoSwipe from "photoswipe";
 import PhotoSwipeUI_Default from "photoswipe/dist/photoswipe-ui-default.js";
@@ -417,6 +417,7 @@ function App() {
     [...elementList].map((element) => {
       element.addEventListener("mouseenter", hoverCursor);
       element.addEventListener("mouseleave", resetCursor);
+      return true;
     });
 
     return () => {
@@ -428,6 +429,7 @@ function App() {
       [...elementList].map((element) => {
         element.removeEventListener("mouseenter", hoverCursor);
         element.removeEventListener("mouseleave", resetCursor);
+        return true;
       });
     };
   }, [tab]);
