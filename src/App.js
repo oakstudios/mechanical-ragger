@@ -16,12 +16,12 @@ const Essay = () => {
       <section className="grid wrapper vertical-padder">
         <p className="column-span-4 overview">
           This site serves as a portfolio for Mechanical Ragging Component
-          developed by <div class="hover-title">Oak Studios</div>
+          developed by <div class="hover-title">Oak Studios.</div>
           <div class="hover-image">
             {" "}
             <img src="/Images/oakLogo.png" alt="Oak Logo" />
           </div>
-          . The Ragging component adjusts paragraphs{" "}
+          The Ragging component adjusts paragraphs{" "}
           <div class="hover-title">to be balanced</div>
           <div class="hover-image">
             {" "}
