@@ -19,18 +19,18 @@ const Essay = () => {
           developed by <div class="hover-title">Oak Studios.</div>
           <div class="hover-image">
             {" "}
-            <img src="/Images/oakLogo.png" alt="Oak Logo" />
+            <img src="/images/oakLogo.png" alt="Oak Logo" />
           </div>
           The Ragging component adjusts paragraphs{" "}
           <div class="hover-title">to be balanced</div>
           <div class="hover-image">
             {" "}
-            <img src="/Images/harmonia.png" alt="harmonia" />
+            <img src="/images/harmonia.png" alt="harmonia" />
           </div>
           , following the <div class="hover-title">long-short-long-short</div>
           <div class="hover-image">
             {" "}
-            <img src="/Images/raggerExample.png" alt="RaggerExample" />
+            <img src="/images/raggerExample.png" alt="RaggerExample" />
           </div>{" "}
           sequence. Paragraph ragging has a strong influence on print media, and
           furthermore we cut off the boundary and deliver it to the digital
@@ -138,7 +138,7 @@ const Essay = () => {
               <div class="hover-image">
                 {" "}
                 <img
-                  src="/Images/detailinTypography.jpg"
+                  src="/images/detailinTypography.jpg"
                   alt="Detail in Typography"
                 />
               </div>
@@ -147,7 +147,7 @@ const Essay = () => {
               <div class="hover-image">
                 {" "}
                 <img
-                  src="/Images/elementsofTypographicStyle.jpg"
+                  src="/images/elementsofTypographicStyle.jpg"
                   alt="Elements of Typographic Style"
                 />
               </div>
@@ -167,7 +167,7 @@ const Essay = () => {
               <div class="hover-image">
                 {" "}
                 <img
-                  src="/Images/appleWatchMessage.png"
+                  src="/images/appleWatchMessage.png"
                   alt="Apple Watch Message"
                 />
               </div>
@@ -276,12 +276,12 @@ const Examples = () => (
       <div className="exmaple column-span-3">
         <img
           className="gallery-image"
-          src="/Images/friendshipCover.jpg"
+          src="/images/friendshipCover.jpg"
           alt="Freundschaft / Friendship by Hello Me"
         />
         <img
           className="gallery-image"
-          src="/Images/friendship2.jpg"
+          src="/images/friendship2.jpg"
           alt="Freundschaft / Friendship by Hello Me"
         />
       </div>
@@ -299,12 +299,12 @@ const Examples = () => (
       <div className="exmaple column-span-3">
         <img
           className="gallery-image"
-          src="/Images/kaleidoscope.jpg"
+          src="/images/kaleidoscope.jpg"
           alt="KALEIDOSCOPE"
         />
         <img
           className="gallery-image"
-          src="/Images/kaleidoscope2.jpg"
+          src="/images/kaleidoscope2.jpg"
           alt="KALEIDOSCOPE"
         />
       </div>
@@ -322,12 +322,12 @@ const Examples = () => (
       <div className="exmaple column-span-3">
         <img
           className="gallery-image"
-          src="/Images/spécimen.jpg"
+          src="/images/spécimen.jpg"
           alt="SpécimenCover"
         />
         <img
           className="gallery-image"
-          src="/Images/spécimen2.jpg"
+          src="/images/spécimen2.jpg"
           alt="SpécimenSpread"
         />
       </div>
