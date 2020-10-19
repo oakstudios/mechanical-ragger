@@ -22,31 +22,17 @@ body {
 }
 
 @font-face {
-  font-family: "Union-Regular";
-  src: url("/public/fonts/Union-Regular.otf") format("otf");
+  font-family: "Telegraf-Regular";
+  src: url("/public/fonts/Telegraf-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Union-Italic";
-  src: url("/public/fonts/Union-Italic.otf") format("otf");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Union-Bold";
-  src: url("/public/fonts/union_bold.otf") format("otf");
+  font-family: "Telegraf-Bold";
+  src: url("/public/fonts/Telegraf-Bold.woff") format("woff");
   font-weight: 700;
-  font-style: Normal;
-}
-
-@font-face {
-  font-family: "Union-BoldItalic";
-  src: url("/public/fonts/Union-BoldItalic.otf") format("otf");
-  font-weight: 700;
-  font-style: italic;
+  font-style: normal;
 }
 
 h1,
@@ -63,7 +49,7 @@ blockquote,
 ul,
 ol {
   font: inherit;
-  font-family: "Union-Regular", serif;
+  font-family: "Telegraf-Regular", san-serif;
   line-height: inherit;
   font-size: inherit;
   color: #d1f0fd;
@@ -78,7 +64,7 @@ img {
 
 /* Link */
 a {
-  font-family: "Union-RegularItalic", sans-serif;
+  font-family: "Telegraf-Regular", sans-serif;
   text-decoration: none;
   line-height: inherit;
   font-size: inherit;
@@ -154,7 +140,7 @@ section {
 
 /* Overview section */
 .overview {
-  font-family: "Union-regular", sans-serif;
+  font-family: "Telegraf-Regular", sans-serif;
   hyphens: none;
   -webkit-font-smoothing: antialiased;
   font-size: 28pt;
@@ -193,12 +179,12 @@ section {
   font: inherit;
 
   &.rag-on {
-    font-family: "Union-Bold", sans-serif;
+    font-family: "Telegraf-Regular", sans-serif;
     background: #d1f0fd;
     color: #67645e;
   }
   &.rag-off {
-    font-family: "Union-Bold", sans-serif;
+    font-family: "Telegraf-Regular", sans-serif;
     background: transparent;
     color: #d1f0fd;
     transform: rotateY(180deg);
@@ -235,7 +221,7 @@ article {
 }
 
 .ellipses-hr {
-  font-family: "Union-Bold", sans-serif;
+  font-family: "Telegraf-Regular", sans-serif;
   color: #d1f0fd;
   text-align: center;
   border: none;
