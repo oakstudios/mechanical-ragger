@@ -1,26 +1,28 @@
 {
   "files": {
-    "main.css": "/Mechanical-Text-Ragger/static/css/main.c4c64cc8.chunk.css",
-    "main.js": "/Mechanical-Text-Ragger/static/js/main.93ec7329.chunk.js",
-    "main.js.map": "/Mechanical-Text-Ragger/static/js/main.93ec7329.chunk.js.map",
+    "main.css": "/Mechanical-Text-Ragger/static/css/main.93521231.chunk.css",
+    "main.js": "/Mechanical-Text-Ragger/static/js/main.d3ce6f4b.chunk.js",
+    "main.js.map": "/Mechanical-Text-Ragger/static/js/main.d3ce6f4b.chunk.js.map",
     "runtime-main.js": "/Mechanical-Text-Ragger/static/js/runtime-main.1c67c9b0.js",
     "runtime-main.js.map": "/Mechanical-Text-Ragger/static/js/runtime-main.1c67c9b0.js.map",
     "static/css/2.b1977c56.chunk.css": "/Mechanical-Text-Ragger/static/css/2.b1977c56.chunk.css",
     "static/js/2.58a7135f.chunk.js": "/Mechanical-Text-Ragger/static/js/2.58a7135f.chunk.js",
     "static/js/2.58a7135f.chunk.js.map": "/Mechanical-Text-Ragger/static/js/2.58a7135f.chunk.js.map",
     "index.html": "/Mechanical-Text-Ragger/index.html",
-    "precache-manifest.b5ba38bbdd8f95f39bc1be5fd394e2c4.js": "/Mechanical-Text-Ragger/precache-manifest.b5ba38bbdd8f95f39bc1be5fd394e2c4.js",
+    "precache-manifest.40caffa469caccdcbce8e698cd9e0fe3.js": "/Mechanical-Text-Ragger/precache-manifest.40caffa469caccdcbce8e698cd9e0fe3.js",
     "service-worker.js": "/Mechanical-Text-Ragger/service-worker.js",
     "static/css/2.b1977c56.chunk.css.map": "/Mechanical-Text-Ragger/static/css/2.b1977c56.chunk.css.map",
-    "static/css/main.c4c64cc8.chunk.css.map": "/Mechanical-Text-Ragger/static/css/main.c4c64cc8.chunk.css.map",
+    "static/css/main.93521231.chunk.css.map": "/Mechanical-Text-Ragger/static/css/main.93521231.chunk.css.map",
     "static/js/2.58a7135f.chunk.js.LICENSE.txt": "/Mechanical-Text-Ragger/static/js/2.58a7135f.chunk.js.LICENSE.txt",
+    "static/media/Telegraf-Bold.woff": "/Mechanical-Text-Ragger/static/media/Telegraf-Bold.420e5dd6.woff",
+    "static/media/Telegraf-Regular.woff": "/Mechanical-Text-Ragger/static/media/Telegraf-Regular.0950fa8f.woff",
     "static/media/default-skin.scss": "/Mechanical-Text-Ragger/static/media/default-skin.b257fa9c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.1c67c9b0.js",
     "static/css/2.b1977c56.chunk.css",
     "static/js/2.58a7135f.chunk.js",
-    "static/css/main.c4c64cc8.chunk.css",
-    "static/js/main.93ec7329.chunk.js"
+    "static/css/main.93521231.chunk.css",
+    "static/js/main.d3ce6f4b.chunk.js"
   ]
 }
