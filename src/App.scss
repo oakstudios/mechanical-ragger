@@ -1,11 +1,3 @@
-// $bp_medium: 900px;
-// $bp_large: 1200px;
-// @mixin min-width($media) {
-//   @media only screen and (min-width: $media) {
-//     @content;
-//   }
-// }
-
 html {
   font-size: 18px;
   line-height: calc(20 / 18);
@@ -32,28 +24,28 @@ body {
 @font-face {
   font-family: "Union-Regular";
   src: url("/public/fonts/Union-Regular.otf") format("otf");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Union-Italic";
   src: url("/public/fonts/Union-Italic.otf") format("otf");
-  font-weight: normal;
+  font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Union-Bold";
   src: url("/public/fonts/union_bold.otf") format("otf");
-  font-weight: Bold;
+  font-weight: 700;
   font-style: Normal;
 }
 
 @font-face {
   font-family: "Union-BoldItalic";
   src: url("/public/fonts/Union-BoldItalic.otf") format("otf");
-  font-weight: Bold;
+  font-weight: 700;
   font-style: italic;
 }
 
@@ -71,7 +63,7 @@ blockquote,
 ul,
 ol {
   font: inherit;
-  font-family: "Union-Bold", sans-serif;
+  font-family: "Union-Regular", serif;
   line-height: inherit;
   font-size: inherit;
   color: #d1f0fd;
@@ -86,7 +78,7 @@ img {
 
 /* Link */
 a {
-  font-family: "Union-BoldItalic", sans-serif;
+  font-family: "Union-RegularItalic", sans-serif;
   text-decoration: none;
   line-height: inherit;
   font-size: inherit;
@@ -313,9 +305,9 @@ a.link {
 /* image setting */
 img {
   display: inline;
-  padding-right: 20px;
-  width: 20vw;
+  width: 14vw;
   height: auto;
+  padding-right: 20pt;
 }
 
 /* back to top button */

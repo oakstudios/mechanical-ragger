@@ -261,8 +261,7 @@ const Essay = () => {
 const Examples = () => (
   <div>
     <section className="grid wrapper ">
-      <h1 className="column-span-2">Title</h1>
-      <h1 className="column-span-2">Detail</h1>
+      <h1 className="column-span-2">Samples</h1>
     </section>
     <div className="minimal-hr" />
     <article className="grid wrapper">
