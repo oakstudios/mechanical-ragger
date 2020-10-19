@@ -23,14 +23,14 @@ body {
 
 @font-face {
   font-family: "Telegraf-Regular";
-  src: url("/fonts/Telegraf-Regular.woff") format("woff");
+  src: url("./fonts/Telegraf-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Telegraf-Bold";
-  src: url("/fonts/Telegraf-Bold.woff") format("woff");
+  src: url("./fonts/Telegraf-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
