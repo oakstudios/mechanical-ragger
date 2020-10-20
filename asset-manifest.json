@@ -1,28 +1,41 @@
 {
   "files": {
     "main.css": "/Mechanical-Text-Ragger/static/css/main.93521231.chunk.css",
-    "main.js": "/Mechanical-Text-Ragger/static/js/main.d0e8e023.chunk.js",
-    "main.js.map": "/Mechanical-Text-Ragger/static/js/main.d0e8e023.chunk.js.map",
+    "main.js": "/Mechanical-Text-Ragger/static/js/main.320dc2d1.chunk.js",
+    "main.js.map": "/Mechanical-Text-Ragger/static/js/main.320dc2d1.chunk.js.map",
     "runtime-main.js": "/Mechanical-Text-Ragger/static/js/runtime-main.1c67c9b0.js",
     "runtime-main.js.map": "/Mechanical-Text-Ragger/static/js/runtime-main.1c67c9b0.js.map",
     "static/css/2.b1977c56.chunk.css": "/Mechanical-Text-Ragger/static/css/2.b1977c56.chunk.css",
     "static/js/2.58a7135f.chunk.js": "/Mechanical-Text-Ragger/static/js/2.58a7135f.chunk.js",
     "static/js/2.58a7135f.chunk.js.map": "/Mechanical-Text-Ragger/static/js/2.58a7135f.chunk.js.map",
     "index.html": "/Mechanical-Text-Ragger/index.html",
-    "precache-manifest.4574941a80c74b25544456916ad4239a.js": "/Mechanical-Text-Ragger/precache-manifest.4574941a80c74b25544456916ad4239a.js",
+    "precache-manifest.8d92c1b70b9cee03fd89047958495d0d.js": "/Mechanical-Text-Ragger/precache-manifest.8d92c1b70b9cee03fd89047958495d0d.js",
     "service-worker.js": "/Mechanical-Text-Ragger/service-worker.js",
     "static/css/2.b1977c56.chunk.css.map": "/Mechanical-Text-Ragger/static/css/2.b1977c56.chunk.css.map",
     "static/css/main.93521231.chunk.css.map": "/Mechanical-Text-Ragger/static/css/main.93521231.chunk.css.map",
     "static/js/2.58a7135f.chunk.js.LICENSE.txt": "/Mechanical-Text-Ragger/static/js/2.58a7135f.chunk.js.LICENSE.txt",
     "static/media/Telegraf-Bold.woff": "/Mechanical-Text-Ragger/static/media/Telegraf-Bold.420e5dd6.woff",
     "static/media/Telegraf-Regular.woff": "/Mechanical-Text-Ragger/static/media/Telegraf-Regular.0950fa8f.woff",
-    "static/media/default-skin.scss": "/Mechanical-Text-Ragger/static/media/default-skin.b257fa9c.svg"
+    "static/media/appleWatchMessage.png": "/Mechanical-Text-Ragger/static/media/appleWatchMessage.57758a71.png",
+    "static/media/default-skin.scss": "/Mechanical-Text-Ragger/static/media/default-skin.b257fa9c.svg",
+    "static/media/detailinTypography.jpg": "/Mechanical-Text-Ragger/static/media/detailinTypography.f7edc971.jpg",
+    "static/media/elementsofTypographicStyle.jpg": "/Mechanical-Text-Ragger/static/media/elementsofTypographicStyle.8578b1de.jpg",
+    "static/media/friendship.jpg": "/Mechanical-Text-Ragger/static/media/friendship.5da04a65.jpg",
+    "static/media/friendship2.jpg": "/Mechanical-Text-Ragger/static/media/friendship2.fb84f37e.jpg",
+    "static/media/friendshipCover.jpg": "/Mechanical-Text-Ragger/static/media/friendshipCover.71add9a5.jpg",
+    "static/media/harmonia.png": "/Mechanical-Text-Ragger/static/media/harmonia.5ea7dd67.png",
+    "static/media/kaleidoscope.jpg": "/Mechanical-Text-Ragger/static/media/kaleidoscope.2412107f.jpg",
+    "static/media/kaleidoscope2.jpg": "/Mechanical-Text-Ragger/static/media/kaleidoscope2.ea13cea3.jpg",
+    "static/media/oakLogo.png": "/Mechanical-Text-Ragger/static/media/oakLogo.34d7f574.png",
+    "static/media/raggerExample.png": "/Mechanical-Text-Ragger/static/media/raggerExample.e50c7815.png",
+    "static/media/spécimen.jpg": "/Mechanical-Text-Ragger/static/media/spécimen.2937f38f.jpg",
+    "static/media/spécimen2.jpg": "/Mechanical-Text-Ragger/static/media/spécimen2.7fa13bb3.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.1c67c9b0.js",
     "static/css/2.b1977c56.chunk.css",
     "static/js/2.58a7135f.chunk.js",
     "static/css/main.93521231.chunk.css",
-    "static/js/main.d0e8e023.chunk.js"
+    "static/js/main.320dc2d1.chunk.js"
   ]
 }
