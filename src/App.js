@@ -32,13 +32,19 @@ const Essay = () => {
           developed by <div class="hover-title">Oak Studios.</div>
           <div class="hover-image">
             {" "}
-            <img src={oakLogo} alt="Oak Logo" />
+            <img
+              src={process.env.PUBLIC_URL + "/images/oakLogo.png"}
+              alt="Oak Studios"
+            />
           </div>
           The Ragging component adjusts paragraphs{" "}
           <div class="hover-title">to be balanced</div>
           <div class="hover-image">
             {" "}
-            <img src="/images/harmonia.png" alt="harmonia" />
+            <img
+              src={process.env.PUBLIC_URL + "/images/harmonia.png"}
+              alt="harmonia"
+            />
           </div>
           , following the <div class="hover-title">long-short-long-short</div>
           <div class="hover-image">
