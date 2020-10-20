@@ -8,6 +8,19 @@ import PhotoSwipeUI_Default from "photoswipe/dist/photoswipe-ui-default.js";
 import useMeasure from "react-use-measure";
 import "photoswipe/dist/photoswipe.css";
 import "photoswipe/src/css/default-skin/default-skin.scss";
+import "./images/appleWatchMessage.png";
+import "./images/detailinTypography.jpg";
+import "./images/elementsofTypographicStyle.jpg";
+import "./images/friendship.jpg";
+import "./images/friendship2.jpg";
+import "./images/friendshipCover.jpg";
+import "./images/harmonia.png";
+import "./images/kaleidoscope.jpg";
+import "./images/kaleidoscope2.jpg";
+import "./images/oakLogo.png";
+import "./images/raggerExample.png";
+import "./images/spécimen.jpg";
+import "./images/spécimen2.jpg";
 
 const Essay = () => {
   const [ragged, setRagging] = useState(true);
