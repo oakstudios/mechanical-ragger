@@ -19,18 +19,18 @@ const Essay = () => {
           developed by <div class="hover-title">Oak Studios.</div>
           <div class="hover-image">
             {" "}
-            <img src="/images/oakLogo.png" alt="Oak Logo" />
+            <img src={"/images/oakLogo.png"} alt="Oak Logo" />
           </div>
           The Ragging component adjusts paragraphs{" "}
           <div class="hover-title">to be balanced</div>
           <div class="hover-image">
             {" "}
-            <img src="/images/harmonia.png" alt="harmonia" />
+            <img src={"/images/harmonia.png"} alt="harmonia" />
           </div>
           , following the <div class="hover-title">long-short-long-short</div>
           <div class="hover-image">
             {" "}
-            <img src="/images/raggerExample.png" alt="RaggerExample" />
+            <img src={"/images/raggerExample.png"} alt="RaggerExample" />
           </div>{" "}
           sequence. Paragraph ragging has a strong influence on print media, and
           furthermore we cut off the boundary and deliver it to the digital
