@@ -20,6 +20,10 @@ import oakLogo from "./images/oakLogo.png";
 import raggerExample from "./images/raggerExample.png";
 import spécimen from "./images/spécimen.jpg";
 import spécimen2 from "./images/spécimen2.jpg";
+import protest from "./images/protest.jpg";
+import protest2 from "./images/protest2.jpg";
+import tryingtobeHere from "./images/tryingtobeHere.jpg";
+import tryingtobeHere2 from "./images/tryingtobeHere2.jpg";
 
 const Essay = () => {
   const [ragged, setRagging] = useState(true);
@@ -320,6 +324,44 @@ const Examples = () => (
       <div className="exmaple column-span-3">
         <img className="gallery-image" src={spécimen} alt="SpécimenCover" />
         <img className="gallery-image" src={spécimen2} alt="SpécimenSpread" />
+      </div>
+    </article>
+    <div className="minimal-hr" />
+    <article className="grid wrapper">
+      <div className="exmaple column-span-2">
+        <p>Protest. The Aesthetics of Resistance</p>
+      </div>
+      <div className="exmaple column-span-2">
+        <p>Lars Müller Publishers</p>
+        <p>16 × 24 × 3 cm</p>
+        <p>ISBN 978-3-03778-560-7</p>
+      </div>
+      <div className="exmaple column-span-3">
+        <img className="gallery-image" src={protest2} alt="protestCover" />
+        <img className="gallery-image" src={protest} alt="protestSpread" />
+      </div>
+    </article>
+    <div className="minimal-hr" />
+    <article className="grid wrapper">
+      <div className="exmaple column-span-2">
+        <p>Trying to be Here...</p>
+      </div>
+      <div className="exmaple column-span-2">
+        <p>Samuel Bänziger; Jiajia Zhang</p>
+        <p>125 × 195 mm</p>
+        <p>ISBN 978-3-033-05571-1</p>
+      </div>
+      <div className="exmaple column-span-3">
+        <img
+          className="gallery-image"
+          src={tryingtobeHere}
+          alt="trying to be here spread"
+        />
+        <img
+          className="gallery-image"
+          src={tryingtobeHere2}
+          alt="trying to be here spread 2"
+        />
       </div>
     </article>
     <div className="minimal-hr" />
