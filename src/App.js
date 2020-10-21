@@ -9,18 +9,18 @@ import useMeasure from "react-use-measure";
 import "photoswipe/dist/photoswipe.css";
 import "photoswipe/src/css/default-skin/default-skin.scss";
 import appleWatchMessage from "./images/appleWatchMessage.png";
-import "./images/detailinTypography.jpg";
-import "./images/elementsofTypographicStyle.jpg";
-import "./images/friendship.jpg";
-import "./images/friendship2.jpg";
-import "./images/friendshipCover.jpg";
-import "./images/harmonia.png";
-import "./images/kaleidoscope.jpg";
-import "./images/kaleidoscope2.jpg";
-import oakLogo from "./images/oakLogo.png";
-import "./images/raggerExample.png";
-import "./images/spécimen.jpg";
-import "./images/spécimen2.jpg";
+// import "./images/detailinTypography.jpg";
+// import "./images/elementsofTypographicStyle.jpg";
+// import "./images/friendship.jpg";
+// import "./images/friendship2.jpg";
+// import "./images/friendshipCover.jpg";
+// import "./images/harmonia.png";
+// import "./images/kaleidoscope.jpg";
+// import "./images/kaleidoscope2.jpg";
+// import oakLogo from "./images/oakLogo.png";
+// import "./images/raggerExample.png";
+// import "./images/spécimen.jpg";
+// import "./images/spécimen2.jpg";
 
 const Essay = () => {
   const [ragged, setRagging] = useState(true);
@@ -49,7 +49,10 @@ const Essay = () => {
           , following the <div class="hover-title">long-short-long-short</div>
           <div class="hover-image">
             {" "}
-            <img src="/images/raggerExample.png" alt="RaggerExample" />
+            <img
+              src={process.env.PUBLIC_URL + "/images/raggerExample.png"}
+              alt="RaggerExample"
+            />
           </div>{" "}
           sequence. Paragraph ragging has a strong influence on print media, and
           furthermore we cut off the boundary and deliver it to the digital
@@ -157,7 +160,9 @@ const Essay = () => {
               <div class="hover-image">
                 {" "}
                 <img
-                  src="/images/detailinTypography.jpg"
+                  src={
+                    process.env.PUBLIC_URL + "/images/detailinTypography.jpg"
+                  }
                   alt="Detail in Typography"
                 />
               </div>
@@ -166,7 +171,10 @@ const Essay = () => {
               <div class="hover-image">
                 {" "}
                 <img
-                  src="/images/elementsofTypographicStyle.jpg"
+                  src={
+                    process.env.PUBLIC_URL +
+                    "/images/elementsofTypographicStyle.jpg"
+                  }
                   alt="Elements of Typographic Style"
                 />
               </div>
@@ -292,12 +300,12 @@ const Examples = () => (
       <div className="exmaple column-span-3">
         <img
           className="gallery-image"
-          src="/images/friendshipCover.jpg"
+          src={process.env.PUBLIC_URL + "/images/friendshipCover.jpg"}
           alt="Freundschaft / Friendship by Hello Me"
         />
         <img
           className="gallery-image"
-          src="/images/friendship2.jpg"
+          src={process.env.PUBLIC_URL + "/images/friendship2.jpg"}
           alt="Freundschaft / Friendship by Hello Me"
         />
       </div>
@@ -315,12 +323,12 @@ const Examples = () => (
       <div className="exmaple column-span-3">
         <img
           className="gallery-image"
-          src="/images/kaleidoscope.jpg"
+          src={process.env.PUBLIC_URL + "/images/kaleidoscope.jpg"}
           alt="KALEIDOSCOPE"
         />
         <img
           className="gallery-image"
-          src="/images/kaleidoscope2.jpg"
+          src={process.env.PUBLIC_URL + "/images/kaleidoscope2.jpg"}
           alt="KALEIDOSCOPE"
         />
       </div>
@@ -338,12 +346,12 @@ const Examples = () => (
       <div className="exmaple column-span-3">
         <img
           className="gallery-image"
-          src="/images/spécimen.jpg"
+          src={process.env.PUBLIC_URL + "/images/spécimen.jpg"}
           alt="SpécimenCover"
         />
         <img
           className="gallery-image"
-          src="/images/spécimen2.jpg"
+          src={process.env.PUBLIC_URL + "/images/spécimen2.jpg"}
           alt="SpécimenSpread"
         />
       </div>
