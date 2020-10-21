@@ -214,6 +214,7 @@ article {
 
 .footnote {
   font-size: 10pt;
+  line-height: 12pt;
   padding-top: 20px;
   * + * {
     margin-top: 20px;
@@ -359,8 +360,8 @@ body:not(.mobile) .hover-title:hover + .hover-image {
 
 @media (max-width: 800px) {
   .overview {
-    font-weight: Normal;
     font-size: 14pt;
+    line-height: 16pt;
     padding-right: 20px;
     grid-column: span 7;
   }
@@ -377,6 +378,7 @@ body:not(.mobile) .hover-title:hover + .hover-image {
 
   .footnote {
     padding-right: 0px;
+    line-height: 16pt;
     border-top: 2px dotted #d1f0fd;
     margin-bottom: 20pt;
     grid-column: span 7;
