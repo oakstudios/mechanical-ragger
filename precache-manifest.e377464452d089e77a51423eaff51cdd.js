@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "620f8455635c5adcbb990163819b731d",
+    "revision": "e54654909ec63b04ebbfdb527219b03a",
     "url": "/Mechanical-Text-Ragger/index.html"
   },
   {
-    "revision": "51b0c445d08c24ce101b",
+    "revision": "603c3f25fde010794d4e",
     "url": "/Mechanical-Text-Ragger/static/css/2.b1977c56.chunk.css"
   },
   {
-    "revision": "6356a109f945e5c0b987",
-    "url": "/Mechanical-Text-Ragger/static/css/main.8a670cf7.chunk.css"
+    "revision": "c87441e60a6447c90b3c",
+    "url": "/Mechanical-Text-Ragger/static/css/main.c35fad5c.chunk.css"
   },
   {
-    "revision": "51b0c445d08c24ce101b",
-    "url": "/Mechanical-Text-Ragger/static/js/2.ee0c2ce9.chunk.js"
+    "revision": "603c3f25fde010794d4e",
+    "url": "/Mechanical-Text-Ragger/static/js/2.a130db85.chunk.js"
   },
   {
     "revision": "425ee120d7cde928cfaaa7560d9d4c27",
-    "url": "/Mechanical-Text-Ragger/static/js/2.ee0c2ce9.chunk.js.LICENSE.txt"
+    "url": "/Mechanical-Text-Ragger/static/js/2.a130db85.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6356a109f945e5c0b987",
-    "url": "/Mechanical-Text-Ragger/static/js/main.165765d5.chunk.js"
+    "revision": "c87441e60a6447c90b3c",
+    "url": "/Mechanical-Text-Ragger/static/js/main.d9c60dec.chunk.js"
   },
   {
     "revision": "326d15becdeae0c9799c",
@@ -80,6 +80,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Mechanical-Text-Ragger/static/media/oakLogo.34d7f574.png"
   },
   {
+    "revision": "2be4d696aa331c5cc882a5b1d572f186",
+    "url": "/Mechanical-Text-Ragger/static/media/protest.2be4d696.jpg"
+  },
+  {
+    "revision": "8eef543737320e719a61dac4d20e9d5e",
+    "url": "/Mechanical-Text-Ragger/static/media/protest2.8eef5437.jpg"
+  },
+  {
     "revision": "e50c7815d8852976007b29ad6f1312d9",
     "url": "/Mechanical-Text-Ragger/static/media/raggerExample.e50c7815.png"
   },
@@ -90,5 +98,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7fa13bb34af42355d6356192c691d918",
     "url": "/Mechanical-Text-Ragger/static/media/spécimen2.7fa13bb3.jpg"
+  },
+  {
+    "revision": "2ddf2741f6ce93e0535ecbb1226431c1",
+    "url": "/Mechanical-Text-Ragger/static/media/tryingtobeHere.2ddf2741.jpg"
+  },
+  {
+    "revision": "fca4a32c3150f1c147323e18cca6102b",
+    "url": "/Mechanical-Text-Ragger/static/media/tryingtobeHere2.fca4a32c.jpg"
   }
 ]);
