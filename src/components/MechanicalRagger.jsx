@@ -16,7 +16,7 @@ const TextRagger = (props) => {
     );
 
     const lineCount = Math.floor(containerBounds.height / lineHeight);
-    console.log({ lineCount, containerBounds, lineHeight });
+    // console.log({ lineCount, containerBounds, lineHeight });
     const lineArray = Array(lineCount).fill();
     const shapeAuto = `${lineArray
       .map((line, i) => {
