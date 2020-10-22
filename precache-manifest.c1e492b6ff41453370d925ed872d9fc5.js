@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c777ebba2f5f07cc408c1869adbab1c0",
+    "revision": "2792aaf3892a7bff43960692c2fb04da",
     "url": "/Mechanical-Text-Ragger/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Mechanical-Text-Ragger/static/css/2.b1977c56.chunk.css"
   },
   {
-    "revision": "6a02ceabab238a3ac23a",
+    "revision": "fcee11795bc731b4190c",
     "url": "/Mechanical-Text-Ragger/static/css/main.b2e510ed.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Mechanical-Text-Ragger/static/js/2.a130db85.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6a02ceabab238a3ac23a",
-    "url": "/Mechanical-Text-Ragger/static/js/main.43ab8e2f.chunk.js"
+    "revision": "fcee11795bc731b4190c",
+    "url": "/Mechanical-Text-Ragger/static/js/main.97cbfa1f.chunk.js"
   },
   {
     "revision": "326d15becdeae0c9799c",
