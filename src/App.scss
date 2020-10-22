@@ -177,6 +177,7 @@ section {
   left: 0;
   backface-visibility: hidden;
   font: inherit;
+  z-index: -10;
 
   &.rag-on {
     font-family: "Telegraf-Regular", sans-serif;
@@ -378,7 +379,7 @@ body:not(.mobile) .hover-title:hover + .hover-image {
 
   .footnote {
     padding-right: 0px;
-    line-height: 16pt;
+    line-height: 12pt;
     border-top: 2px dotted #d1f0fd;
     margin-bottom: 20pt;
     grid-column: span 7;

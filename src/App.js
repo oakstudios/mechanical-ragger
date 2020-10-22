@@ -260,6 +260,32 @@ const Essay = () => {
         </div>
       </article>
       <div className="minimal-hr" />
+      <section className="grid wrapper vertical-padder">
+        <div className="column-span-2">
+          <p>About us</p>
+        </div>
+      </section>
+      <div className="minimal-hr" />
+      <section className="grid wrapper vertical-padder">
+        <div className="column-span-4">
+          <p>Oak Studios LLC</p>
+          <p>67 35th St b503, Brooklyn, NY 11232</p>
+          <p>info@oakmade.com</p>
+        </div>
+        <div className="column-span-2">
+          <p>Daniel Gamage</p>
+          <p>Chengcheng Hou</p>
+          <p>Mika Busante</p>
+        </div>
+        <div className="column-span-1">
+          <a href="https://github.com/oakstudios/Mechanical-Text-Ragger">
+            Github
+          </a>
+          <br></br>
+          <a href="https://www.instagram.com/oakstudios/">Instagram</a>
+        </div>
+      </section>
+      <div className="minimal-hr" />
       <div className="backtoTop">
         <a href="#essay">Back to the top</a>
       </div>
