@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "69c1c76696f80684937a00cbe0f25bf3",
+    "revision": "c777ebba2f5f07cc408c1869adbab1c0",
     "url": "/Mechanical-Text-Ragger/index.html"
   },
   {
