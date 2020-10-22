@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Mechanical-Text-Ragger/static/css/main.c35fad5c.chunk.css",
-    "main.js": "/Mechanical-Text-Ragger/static/js/main.d9c60dec.chunk.js",
-    "main.js.map": "/Mechanical-Text-Ragger/static/js/main.d9c60dec.chunk.js.map",
+    "main.css": "/Mechanical-Text-Ragger/static/css/main.7f003c1b.chunk.css",
+    "main.js": "/Mechanical-Text-Ragger/static/js/main.6dc1e297.chunk.js",
+    "main.js.map": "/Mechanical-Text-Ragger/static/js/main.6dc1e297.chunk.js.map",
     "runtime-main.js": "/Mechanical-Text-Ragger/static/js/runtime-main.1c67c9b0.js",
     "runtime-main.js.map": "/Mechanical-Text-Ragger/static/js/runtime-main.1c67c9b0.js.map",
     "static/css/2.b1977c56.chunk.css": "/Mechanical-Text-Ragger/static/css/2.b1977c56.chunk.css",
     "static/js/2.a130db85.chunk.js": "/Mechanical-Text-Ragger/static/js/2.a130db85.chunk.js",
     "static/js/2.a130db85.chunk.js.map": "/Mechanical-Text-Ragger/static/js/2.a130db85.chunk.js.map",
     "index.html": "/Mechanical-Text-Ragger/index.html",
-    "precache-manifest.e377464452d089e77a51423eaff51cdd.js": "/Mechanical-Text-Ragger/precache-manifest.e377464452d089e77a51423eaff51cdd.js",
+    "precache-manifest.29d2253e1e68f66af443b6c40a92beeb.js": "/Mechanical-Text-Ragger/precache-manifest.29d2253e1e68f66af443b6c40a92beeb.js",
     "service-worker.js": "/Mechanical-Text-Ragger/service-worker.js",
     "static/css/2.b1977c56.chunk.css.map": "/Mechanical-Text-Ragger/static/css/2.b1977c56.chunk.css.map",
-    "static/css/main.c35fad5c.chunk.css.map": "/Mechanical-Text-Ragger/static/css/main.c35fad5c.chunk.css.map",
+    "static/css/main.7f003c1b.chunk.css.map": "/Mechanical-Text-Ragger/static/css/main.7f003c1b.chunk.css.map",
     "static/js/2.a130db85.chunk.js.LICENSE.txt": "/Mechanical-Text-Ragger/static/js/2.a130db85.chunk.js.LICENSE.txt",
     "static/media/Telegraf-Bold.woff": "/Mechanical-Text-Ragger/static/media/Telegraf-Bold.420e5dd6.woff",
     "static/media/Telegraf-Regular.woff": "/Mechanical-Text-Ragger/static/media/Telegraf-Regular.0950fa8f.woff",
@@ -39,7 +39,7 @@
     "static/js/runtime-main.1c67c9b0.js",
     "static/css/2.b1977c56.chunk.css",
     "static/js/2.a130db85.chunk.js",
-    "static/css/main.c35fad5c.chunk.css",
-    "static/js/main.d9c60dec.chunk.js"
+    "static/css/main.7f003c1b.chunk.css",
+    "static/js/main.6dc1e297.chunk.js"
   ]
 }
