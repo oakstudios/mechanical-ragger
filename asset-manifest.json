@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Mechanical-Text-Ragger/static/css/main.b2e510ed.chunk.css",
-    "main.js": "/Mechanical-Text-Ragger/static/js/main.9498093b.chunk.js",
-    "main.js.map": "/Mechanical-Text-Ragger/static/js/main.9498093b.chunk.js.map",
+    "main.js": "/Mechanical-Text-Ragger/static/js/main.68cd8125.chunk.js",
+    "main.js.map": "/Mechanical-Text-Ragger/static/js/main.68cd8125.chunk.js.map",
     "runtime-main.js": "/Mechanical-Text-Ragger/static/js/runtime-main.1c67c9b0.js",
     "runtime-main.js.map": "/Mechanical-Text-Ragger/static/js/runtime-main.1c67c9b0.js.map",
     "static/css/2.b1977c56.chunk.css": "/Mechanical-Text-Ragger/static/css/2.b1977c56.chunk.css",
     "static/js/2.a130db85.chunk.js": "/Mechanical-Text-Ragger/static/js/2.a130db85.chunk.js",
     "static/js/2.a130db85.chunk.js.map": "/Mechanical-Text-Ragger/static/js/2.a130db85.chunk.js.map",
     "index.html": "/Mechanical-Text-Ragger/index.html",
-    "precache-manifest.b07b6f207d01b01b206d1f490813d981.js": "/Mechanical-Text-Ragger/precache-manifest.b07b6f207d01b01b206d1f490813d981.js",
+    "precache-manifest.b8c4f119ecf09ca1df9d8d3b7000ce4b.js": "/Mechanical-Text-Ragger/precache-manifest.b8c4f119ecf09ca1df9d8d3b7000ce4b.js",
     "service-worker.js": "/Mechanical-Text-Ragger/service-worker.js",
     "static/css/2.b1977c56.chunk.css.map": "/Mechanical-Text-Ragger/static/css/2.b1977c56.chunk.css.map",
     "static/css/main.b2e510ed.chunk.css.map": "/Mechanical-Text-Ragger/static/css/main.b2e510ed.chunk.css.map",
@@ -40,6 +40,6 @@
     "static/css/2.b1977c56.chunk.css",
     "static/js/2.a130db85.chunk.js",
     "static/css/main.b2e510ed.chunk.css",
-    "static/js/main.9498093b.chunk.js"
+    "static/js/main.68cd8125.chunk.js"
   ]
 }
