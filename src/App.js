@@ -268,9 +268,9 @@ const Essay = () => {
       <div className="minimal-hr" />
       <section className="grid wrapper vertical-padder">
         <div className="column-span-4">
-          <p>Oak Studios LLC</p>
+          <a href="https://oak.is/">Oak Studios LLC</a>
           <p>67 35th St b503, Brooklyn, NY 11232</p>
-          <p>info@oakmade.com</p>
+          <a href="mailto:info@oakmade.com">info@oakmade.com</a>
         </div>
         <div className="column-span-2">
           <p>Daniel Gamage</p>
