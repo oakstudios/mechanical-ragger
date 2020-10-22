@@ -468,7 +468,7 @@ function App() {
     const elementList = document.querySelectorAll(
       "img, a, button, .hover-title"
     );
-    console.log("bind", elementList.length, elementList);
+    // console.log("bind", elementList.length, elementList);
     const hoverCursor = () => setCursorSize("hovered");
     const resetCursor = () => setCursorSize("normal");
     [...elementList].map((element) => {
@@ -481,7 +481,7 @@ function App() {
       const elementList = document.querySelectorAll(
         "img, a, button, .hover-title"
       );
-      console.log("unbind", elementList.length);
+      // console.log("unbind", elementList.length);
 
       [...elementList].map((element) => {
         element.removeEventListener("mouseenter", hoverCursor);
