@@ -282,7 +282,7 @@ const Essay = () => {
             Github
           </a>
           <br></br>
-          <a href="https://www.instagram.com/oakstudios/">Ins</a>
+          <a href="https://www.instagram.com/oakstudios/">Instagram</a>
         </div>
       </section>
       <div className="minimal-hr" />
