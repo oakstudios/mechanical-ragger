@@ -188,12 +188,13 @@ const Essay = () => {
             </p>
             <p className="paragraph-indent">
               The idea of long-short-long-short ragging method was probably
-              originated by book designs—specifically, regulated and balanced
-              text ragging examples from modern swiss book designs. (See good
-              examples of ragged text under Examples tag of the site)
-              Understanding text ragging was straight&shy;forward, so we started
-              investigating the technical end and started to seek the right
-              vehicle to establish our concept.{" "}
+              originated by hand writing and 20th century book
+              designs—specifically, regulated and balanced text ragging examples
+              from modern swiss book designs. (See good examples of ragged text
+              under Examples tag of the site) Understanding text ragging was
+              straight&shy;forward, so we started investigating the technical
+              end and started to seek the right vehicle to establish our
+              concept.{" "}
             </p>
             <p>
               After a few weeks of research and development, it turns out that
