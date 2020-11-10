@@ -118,11 +118,11 @@ const Essay = () => {
             </p>
             {/* <hr className="ellipses-hr" /> */}
             <p className="paragraph-indent">
-              However, typesetting design has been standing considerably distant
-              from the modern design circles and lost its relevance. By the
-              norms, typesetting has only been embedded in the realm of print
-              and old school design. In the digital world, it stands almost
-              invisible.
+              However, typesetting design[4] has been standing considerably
+              distant from the modern design circles and lost its relevance. By
+              the norms, typesetting has only been embedded in the realm of
+              print and old school design. In the digital world, it stands
+              almost invisible.
             </p>
             <p>
               For typesetting, generally, its existence is for visual display,
