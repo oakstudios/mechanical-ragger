@@ -95,45 +95,44 @@ const Essay = () => {
           </header>
           <MechanicalRagger width={ragged ? "2rem" : "0px"}>
             <p>
-              From Stop-motion to animating graphics with After Effects1,
+              From Stop-motion to animating graphics with After Effects[1],
               carving letters on wood blocks to generate scalable vectorized
-              letters with Glyphs and FontLab Studios2, design inventories
+              letters with Glyphs and FontLab Studios[2], design inventories
               accelerates faster than at any other time in history.
             </p>
             <p className="paragraph-indent">
               A couple of years ago, collaboration on UI or any other design
               project that requires an alliance of designers was daring. One
-              designer might focus on the design, and the rest might be there
-              proffering leadership and giving guidance. This system changed
-              until the appearance of collaborative design software emerged from
-              around 2015 to 2016. Figma3 was one of the few that grabbed the
-              golden spoon, interlinked designers and developers, and produced
-              the first site to assist designers in participating in group
-              projects without extra software on a computer.
+              designer focuses on the design, and the rest might be there
+              proffering leadership and giving guidance. This system ended until
+              collaborative design software emerged from the market around 2015
+              to 2016. Figma[3] was one of the few that grabbed the golden
+              spoon, interlinked designers and developers, and produced the
+              first site to assist designers participating in group projects
+              without installation of extra software on computer.
             </p>
             <p>
               Our design phase is in a stage of steadfast developments and
               changes, including typography, printing, 3D design, AR VR, etc.
-              Every media is advancing in godspeed internationally and globally.
+              Every media is advancing internationally and globally.
             </p>
             {/* <hr className="ellipses-hr" /> */}
             <p className="paragraph-indent">
               However, typesetting design has been standing considerably distant
-              from the modern design circles and lost its relevance. From our
-              view, typesetting has only been embedded in the realm of print and
-              old school design. In the digital world, it stands almost
+              from the modern design circles and lost its relevance. By the
+              norms, typesetting has only been embedded in the realm of print
+              and old school design. In the digital world, it stands almost
               invisible.
             </p>
             <p>
-              Funny, the first thing that came up in my mind is not about
-              typesetting, but rather the Principle of Sufficient Reason from
-              Gottfried Wilhelm Leibniz5—Consequently, everything exists for
-              reasons. For typesetting, its reasons are for visual display,
-              communication, coherence, and establishing provision on a
-              systematic design. In the current digital world, we currently have
-              control over the choice of typeface, font size, font leading, type
-              alignment, etc. However, we do not have any authority over the
-              flow of a paragraph.
+              For typesetting, generally, its existence is for visual display,
+              communication, coherence, and establishes provision on a
+              systematic design. In the current digital world, we hold the
+              authority over the choice of typeface, font size, font leading,
+              and type alignment. However, we do not have any authority over the
+              flow of a paragraph, or maybe advanced typesetting is irrelevant
+              for modern developers and designers to even pay attention to this
+              function[5].
             </p>
             <p className="paragraph-indent">
               The flow of a paragraph is related to only left-alignment,
@@ -142,14 +141,15 @@ const Essay = () => {
               the same. A properly manual ragged paragraph would flow in a
               balanced composition—Long, short, long, short. It should flow
               without running a hefty jump for the eye, else interfering
-              readability of the text. It is just the fundamental instruction of
-              paragraph flow, the more advanced typesetting would even consider
-              the meaning of the text, associate the actual context and its
-              flow. Some designers would prefer not to put a short word at the
-              end of each line. For example, like "A, a, an, of, the, are, is"
-              should not appear at the end of each line. (There are a few books
-              that are recommended for reading if any reader is interested in
-              more information about typography and layout: 1.{" "}
+              readability of the text. It is fundamental for paragraph flow, the
+              more advanced typesetting would even consider the meaning of the
+              text, associate the actual context and its flow. Even more, some
+              designers would prefer not to put a short word at the end of each
+              line for reading purpose. For example, like "A, a, an, of, the,
+              are, is..." should not appear at the end of each line. (If you are
+              a type nerd, there are a few books that are recommended for
+              reading if any reader is interested in more information about
+              typography and layout: 1.{" "}
               <div class="hover-title">Detail in Typography</div>
               <div class="hover-image">
                 {" "}
@@ -167,12 +167,12 @@ const Essay = () => {
               , by Robert Bringhurst)
             </p>
             <p>
-              Back to the point, typesetting in digital media is complicated.
-              The interactive display is limitless; its size varies to fit in
-              any mobile display. When web designers design a website, the
-              website should perform its context functionally in all different
-              screen sizes. This vitality brings convenience, but it is
-              forbidden for typesetting. In some extreme context, the display
+              Back to our arugument, typesetting in digital media is
+              complicated. The interactive display is limitless; its size varies
+              to fit in any mobile display. When web designers design a website,
+              the website should perform its context functionally in all
+              different screen sizes. This vitality brings convenience, but it
+              is forbidden for typesetting. In some extreme context, the display
               screen would show one word at each line. like{" "}
               <div class="hover-title">
                 reading message from a 40mm Apple Watch (394x324px)
@@ -190,13 +190,14 @@ const Essay = () => {
               The idea was inspired by book designs—specifically, regulated and
               balanced text ragging examples from modern swiss book designs.
               (See good examples of ragged text under Examples tag of the site)
-              Understanding text ragging was straight&shy;forward, so our
-              process started investigating the technical end—finding the right
-              vehicle to establish the result.{" "}
+              Understanding text ragging was straight&shy;forward, so we started
+              investigating the technical end and were seeking the right vehicle
+              to establish our concept.{" "}
             </p>
             <p>
-              It turns out that it was easier than we expected. The component's
-              outcome is a javascript utility that accepts child text nodes, a
+              After a few weeks of research and development, it turns out that
+              it was easier than we expected. The component's outcome is a
+              javascript utility that accepts child text nodes, a
               sawtooth/rag-width property, and automatically trims the line
               endings. Put this more simply, each line of text was extracted
               first, and only the odd lines were selected. After that, extrusion
@@ -206,12 +207,14 @@ const Essay = () => {
             </p>
             <p className="paragraph-indent">
               What we did was only a small step in the design industry. There
-              are many pros and cons to the current ragging component. In the
-              future, hopefully, ragging text would be much simpler. Perhaps
-              with future AI technology, computers can calculate and map out the
-              best ragging solution under different situations, like
-              understanding not to put a single letter at the end of each line,
-              or solving any other problems that require manual adjustment.{" "}
+              are many pros and cons to the current ragging component. For
+              exmaple, we currently do not have the control over short letters
+              hanging at the end of a sentence, or typesetting a paragraph based
+              on readability. In the future, hopefully, ragging text would be
+              much simpler. Perhaps with AI technology, computers can calculate
+              and map out the best ragging solution under different scenerios,
+              solving complex problems that would previously require manual
+              adjustment.{" "}
             </p>
           </MechanicalRagger>
         </div>
@@ -241,21 +244,12 @@ const Essay = () => {
             orthography for visual display.
           </p>
           <p>
-            [5] The principle of sufficient reason states that everything must
-            have a reason or a cause. The modern formulation of the principle is
-            usually attributed to Gottfried Leibniz, although the idea was
-            conceived of and utilized by various philosophers who preceded him,
-            including Anaximander, Parmenides, Archimedes, Plato and Aristotle,
-            Cicero, Avicenna, Thomas Aquinas, and Spinoza. Some philosophers
-            have associated the principle of sufficient reason with “ex nihilo
-            nihil fit”. Hamilton identified the laws of inference modus ponens
-            with the “law of Sufficient Reason, or of Reason and Consequent” and
-            modus tollens with its contrapositive expression.
-          </p>
-          <p>
-            [6] Gottfried Wilhelm Leibniz was a prominent German polymath and
-            one of the most important logicians, mathematicians and natural
-            philosophers of the Enlightenment.
+            [5] As the technology grows, people seem to move away from some
+            principles that were guiding us in the past. Same situations have
+            happened in almost all creative fields, for example, students are
+            not taught how to write cursive anymore, tradition are replaced by
+            fast and advanced technology. As we gaining new powers, we seem to
+            also losing our identity.
           </p>
         </div>
       </article>
