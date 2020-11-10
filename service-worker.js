@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Mechanical-Text-Ragger/precache-manifest.6a50982524ceff3c22555a3529e6ff39.js"
+  "/Mechanical-Text-Ragger/precache-manifest.bb26d942592082d501273d21c861402b.js"
 );
 
 self.addEventListener('message', (event) => {
