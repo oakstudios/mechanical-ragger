@@ -167,12 +167,12 @@ const Essay = () => {
               , by Robert Bringhurst)
             </p>
             <p>
-              Back to our arugument, typesetting in digital media is
-              complicated. The interactive display is limitless; its size varies
-              to fit in any mobile display. When web designers design a website,
-              the website should perform its context functionally in all
-              different screen sizes. This vitality brings convenience, but it
-              is forbidden for typesetting. In some extreme context, the display
+              Back to our argument, typesetting in digital media is complicated.
+              The interactive display is limitless; its size varies to fit in
+              any mobile display. When web designers design a website, the
+              website should perform its context functionally in all different
+              screen sizes. This vitality brings convenience, but it is
+              forbidden for typesetting. In some extreme context, the display
               screen would show one word at each line. like{" "}
               <div class="hover-title">
                 reading message from a 40mm Apple Watch (394x324px)
