@@ -187,23 +187,24 @@ const Essay = () => {
               balanced paragraph ragging would reduce the difficulty in reading.{" "}
             </p>
             <p className="paragraph-indent">
-              The idea was inspired by book designs—specifically, regulated and
-              balanced text ragging examples from modern swiss book designs.
-              (See good examples of ragged text under Examples tag of the site)
+              The idea of long-short-long-short ragging method was probably
+              originated by book designs—specifically, regulated and balanced
+              text ragging examples from modern swiss book designs. (See good
+              examples of ragged text under Examples tag of the site)
               Understanding text ragging was straight&shy;forward, so we started
-              investigating the technical end and were seeking the right vehicle
-              to establish our concept.{" "}
+              investigating the technical end and started to seek the right
+              vehicle to establish our concept.{" "}
             </p>
             <p>
               After a few weeks of research and development, it turns out that
               it was easier than we expected. The component's outcome is a
               javascript utility that accepts child text nodes, a
-              sawtooth/rag-width property, and automatically trims the line
-              endings. Put this more simply, each line of text was extracted
-              first, and only the odd lines were selected. After that, extrusion
-              formulated coordinates the font size and its leading, matching the
-              exact line spacing with the text, and here it goes our ragging
-              component.{" "}
+              sawtooth/rag-width property, it automatically trims the line
+              endings. Put this more simply, each line of text was extracted and
+              calculated first, and only the odd lines were selected. After
+              that, extrusion formulated coordinates the font size and its
+              leading, matching the exact line spacing with the text, and here
+              it goes our ragging component.{" "}
             </p>
             <p className="paragraph-indent">
               What we did was only a small step in the design industry. There
