@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/Mechanical-Text-Ragger/static/css/main.b2e510ed.chunk.css",
-    "main.js": "/Mechanical-Text-Ragger/static/js/main.97defb84.chunk.js",
-    "main.js.map": "/Mechanical-Text-Ragger/static/js/main.97defb84.chunk.js.map",
-    "runtime-main.js": "/Mechanical-Text-Ragger/static/js/runtime-main.1c67c9b0.js",
-    "runtime-main.js.map": "/Mechanical-Text-Ragger/static/js/runtime-main.1c67c9b0.js.map",
-    "static/css/2.b1977c56.chunk.css": "/Mechanical-Text-Ragger/static/css/2.b1977c56.chunk.css",
-    "static/js/2.a130db85.chunk.js": "/Mechanical-Text-Ragger/static/js/2.a130db85.chunk.js",
-    "static/js/2.a130db85.chunk.js.map": "/Mechanical-Text-Ragger/static/js/2.a130db85.chunk.js.map",
+    "main.js": "/Mechanical-Text-Ragger/static/js/main.119825b6.chunk.js",
+    "main.js.map": "/Mechanical-Text-Ragger/static/js/main.119825b6.chunk.js.map",
+    "runtime-main.js": "/Mechanical-Text-Ragger/static/js/runtime-main.e6b287c1.js",
+    "runtime-main.js.map": "/Mechanical-Text-Ragger/static/js/runtime-main.e6b287c1.js.map",
+    "static/css/2.98816595.chunk.css": "/Mechanical-Text-Ragger/static/css/2.98816595.chunk.css",
+    "static/js/2.0825169c.chunk.js": "/Mechanical-Text-Ragger/static/js/2.0825169c.chunk.js",
+    "static/js/2.0825169c.chunk.js.map": "/Mechanical-Text-Ragger/static/js/2.0825169c.chunk.js.map",
     "index.html": "/Mechanical-Text-Ragger/index.html",
-    "precache-manifest.d22cfe0de2161f8fd8616fd62aea09b5.js": "/Mechanical-Text-Ragger/precache-manifest.d22cfe0de2161f8fd8616fd62aea09b5.js",
+    "precache-manifest.e6a9d6553b6c53d3da7b562e9b57aa96.js": "/Mechanical-Text-Ragger/precache-manifest.e6a9d6553b6c53d3da7b562e9b57aa96.js",
     "service-worker.js": "/Mechanical-Text-Ragger/service-worker.js",
-    "static/css/2.b1977c56.chunk.css.map": "/Mechanical-Text-Ragger/static/css/2.b1977c56.chunk.css.map",
+    "static/css/2.98816595.chunk.css.map": "/Mechanical-Text-Ragger/static/css/2.98816595.chunk.css.map",
     "static/css/main.b2e510ed.chunk.css.map": "/Mechanical-Text-Ragger/static/css/main.b2e510ed.chunk.css.map",
-    "static/js/2.a130db85.chunk.js.LICENSE.txt": "/Mechanical-Text-Ragger/static/js/2.a130db85.chunk.js.LICENSE.txt",
+    "static/js/2.0825169c.chunk.js.LICENSE.txt": "/Mechanical-Text-Ragger/static/js/2.0825169c.chunk.js.LICENSE.txt",
     "static/media/Telegraf-Bold.woff": "/Mechanical-Text-Ragger/static/media/Telegraf-Bold.420e5dd6.woff",
     "static/media/Telegraf-Regular.woff": "/Mechanical-Text-Ragger/static/media/Telegraf-Regular.0950fa8f.woff",
     "static/media/appleWatchMessage.png": "/Mechanical-Text-Ragger/static/media/appleWatchMessage.57758a71.png",
@@ -36,10 +36,10 @@
     "static/media/tryingtobeHere2.jpg": "/Mechanical-Text-Ragger/static/media/tryingtobeHere2.fca4a32c.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.1c67c9b0.js",
-    "static/css/2.b1977c56.chunk.css",
-    "static/js/2.a130db85.chunk.js",
+    "static/js/runtime-main.e6b287c1.js",
+    "static/css/2.98816595.chunk.css",
+    "static/js/2.0825169c.chunk.js",
     "static/css/main.b2e510ed.chunk.css",
-    "static/js/main.97defb84.chunk.js"
+    "static/js/main.119825b6.chunk.js"
   ]
 }
