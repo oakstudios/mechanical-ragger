@@ -94,7 +94,7 @@ export class MechanicalRaggerCore {
     this.sizeListener.observe(this.container);
   };
 
-  /**s
+  /**
    * @todo: Need a public destroy method to unbind resizeObserver?
    *        Or does garbage collection find it since the reference
    *        gets deleted?
