@@ -8,7 +8,7 @@
 import React from "react";
 import MechanicalRaggerCore from "./core";
 
-const MechanicalRaggerReact = (props) => {
+export const MechanicalRaggerReact = (props) => {
   const containerEl = React.useRef(null);
   const ragger = React.useRef();
   const [exclusionCSS, setExlusionCSS] = React.useState({});
