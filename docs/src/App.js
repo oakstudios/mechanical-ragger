@@ -32,23 +32,22 @@ const Essay = () => {
       <section className="grid wrapper vertical-padder">
         <p className="column-span-4 overview">
           This site serves as a portfolio for Mechanical Ragging Component
-          developed by <span className="hover-title">Oak Studios.</span>
-          <span className="hover-image">
+          developed by <div class="hover-title">Oak Studios.</div>
+          <div class="hover-image">
             {" "}
             <img src={oakLogo} alt="Oak Studios" />
-          </span>
+          </div>
           The Ragging component adjusts paragraphs{" "}
-          <span className="hover-title">to be balanced</span>
-          <span className="hover-image">
+          <div class="hover-title">to be balanced</div>
+          <div class="hover-image">
             {" "}
             <img src={harmonia} alt="harmonia" />
-          </span>
-          , following the{" "}
-          <span className="hover-title">long-short-long-short</span>
-          <span className="hover-image">
+          </div>
+          , following the <div class="hover-title">long-short-long-short</div>
+          <div class="hover-image">
             {" "}
             <img src={raggerExample} alt="RaggerExample" />
-          </span>{" "}
+          </div>{" "}
           sequence. Paragraph ragging has a strong influence on print media, and
           furthermore we cut off the boundary and deliver it to the digital
           design world.
@@ -151,16 +150,14 @@ const Essay = () => {
               a type nerd, there are a few books that are recommended for
               reading if any reader is interested in more information about
               typography and layout: 1.{" "}
-              <div className="hover-title">Detail in Typography</div>
-              <div className="hover-image">
+              <div class="hover-title">Detail in Typography</div>
+              <div class="hover-image">
                 {" "}
                 <img src={detailinTypography} alt="Detail in Typography" />
               </div>
               , by Jost Hochuli; 2.{" "}
-              <div className="hover-title">
-                The Elements of Typographic Style
-              </div>
-              <div className="hover-image">
+              <div class="hover-title">The Elements of Typographic Style</div>
+              <div class="hover-image">
                 {" "}
                 <img
                   src={elementsofTypographicStyle}
@@ -177,10 +174,10 @@ const Essay = () => {
               screen sizes. This vitality brings convenience, but it is
               forbidden for typesetting. In some extreme context, the display
               screen would show one word at each line. like{" "}
-              <div className="hover-title">
+              <div class="hover-title">
                 reading message from a 40mm Apple Watch (394x324px)
               </div>
-              <div className="hover-image">
+              <div class="hover-image">
                 {" "}
                 <img src={appleWatchMessage} alt="Apple Watch Message" />
               </div>
@@ -497,7 +494,7 @@ function App() {
         "--header-height": `${headerBounds.height}px`,
       }}
     >
-      <span className={`cursor state--${cursorSize}`} />
+      <span class={`cursor state--${cursorSize}`} />
       <header
         className="grid navigation wrapper vertical-padder"
         ref={headerRef}
