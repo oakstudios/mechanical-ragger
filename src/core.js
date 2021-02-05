@@ -1,8 +1,10 @@
 /**
- * mechanical-ragger
- * Oak Studios
- * Copyright 2021
+ * @package mechanical-ragger
+ * @fileoverview Core class
+ * @license MIT
+ * @author Oak Studios
  */
+
 class MechanicalRaggerCore {
   constructor({ container, onUpdate } = {}) {
     this.sizeListener = new ResizeObserver(this.sizeListenerCallback);
@@ -91,6 +93,12 @@ class MechanicalRaggerCore {
   attachSizeListener = () => {
     this.sizeListener.observe(this.container);
   };
+
+  /**s
+   * @todo: Need a public destroy method to unbind resizeObserver?
+   *        Or does garbage collection find it since the reference
+   *        gets deleted?
+   */
 }
 
-module.exports = MechanicalRaggerCore;
+export default MechanicalRaggerCore;

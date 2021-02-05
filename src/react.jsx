@@ -1,19 +1,23 @@
+/**
+ * @package mechanical-ragger
+ * @fileoverview React Component entry
+ * @license MIT
+ * @author Oak Studios
+ */
+
 import React from "react";
-console.log("hello");
-import Ragger from "./MechanicalRagger.js";
-console.log("hello2");
+import MechanicalRaggerCore from "./core";
 
-console.log({ Ragger });
-
-const TextRagger = (props) => {
+const MechanicalRaggerReact = (props) => {
   const containerEl = React.useRef(null);
   const ragger = React.useRef();
   const [exclusionCSS, setExlusionCSS] = React.useState({});
 
+  if (containerEl.current) {
+  }
   React.useEffect(() => {
-    ragger.current = new Ragger({
-      container,
-      width: props.width,
+    ragger.current = new MechanicalRaggerCore({
+      container: containerEl,
       onUpdate: setExlusionCSS,
     });
   }, []);
@@ -22,10 +26,6 @@ const TextRagger = (props) => {
     ragger.current.width = props.width;
   }, [props.width]);
 
-  React.useEffect(() => {
-    ragger.current.container = containerEl;
-  }, [containerEl]);
-
   return (
     <div ref={containerEl}>
       <div style={exclusionCSS} />
@@ -33,4 +33,5 @@ const TextRagger = (props) => {
     </div>
   );
 };
-export default TextRagger;
+
+export default MechanicalRaggerReact;

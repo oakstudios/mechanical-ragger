@@ -1,11 +1,19 @@
 /**
- * mechanical-ragger
- * Oak Studios
- * Copyright 2021
+ * @package mechanical-ragger
+ * @fileoverview Web Component entry
+ * @license MIT
+ * @author Oak Studios
  */
 
-import MechanicalRaggerCore from "./MechanicalRagger-core";
+import MechanicalRaggerCore from "./core";
 
+/**
+ * <mechanical-ragger>
+ *   #shadow-root
+ *     <this.exclusion />
+ *     <this.textRoot />
+ * </mechanical-ragger>
+ */
 class MechanicalRaggerWC extends HTMLElement {
   constructor() {
     super();
@@ -19,15 +27,16 @@ class MechanicalRaggerWC extends HTMLElement {
 
     this.ragger = new MechanicalRaggerCore({
       container: this.textRoot,
-      onUpdate: this.setStyles,
+      onUpdate: this.setExclusionStyles,
     });
   }
 
   connectedCallback = () => {};
 
-  setStyles = (value) => {
+  setExclusionStyles = (value) => {
     Object.assign(this.exclusion.style, value);
   };
 }
 
-customElements.define("mechanical-ragger", MechanicalRaggerWC);
+export default MechanicalRaggerWC;
+customElements.define("smechanical-ragger", MechanicalRaggerWC);
