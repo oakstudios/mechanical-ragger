@@ -8,39 +8,35 @@ npm i @oakstudios/mechanical-ragger
 
 ### Web Component
 
-load the web component:
+1. load the web component:
 
-```html
-<!-- this automatically registers the component in the window as mechanical-ragger -->
-<script src="@oakstudios/mechanical-ragger/web-component-auto-register"></script>
-```
+   ```html
+   <!-- this automatically registers the component in the window as mechanical-ragger -->
+   <script src="@oakstudios/mechanical-ragger/web-component-auto-register"></script>
+   ```
 
-_OR import in JS and register the component manually_
+   _OR import in JS and register the component manually_
 
-js:
+   js:
 
-```js
-import MechanicalRagger from "@oakstudios/mechanical-ragger/web-component";
+   ```js
+   import MechanicalRagger from "@oakstudios/mechanical-ragger/web-component";
 
-customElements.define("mechanical-ragger", MechanicalRagger);
-```
+   customElements.define("mechanical-ragger", MechanicalRagger);
+   ```
 
-then in html:
+2. then in html:
 
-```html
-<mechanical-ragger>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-</mechanical-ragger>
-```
+   ```html
+   <mechanical-ragger>
+     Lorem ipsum dolor sit amet consectetur adipisicing elit.
+   </mechanical-ragger>
+   ```
 
 ### React Component
 
-jsx:
-
 ```jsx
 import MechanicalRagger from "@oakstudios/mechanical-ragger/react";
-
-// ...
 
 export default () => {
   return <MechanicalRagger>Lorem ipsum dolor sit amet.</MechanicalRagger>;
@@ -49,7 +45,9 @@ export default () => {
 
 ### Other Frameworks
 
-While web components can be used in most any framework, if you'd like deep integration with the framework of your choosing, you can reference `src/web-component.js` and `src/react.jsx` to reference in implementing mechanical-ragger elsewhere. The npm package also exposes the MechanicalRaggerCore module that these use. eg:
+While web components can be used in most any framework, if you'd like deep integration with the framework of your choosing, you can use [`src/web-component.js`](src/web-component.js) and [`src/react.jsx`](src/react.jsx) to reference in implementing `mechanical-ragger` elsewhere.
+
+The npm package also exposes the `MechanicalRaggerCore` module that these use. eg:
 
 ```js
 import MechanicalRaggerCore from "@oakstudios/mechanical-ragger/core";
@@ -84,12 +82,10 @@ HTML and CSS both offer tools to manage this. In CSS:
 
 ```css
 mechanical-ragger {
-  /* Inserts hyphens according to browser hyphenation dictionaries */
+  /* Insert hyphens according to browser hyphenation dictionaries */
   hyphens: auto;
 
-  /* OR */
-
-  /* Only inserts hyphens at the author's request */
+  /* Or only inserts hyphens at the author's request */
   hyphens: manual;
 }
 ```
