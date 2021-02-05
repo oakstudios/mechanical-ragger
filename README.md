@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-npm i @oakstudios/mechanical-ragger
+npm i mechanical-ragger
 ```
 
 ### Web Component
@@ -12,13 +12,13 @@ npm i @oakstudios/mechanical-ragger
 
    ```html
    <!-- this automatically registers the component in the window as mechanical-ragger -->
-   <script src="@oakstudios/mechanical-ragger/web-component-auto-register"></script>
+   <script src="mechanical-ragger/web-component-auto-register"></script>
    ```
 
    _OR_ import in JS and register the component manually:
 
    ```js
-   import MechanicalRagger from "@oakstudios/mechanical-ragger/web-component";
+   import MechanicalRagger from "mechanical-ragger/web-component";
 
    customElements.define("mechanical-ragger", MechanicalRagger);
    ```
@@ -34,7 +34,7 @@ npm i @oakstudios/mechanical-ragger
 ### React Component
 
 ```jsx
-import MechanicalRagger from "@oakstudios/mechanical-ragger/react";
+import MechanicalRagger from "mechanical-ragger/react";
 
 export default () => {
   return <MechanicalRagger>Lorem ipsum dolor sit amet.</MechanicalRagger>;
@@ -48,7 +48,7 @@ While web components can be used in most any framework, if you'd like deep integ
 The npm package also exposes the `MechanicalRaggerCore` module that these use. eg:
 
 ```js
-import MechanicalRaggerCore from "@oakstudios/mechanical-ragger/core";
+import MechanicalRaggerCore from "mechanical-ragger/core";
 ```
 
 ## Options
