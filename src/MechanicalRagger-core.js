@@ -4,76 +4,68 @@
  * Copyright 2021
  */
 class MechanicalRaggerCore {
-  constructor({ container, width, onUpdate } = {}) {
-    this.container = container;
-    this.width = width;
+  constructor({ container, onUpdate } = {}) {
+    this.sizeListener = new ResizeObserver(this.sizeListenerCallback);
+
     this.containerBounds = {};
+    this.container = container;
+
     this.updateCallback = onUpdate || function () {};
-
-    this.attachSizeListener();
-
-    this.sizeListener = new ResizeObserver(this.sizeListener);
   }
 
   /**
-   * Setters
+   * Public Properties
    */
 
+  get container() {
+    return this._container;
+  }
   set container(value) {
-    this.container = value;
+    this._container = value;
 
     this.attachSizeListener();
   }
-  set width(value) {
-    this.width = value;
-
-    this.update();
-  }
-  set containerBounds(value) {
-    this.containerBounds = value;
-  }
 
   /**
-   * Getters
+   * Derived Properties
    */
 
-  get lineHeight() {
+  get exclusionPolygon() {
     const containerLineHeight = document.defaultView
       .getComputedStyle(this.container, null)
       .getPropertyValue("line-height");
 
-    return Math.floor(parseFloat(containerLineHeight));
-  }
+    const lineHeight = Math.floor(parseFloat(containerLineHeight));
 
-  get lineCount() {
-    return Math.floor(this.containerBounds.height / this.lineHeight);
-  }
+    const lineCount = Math.floor(this.containerBounds.height / lineHeight);
 
-  get exclusionPolygon() {
-    const lineArray = Array(this.lineCount).fill();
+    const lineArray = Array(lineCount).fill();
 
     return `${lineArray
       .map((line, i) => {
         const isEven = i % 2 === 0;
-        const y0 = i * this.lineHeight;
-        const y1 = i * this.lineHeight + this.lineHeight;
+        const y0 = i * lineHeight;
+        const y1 = y0 + lineHeight;
+        const midpoint = y0 + lineHeight / 2;
 
         if (isEven) {
           return `100% ${y0}px, 100% ${y1}px,`;
         } else {
-          return `0% ${y0}px, 0% ${y1}px,`;
+          return `0% ${midpoint}px, 0% ${midpoint}px,`;
         }
       })
-      .join("")} 100% ${this.lineCount * this.lineHeight}px`;
+      .join("")} 100% ${lineCount * lineHeight}px`;
   }
 
   get cssProperties() {
+    const shape = this.exclusionPolygon;
     return {
-      clipPath: `polygon(${this.exclusionPolygon})`,
-      shapeOutside: `polygon(${this.exclusionPolygon})`,
-      width: this.width,
+      clipPath: `polygon(${shape})`,
+      shapeOutside: `polygon(${shape})`,
+      width: "var(--ragging-width, 1em)",
       height: `${this.containerBounds.height}px`,
       float: "right",
+      background: "blue",
     };
   }
 
@@ -81,21 +73,24 @@ class MechanicalRaggerCore {
    * Methods
    */
 
-  sizeListener(entries) {
+  sizeListenerCallback = (entries) => {
     for (let entry of entries) {
       // TODO: use entry.contentBoxSize for vertical writing modes
       this.containerBounds = entry.contentRect;
     }
     this.update();
-  }
+  };
 
-  update() {
-    this.updateCallback(this.cssProperties);
-  }
+  update = () => {
+    const styles = this.cssProperties;
+    if (styles) {
+      this.updateCallback(styles);
+    }
+  };
 
-  attachSizeListener() {
+  attachSizeListener = () => {
     this.sizeListener.observe(this.container);
-  }
+  };
 }
 
 module.exports = MechanicalRaggerCore;
