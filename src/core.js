@@ -67,7 +67,6 @@ export class MechanicalRaggerCore {
       width: "var(--ragging-width, 1em)",
       height: `${this.containerBounds.height}px`,
       float: "right",
-      background: "blue",
     };
   }
 
