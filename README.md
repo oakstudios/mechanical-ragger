@@ -15,9 +15,7 @@ npm i @oakstudios/mechanical-ragger
    <script src="@oakstudios/mechanical-ragger/web-component-auto-register"></script>
    ```
 
-   _OR import in JS and register the component manually_
-
-   js:
+   _OR_ import in JS and register the component manually:
 
    ```js
    import MechanicalRagger from "@oakstudios/mechanical-ragger/web-component";
