@@ -14,7 +14,7 @@ import MechanicalRaggerCore from "./core";
  *     <this.textRoot />
  * </mechanical-ragger>
  */
-class MechanicalRaggerWC extends HTMLElement {
+export class MechanicalRaggerWC extends HTMLElement {
   constructor() {
     super();
 
@@ -39,4 +39,3 @@ class MechanicalRaggerWC extends HTMLElement {
 }
 
 export default MechanicalRaggerWC;
-customElements.define("smechanical-ragger", MechanicalRaggerWC);

@@ -1,39 +1,27 @@
 {
-  "name": "@oakstudios/mechanical-ragger",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "https://oakstudios.github.io/mechanical-ragger/",
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "node-sass": "^4.14.1",
-    "photoswipe": "4.1.3",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-merge-refs": "^1.1.0",
-    "react-scripts": "3.4.2",
-    "react-use-measure": "^2.0.1"
+  "name": "mechanical-ragger",
+  "version": "0.1.5",
+  "description": "A layout tool that automatically rags long text by line",
+  "main": "src/index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "rollup": "^2.38.5",
+    "rollup-plugin-terser": "^7.0.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/oakstudios/mechanical-ragger.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "author": "Oak Studios",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oakstudios/mechanical-ragger/issues"
+  },
+  "homepage": "https://github.com/oakstudios/mechanical-ragger#readme"
 }

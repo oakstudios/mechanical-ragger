@@ -5,7 +5,7 @@
  * @author Oak Studios
  */
 
-class MechanicalRaggerCore {
+export class MechanicalRaggerCore {
   constructor({ container, onUpdate } = {}) {
     this.sizeListener = new ResizeObserver(this.sizeListenerCallback);
 
