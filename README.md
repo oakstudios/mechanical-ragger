@@ -101,3 +101,15 @@ In HTML, [the `<wbr>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Ele
 ### ⚠️ Chrome and other browsers do not allow for floating-point decimal line-heights. All line-heights are rounded to the nearest CSS pixel (px values that do not factor in screen pixel-density).
 
 To ensure that the ragging does not fall out of sync with the text it controls, opt for line-heights that evaluate to whole pixels.
+
+## Development
+
+### Docs
+
+`cd` into the `docs/` directory, where you can interact with the `create-react-app` instance.
+
+```
+cd docs
+
+npm run start
+```
