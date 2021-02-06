@@ -12,10 +12,16 @@ npm i mechanical-ragger
 
    ```html
    <!-- this automatically registers the component in the window as mechanical-ragger -->
-   <script src="mechanical-ragger/web-component-auto-register"></script>
+   <script src="path_in_your_project_to/mechanical-ragger/web-component-auto-register.js"></script>
    ```
 
-   _OR_ import in JS and register the component manually:
+   _OR_ import the auto-register function in JS
+
+   ```js
+   import "mechanical-ragger/web-component-auto-register";
+   ```
+
+   _OR_ register the component manually:
 
    ```js
    import MechanicalRagger from "mechanical-ragger/web-component";
