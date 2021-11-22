@@ -69,7 +69,7 @@ body {
   --ragging-width: 3rem;
 }
 
-/* Or locally */
+/* Or Locally */
 mechanical-ragger:nth-child(1) {
   --ragging-width: 4rem;
 }
@@ -78,11 +78,32 @@ mechanical-ragger:nth-child(2) {
 }
 ```
 
+Because this is a CSS custom property, you can change this value in the same place that you set the rest of your styles. The value will also respect other runtime conditions like media queries and application state.
+
+```css
+mechanical-ragger {
+  --ragging-width: 2rem;
+}
+/* Media Queries */
+@media (min-width: 480px) {
+  mechanical-ragger {
+    --ragging-width: 3rem;
+ }
+}
+/* User Preferences */
+body.no-ragging mechanical-ragger {
+  --ragging-width: 0px;
+}
+```
+
 ## Best Practices
 
-### ℹ️ You may hope for text lines to reach closer to the end of each line to make the ragging cleaner.
 
-HTML and CSS both offer tools to manage this. In CSS:
+### ℹ️ Tidying line-ends
+
+You may hope for text lines to reach closer to the end of each line to make the ragging cleaner. HTML and CSS both offer tools to manage this.
+
+In CSS:
 
 ```css
 mechanical-ragger {
@@ -98,9 +119,10 @@ mechanical-ragger {
 
 In HTML, [the `<wbr>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr) can be used to suggest a word breakpoint _without_ hyphenation.
 
-### ⚠️ Chrome and other browsers do not allow for floating-point decimal line-heights. All line-heights are rounded to the nearest CSS pixel (px values that do not factor in screen pixel-density).
 
-To ensure that the ragging does not fall out of sync with the text it controls, opt for line-heights that evaluate to whole pixels.
+### ⚠️ Browser handling of line-heights.
+
+Chrome and other browsers do not allow for floating-point decimal line-heights. All line-heights are rounded to the nearest CSS pixel (px values that do not factor in screen pixel-density). To ensure that the ragging does not fall out of sync with the text it controls, opt for line-heights that evaluate to whole pixels.
 
 ## Development
 
