@@ -1,8 +1,8 @@
 {
-  "name": "mechanical-ragger",
-  "version": "0.1.5",
+  "name": "@oakstudios/mechanical-ragger",
+  "version": "0.1.6",
   "description": "A layout tool that automatically rags long text by line",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "directories": {
     "doc": "docs"
   },
@@ -26,10 +26,14 @@
     "type": "git",
     "url": "git+ssh://git@github.com/oakstudios/mechanical-ragger.git"
   },
-  "author": "Oak Studios",
+  "author": "Oak Studios <info@oak.is> https://oak.is",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/oakstudios/mechanical-ragger/issues"
   },
-  "homepage": "https://github.com/oakstudios/mechanical-ragger#readme"
+  "homepage": "https://github.com/oakstudios/mechanical-ragger#readme",
+  "keywords": [
+    "typesetting",
+    "typography"
+  ]
 }
