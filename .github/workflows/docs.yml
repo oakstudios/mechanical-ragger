@@ -1,5 +1,8 @@
 name: Docs Deploy
-on: [push]
+on:
+  push:
+    branches:
+      - main
 jobs:
   docs-deploy:
     runs-on: ubuntu-latest
