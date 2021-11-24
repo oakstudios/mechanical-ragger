@@ -1,6 +1,6 @@
 import React, { useState, useLayoutEffect, useEffect } from "react";
 import "./App.scss";
-import MechanicalRagger from "./components/MechanicalRagger";
+import { MechanicalRaggerReact as MechanicalRagger } from "@oakstudios/mechanical-ragger";
 import "./components/InvertCursor.js";
 import PhotoSwipeRoot from "./components/PhotoSwipe";
 import PhotoSwipe from "photoswipe";
