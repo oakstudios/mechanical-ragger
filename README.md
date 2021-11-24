@@ -10,26 +10,28 @@ npm i @oakstudios/mechanical-ragger
 
 1. Load the web component. Choose the option that best suits your needs:
 
-   ```html
-   <!-- this automatically registers the component in the window as mechanical-ragger -->
-   <script src="https://unpkg.com/@oakstudios/mechanical-ragger@0.1.6/dist/web-component-auto-register.js"></script>
-   ```
+Using a `script` tag:
 
-   _OR_ import the auto-register function in JS
+```html
+<!-- this automatically registers the component in the window as mechanical-ragger -->
+<script src="https://unpkg.com/@oakstudios/mechanical-ragger@0.1.6/dist/web-component-auto-register.js"></script>
+```
 
-   ```js
-   import "@oakstudios/mechanical-ragger/dist/web-component-auto-register";
-   ```
+_OR_ importing the same auto-register function in JS:
 
-   _OR_ register the component manually:
+```js
+import "@oakstudios/mechanical-ragger/dist/web-component-auto-register";
+```
 
-   ```js
-   import { MechanicalRaggerWC } from "@oakstudios/mechanical-ragger";
+_OR_ registering the component manually:
 
-   customElements.define("mechanical-ragger", MechanicalRaggerWC);
-   ```
+```js
+import { MechanicalRaggerWC } from "@oakstudios/mechanical-ragger";
 
-2. then in html:
+customElements.define("mechanical-ragger", MechanicalRaggerWC);
+```
+
+2. Then add it to your HTML:
 
    ```html
    <mechanical-ragger>
@@ -123,6 +125,10 @@ In HTML, [the `<wbr>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Ele
 Chrome and other browsers do not allow for floating-point decimal line-heights. All line-heights are rounded to the nearest CSS pixel (px values that do not factor in screen pixel-density). To ensure that the ragging does not fall out of sync with the text it controls, opt for line-heights that evaluate to whole pixels.
 
 ## Development
+
+### Package
+
+`npm run build` in the root directory. To see the resulting module generated from the `src/` directory, check `dist/`.
 
 ### Docs
 
