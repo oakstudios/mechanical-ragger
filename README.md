@@ -3,30 +3,30 @@
 ## Installation
 
 ```
-npm i mechanical-ragger
+npm i @oakstudios/mechanical-ragger
 ```
 
 ### Web Component
 
-1. load the web component:
+1. Load the web component. Choose the option that best suits your needs:
 
    ```html
    <!-- this automatically registers the component in the window as mechanical-ragger -->
-   <script src="path_in_your_project_to/mechanical-ragger/web-component-auto-register.js"></script>
+   <script src="https://unpkg.com/@oakstudios/mechanical-ragger@0.1.6/dist/web-component-auto-register.js"></script>
    ```
 
    _OR_ import the auto-register function in JS
 
    ```js
-   import "mechanical-ragger/web-component-auto-register";
+   import "@oakstudios/mechanical-ragger/dist/web-component-auto-register";
    ```
 
    _OR_ register the component manually:
 
    ```js
-   import MechanicalRagger from "mechanical-ragger/web-component";
+   import { MechanicalRaggerWC } from "@oakstudios/mechanical-ragger";
 
-   customElements.define("mechanical-ragger", MechanicalRagger);
+   customElements.define("mechanical-ragger", MechanicalRaggerWC);
    ```
 
 2. then in html:
@@ -40,7 +40,7 @@ npm i mechanical-ragger
 ### React Component
 
 ```jsx
-import MechanicalRagger from "mechanical-ragger/react";
+import { MechanicalRaggerReact as MechanicalRagger } from "@oakstudios/mechanical-ragger";
 
 export default () => {
   return <MechanicalRagger>Lorem ipsum dolor sit amet.</MechanicalRagger>;
@@ -54,7 +54,7 @@ While web components can be used in most any framework, if you'd like deep integ
 The npm package also exposes the `MechanicalRaggerCore` module that these use. eg:
 
 ```js
-import MechanicalRaggerCore from "mechanical-ragger/core";
+import { MechanicalRaggerCore } from "@oakstudios/mechanical-ragger";
 ```
 
 ## Options
@@ -88,7 +88,7 @@ mechanical-ragger {
 @media (min-width: 480px) {
   mechanical-ragger {
     --ragging-width: 3rem;
- }
+  }
 }
 /* User Preferences */
 body.no-ragging mechanical-ragger {
@@ -97,7 +97,6 @@ body.no-ragging mechanical-ragger {
 ```
 
 ## Best Practices
-
 
 ### ℹ️ Tidying line-ends
 
@@ -118,7 +117,6 @@ mechanical-ragger {
 [With `hyphens: manual`, use the `&shy;` HTML entity](https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens#suggesting_line_break_opportunities) in your text to suggest hyphenation breakpoints to the browser.
 
 In HTML, [the `<wbr>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr) can be used to suggest a word breakpoint _without_ hyphenation.
-
 
 ### ⚠️ Browser handling of line-heights.
 
