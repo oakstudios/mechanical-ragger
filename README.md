@@ -9,27 +9,27 @@ npm i @oakstudios/mechanical-ragger
 ### Web Component
 
 1. Load the web component. Choose the option that best suits your needs:
-
-Using a `script` tag:
-
-```html
-<!-- this automatically registers the component in the window as mechanical-ragger -->
-<script src="https://unpkg.com/@oakstudios/mechanical-ragger@0.1.6/dist/web-component-auto-register.js"></script>
-```
-
-_OR_ importing the same auto-register function in JS:
-
-```js
-import "@oakstudios/mechanical-ragger/dist/web-component-auto-register";
-```
-
-_OR_ registering the component manually:
-
-```js
-import { MechanicalRaggerWC } from "@oakstudios/mechanical-ragger";
-
-customElements.define("mechanical-ragger", MechanicalRaggerWC);
-```
+    
+    Using a `script` tag:
+    
+    ```html
+    <!-- this automatically registers the component in the window as mechanical-ragger -->
+    <script src="https://unpkg.com/@oakstudios/mechanical-ragger@0.1.6/dist/web-component-auto-register.js"></script>
+    ```
+    
+    _OR_ importing the same auto-register function in JS:
+    
+    ```js
+    import "@oakstudios/mechanical-ragger/dist/web-component-auto-register";
+    ```
+    
+    _OR_ registering the component manually:
+    
+    ```js
+    import { MechanicalRaggerWC } from "@oakstudios/mechanical-ragger";
+    
+    customElements.define("mechanical-ragger", MechanicalRaggerWC);
+    ```
 
 2. Then add it to your HTML:
 
@@ -128,7 +128,7 @@ Chrome and other browsers do not allow for floating-point decimal line-heights. 
 
 ### Package
 
-`npm run build` in the root directory. To see the resulting module generated from the `src/` directory, check `dist/`.
+`npm run build` in the root directory. To see the resulting modules generated from the `src/` directory, check `dist/`.
 
 ### Docs
 
