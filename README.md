@@ -98,6 +98,8 @@ body.no-ragging mechanical-ragger {
 }
 ```
 
+You can also use any css unit (`ch`, `em`, `rem`, `vw`, etc)
+
 ## Best Practices
 
 ### ℹ️ Tidying line-ends
