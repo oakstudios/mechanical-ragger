@@ -12,7 +12,7 @@ jobs:
       - name: Install and Build Docs
         run: |
           cd docs
-          npm i
+          npm ci
           npm run build
 
       - name: Deploy Docs
