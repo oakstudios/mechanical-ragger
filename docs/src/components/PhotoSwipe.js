@@ -2,7 +2,7 @@ import React from "react";
 
 export default () => {
   return (
-    <div className="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div className="pswp" tabIndex="-1" role="dialog" aria-hidden="true">
       <div className="pswp__bg"></div>
 
       <div className="pswp__scroll-wrap">

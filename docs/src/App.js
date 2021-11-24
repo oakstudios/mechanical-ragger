@@ -2,15 +2,15 @@ import React, { useState, useLayoutEffect, useEffect } from "react";
 import "./App.scss";
 import { MechanicalRaggerReact as MechanicalRagger } from "@oakstudios/mechanical-ragger";
 import "./components/InvertCursor.js";
+import useMeasure from "react-use-measure";
+
 import PhotoSwipeRoot from "./components/PhotoSwipe";
 import PhotoSwipe from "photoswipe";
 import PhotoSwipeUI_Default from "photoswipe/dist/photoswipe-ui-default.js";
-import useMeasure from "react-use-measure";
 import "photoswipe/dist/photoswipe.css";
 import "photoswipe/src/css/default-skin/default-skin.scss";
+
 import appleWatchMessage from "./images/appleWatchMessage.png";
-import detailinTypography from "./images/detailinTypography.jpg";
-import elementsofTypographicStyle from "./images/elementsofTypographicStyle.jpg";
 import friendship2 from "./images/friendship2.jpg";
 import friendshipCover from "./images/friendshipCover.jpg";
 import harmonia from "./images/harmonia.png";
@@ -32,19 +32,19 @@ const Essay = () => {
       <section className="grid wrapper vertical-padder">
         <p className="column-span-4 overview">
           This site serves as a portfolio for Mechanical Ragging Component
-          developed by <div class="hover-title">Oak Studios.</div>
-          <div class="hover-image">
+          developed by <div className="hover-title">Oak Studios.</div>
+          <div className="hover-image">
             {" "}
             <img src={oakLogo} alt="Oak Studios" />
           </div>
           The Ragging component adjusts paragraphs{" "}
-          <div class="hover-title">to be balanced</div>
-          <div class="hover-image">
+          <div className="hover-title">to be balanced</div>
+          <div className="hover-image">
             {" "}
             <img src={harmonia} alt="harmonia" />
           </div>
-          , following the <div class="hover-title">long-short-long-short</div>
-          <div class="hover-image">
+          , following the <div className="hover-title">long-short-long-short</div>
+          <div className="hover-image">
             {" "}
             <img src={raggerExample} alt="RaggerExample" />
           </div>{" "}
@@ -163,8 +163,8 @@ const Essay = () => {
               sizes. This unlimited interactive screen view brings convenience,
               but it could be forbidden for typesetting. In some extreme
               context, the display screen would show one word at each line. Like{" "}
-              <div class="hover-title"></div>
-              <div class="hover-image">
+              <div className="hover-title"></div>
+              <div className="hover-image">
                 {" "}
                 <img src={appleWatchMessage} alt="Apple Watch Message" />
               </div>
@@ -487,7 +487,7 @@ function App() {
         "--header-height": `${headerBounds.height}px`,
       }}
     >
-      <span class={`cursor state--${cursorSize}`} />
+      <span className={`cursor state--${cursorSize}`} />
       <header
         className="grid navigation wrapper vertical-padder"
         ref={headerRef}
