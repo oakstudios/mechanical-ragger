@@ -10,20 +10,20 @@ import PhotoSwipeUI_Default from "photoswipe/dist/photoswipe-ui-default.js";
 import "photoswipe/dist/photoswipe.css";
 import "photoswipe/src/css/default-skin/default-skin.scss";
 
-import appleWatchMessage from "./images/appleWatchMessage.png";
-import friendship2 from "./images/friendship2.jpg";
-import friendshipCover from "./images/friendshipCover.jpg";
-import harmonia from "./images/harmonia.png";
-import kaleidoscope from "./images/kaleidoscope.jpg";
-import kaleidoscope2 from "./images/kaleidoscope2.jpg";
-import oakLogo from "./images/oakLogo.png";
-import raggerExample from "./images/raggerExample.png";
-import spécimen from "./images/spécimen.jpg";
-import spécimen2 from "./images/spécimen2.jpg";
-import protest from "./images/protest.jpg";
-import protest2 from "./images/protest2.jpg";
-import tryingtobeHere from "./images/tryingtobeHere.jpg";
-import tryingtobeHere2 from "./images/tryingtobeHere2.jpg";
+import appleWatchMessage from "./images/appleWatchMessage.webp";
+import friendship2 from "./images/friendship2.webp";
+import friendshipCover from "./images/friendshipCover.webp";
+import harmonia from "./images/harmonia.webp";
+import kaleidoscope from "./images/kaleidoscope.webp";
+import kaleidoscope2 from "./images/kaleidoscope2.webp";
+import oakLogo from "./images/oakLogo.webp";
+import raggerExample from "./images/raggerExample.webp";
+import spécimen from "./images/spécimen.webp";
+import spécimen2 from "./images/spécimen2.webp";
+import protest from "./images/protest.webp";
+import protest2 from "./images/protest2.webp";
+import tryingtobeHere from "./images/tryingtobeHere.webp";
+import tryingtobeHere2 from "./images/tryingtobeHere2.webp";
 
 const Essay = () => {
   const [ragged, setRagging] = useState(true);
