@@ -28,7 +28,7 @@ import tryingtobeHere2 from "./images/tryingtobeHere2.jpg";
 const Essay = () => {
   const [ragged, setRagging] = useState(true);
   return (
-    <div>
+    <div style={{ "--ragging-width": ragged ? "2rem" : "0px" }}>
       <section className="grid wrapper vertical-padder">
         <p className="column-span-4 overview">
           This site serves as a portfolio for Mechanical Ragging Component
@@ -93,7 +93,7 @@ const Essay = () => {
             </h1>
             <br></br>
           </header>
-          <MechanicalRagger width={ragged ? "2rem" : "0px"}>
+          <MechanicalRagger>
             <p>
               From Stop-motion to animating graphics with After Effects, carving
               letters on wood blocks to create scalable vectorized letters with
