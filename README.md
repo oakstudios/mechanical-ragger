@@ -1,68 +1,141 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Mechanical Ragger
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+```
+npm i @oakstudios/mechanical-ragger
+```
 
-### `yarn start`
+### Web Component
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Load the web component. Choose the option that best suits your needs:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Using a `script` tag:
 
-### `yarn test`
+```html
+<!-- this automatically registers the component in the window as mechanical-ragger -->
+<script src="https://unpkg.com/@oakstudios/mechanical-ragger@0.1.6/dist/web-component-auto-register.js"></script>
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+_OR_ importing the same auto-register function in JS:
 
-### `yarn build`
+```js
+import "@oakstudios/mechanical-ragger/dist/web-component-auto-register";
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+_OR_ registering the component manually:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```js
+import { MechanicalRaggerWC } from "@oakstudios/mechanical-ragger";
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+customElements.define("mechanical-ragger", MechanicalRaggerWC);
+```
 
-### `yarn eject`
+2. Then add it to your HTML:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   ```html
+   <mechanical-ragger>
+     Lorem ipsum dolor sit amet consectetur adipisicing elit.
+   </mechanical-ragger>
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### React Component
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```jsx
+import { MechanicalRaggerReact as MechanicalRagger } from "@oakstudios/mechanical-ragger";
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+export default () => {
+  return <MechanicalRagger>Lorem ipsum dolor sit amet.</MechanicalRagger>;
+};
+```
 
-## Learn More
+### Other Frameworks
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+While web components can be used in most any framework, if you'd like deep integration with the framework of your choosing, you can use [`src/web-component.js`](src/web-component.js) and [`src/react.jsx`](src/react.jsx) to reference in implementing `mechanical-ragger` elsewhere.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The npm package also exposes the `MechanicalRaggerCore` module that these use. eg:
 
-### Code Splitting
+```js
+import { MechanicalRaggerCore } from "@oakstudios/mechanical-ragger";
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Options
 
-### Analyzing the Bundle Size
+### `--ragging-width`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+`mechanical-ragger` inherits the depth of the mechanical ragging from a CSS custom property. To set this to a value other than the default, apply the custom property anywhere in the DOM containing the `mechanical-ragger`.
 
-### Making a Progressive Web App
+```css
+/* Globally... */
+body {
+  --ragging-width: 3rem;
+}
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+/* Or Locally */
+mechanical-ragger:nth-child(1) {
+  --ragging-width: 4rem;
+}
+mechanical-ragger:nth-child(2) {
+  --ragging-width: 2rem;
+}
+```
 
-### Advanced Configuration
+Because this is a CSS custom property, you can change this value in the same place that you set the rest of your styles. The value will also respect other runtime conditions like media queries and application state.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+```css
+mechanical-ragger {
+  --ragging-width: 2rem;
+}
+/* Media Queries */
+@media (min-width: 480px) {
+  mechanical-ragger {
+    --ragging-width: 3rem;
+  }
+}
+/* User Preferences */
+body.no-ragging mechanical-ragger {
+  --ragging-width: 0px;
+}
+```
 
-### Deployment
+## Best Practices
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+### ℹ️ Tidying line-ends
 
-### `yarn build` fails to minify
+You may hope for text lines to reach closer to the end of each line to make the ragging cleaner. HTML and CSS both offer tools to manage this.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+In CSS:
+
+```css
+mechanical-ragger {
+  /* Insert hyphens according to browser hyphenation dictionaries */
+  hyphens: auto;
+
+  /* Or only inserts hyphens at the author's request */
+  hyphens: manual;
+}
+```
+
+[With `hyphens: manual`, use the `&shy;` HTML entity](https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens#suggesting_line_break_opportunities) in your text to suggest hyphenation breakpoints to the browser.
+
+In HTML, [the `<wbr>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr) can be used to suggest a word breakpoint _without_ hyphenation.
+
+### ⚠️ Browser handling of line-heights.
+
+Chrome and other browsers do not allow for floating-point decimal line-heights. All line-heights are rounded to the nearest CSS pixel (px values that do not factor in screen pixel-density). To ensure that the ragging does not fall out of sync with the text it controls, opt for line-heights that evaluate to whole pixels.
+
+## Development
+
+### Package
+
+`npm run build` in the root directory. To see the resulting module generated from the `src/` directory, check `dist/`.
+
+### Docs
+
+`cd` into the `docs/` directory, where you can interact with the `create-react-app` instance.
+
+```
+cd docs
+
+npm run start
+```
