@@ -13,18 +13,14 @@ export const MechanicalRaggerReact = (props) => {
   const ragger = React.useRef();
   const [exclusionCSS, setExlusionCSS] = React.useState({});
 
-  if (containerEl.current) {
-  }
   React.useEffect(() => {
-    ragger.current = new MechanicalRaggerCore({
-      container: containerEl,
-      onUpdate: setExlusionCSS,
-    });
+    if (containerEl.current) {
+      ragger.current = new MechanicalRaggerCore({
+        container: containerEl.current,
+        onUpdate: setExlusionCSS,
+      });
+    }
   }, []);
-
-  React.useEffect(() => {
-    ragger.current.width = props.width;
-  }, [props.width]);
 
   return (
     <div ref={containerEl}>
