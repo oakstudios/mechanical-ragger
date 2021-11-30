@@ -1,6 +1,6 @@
 import NextImage from "next/image"
 
-// default Image component with a loader
+// Default Image component with a loader
 const Image = (props) => {
   return (
     <NextImage

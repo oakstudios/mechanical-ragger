@@ -1,3 +1,4 @@
+// Updates cursor position in viewport
 if (typeof window !== 'undefined') {
   document.body.onmousemove = function (e) {
     document.documentElement.style.setProperty(

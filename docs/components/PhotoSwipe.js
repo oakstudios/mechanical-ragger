@@ -2,6 +2,7 @@ import { useLayoutEffect } from "react";
 import PhotoSwipe from "photoswipe";
 import PhotoSwipeUI_Default from "photoswipe/dist/photoswipe-ui-default.js";
 
+// Photoswipe root component with logic for binding image elements
 const PhotoSwipeContainer = () => {
   useLayoutEffect(() => {
     var pswpElement = document.querySelectorAll(".pswp")[0];

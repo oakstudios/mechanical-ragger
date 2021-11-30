@@ -17,7 +17,6 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useLayoutEffect(() => {
-    console.log("layouteffect")
     const elementList = document.querySelectorAll(
       "img, a, button, .HoverImage"
     );
