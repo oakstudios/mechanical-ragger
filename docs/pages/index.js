@@ -132,17 +132,13 @@ export default function Home() {
             should perform its context functionally in all different screen
             sizes. This unlimited interactive screen view brings convenience,
             but it could be forbidden for typesetting. In some extreme
-            context, the display screen would show one word at each line. Like{" "}
-            <div className="hover-title"></div>
-            <div className="hover-image">
-              {" "}
-              <img src={appleWatchMessage} alt="Apple Watch Message" />
-            </div>
-            reading a message from a 40mm Apple Watch (394x324px), a medium
-            lengthed paragraph would be divided into multiple lines, produces
-            a difficult reading material regardless of its actual content.
-            Under such conditions, performing more of a balanced paragraph rag
-            would reduce the difficulty in reading.{" "}
+            context, the display screen would show one word at each line.
+            Like reading a message from a
+            <HoverImage src={appleWatchMessage} alt="Apple Watch Message">40mm Apple Watch</HoverImage>{" "}
+            (394x324px), a medium lengthed paragraph would be divided into
+            multiple lines, produces a difficult reading material regardless of
+            its actual content. Under such conditions, performing more of a
+            balanced paragraph rag would reduce the difficulty in reading.{" "}
           </p>
           <p className="paragraph-indent">
             The idea of balanced paragraph text rag, or long-short-long-short
