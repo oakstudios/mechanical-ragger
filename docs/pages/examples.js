@@ -1,16 +1,15 @@
 import React, { useState, useLayoutEffect, useEffect } from "react";
-import "../components/InvertCursor.js";
-import Image from "next/image"
-import friendship2 from "../public/images/friendship2.jpg";
-import friendshipCover from "../public/images/friendshipCover.jpg";
-import kaleidoscope from "../public/images/kaleidoscope.jpg";
-import kaleidoscope2 from "../public/images/kaleidoscope2.jpg";
-import spécimen from "../public/images/spécimen.jpg";
-import spécimen2 from "../public/images/spécimen2.jpg";
-import protest from "../public/images/protest.jpg";
-import protest2 from "../public/images/protest2.jpg";
-import tryingtobeHere from "../public/images/tryingtobeHere.jpg";
-import tryingtobeHere2 from "../public/images/tryingtobeHere2.jpg";
+import Image from "../components/Image"
+import friendship2 from "../public/images/friendship2.webp";
+import friendshipCover from "../public/images/friendshipCover.webp";
+import kaleidoscope from "../public/images/kaleidoscope.webp";
+import kaleidoscope2 from "../public/images/kaleidoscope2.webp";
+import spécimen from "../public/images/spécimen.webp";
+import spécimen2 from "../public/images/spécimen2.webp";
+import protest from "../public/images/protest.webp";
+import protest2 from "../public/images/protest2.webp";
+import tryingtobeHere from "../public/images/tryingtobeHere.webp";
+import tryingtobeHere2 from "../public/images/tryingtobeHere2.webp";
 
 export const Examples = () => (
   <div>

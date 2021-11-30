@@ -1,11 +1,9 @@
 import React, { useState, useLayoutEffect, useEffect } from "react";
-import "../components/InvertCursor.js";
-import Image from "next/image"
 import HoverImage from "../components/HoverImage.js";
-import appleWatchMessage from "../public/images/appleWatchMessage.png";
-import harmonia from "../public/images/harmonia.png";
-import oakLogo from "../public/images/oakLogo.png";
-import raggerExample from "../public/images/raggerExample.png";
+import appleWatchMessage from "../public/images/appleWatchMessage.webp";
+import harmonia from "../public/images/harmonia.webp";
+import oakLogo from "../public/images/oakLogo.webp";
+import raggerExample from "../public/images/raggerExample.webp";
 
 export default function Home() {
   const [ragged, setRagging] = useState(true);
@@ -201,7 +199,7 @@ export default function Home() {
           <p>
             [4] Typesetting is the composition of text by means of arranging
             physical types or the digital equivalents. Stored letters and other
-            symbols are retrieved and ordered according to a language's
+            symbols are retrieved and ordered according to a language&apos;s
             orthography for visual display.
           </p>
           <p>

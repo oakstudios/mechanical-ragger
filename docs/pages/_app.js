@@ -1,8 +1,9 @@
 import React, { useState, useLayoutEffect, useEffect } from "react";
 import "../styles/globals.scss";
-import "../components/InvertCursor.js";
+import "../utils/cursorPosition.js";
 import useMeasure from "react-use-measure";
 import Link from "next/link"
+import { useRouter } from "next/router";
 
 import PhotoSwipeRoot from "../components/PhotoSwipe";
 // importing here because global CSS can't be imported in inner pages in Next.js
@@ -13,8 +14,10 @@ function MyApp({ Component, pageProps }) {
   const [cursorSize, setCursorSize] = useState("normal");
 
   const [headerRef, headerBounds] = useMeasure();
+  const router = useRouter();
 
   useLayoutEffect(() => {
+    console.log("layouteffect")
     const elementList = document.querySelectorAll(
       "img, a, button, .HoverImage"
     );
@@ -37,8 +40,7 @@ function MyApp({ Component, pageProps }) {
         return true;
       });
     };
-    // @todo: update on route change
-  }, []);
+  }, [router.asPath]);
 
   return (
     <div

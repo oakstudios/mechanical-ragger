@@ -5,15 +5,15 @@
  * @author Oak Studios
  */
 
-import React from "react";
+import { useState, useRef, useEffect } from "react";
 import MechanicalRaggerCore from "./core";
 
 export const MechanicalRaggerReact = (props) => {
-  const containerEl = React.useRef(null);
-  const ragger = React.useRef();
-  const [exclusionCSS, setExlusionCSS] = React.useState({});
+  const containerEl = useRef(null);
+  const ragger = useRef();
+  const [exclusionCSS, setExlusionCSS] = useState({});
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (containerEl.current) {
       ragger.current = new MechanicalRaggerCore({
         container: containerEl.current,
