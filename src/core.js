@@ -7,12 +7,13 @@
 
 export class MechanicalRaggerCore {
   constructor({ container, onUpdate } = {}) {
+    if (typeof window === "undefined") return;
     this.sizeListener = new ResizeObserver(this.sizeListenerCallback);
 
     this.containerBounds = {};
     this.container = container;
 
-    this.updateCallback = onUpdate || function () {};
+    this.updateCallback = onUpdate || function () { };
   }
 
   /**

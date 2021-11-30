@@ -10,7 +10,7 @@ npm i @oakstudios/mechanical-ragger
 
 1. Load the web component. Choose the option that best suits your needs:
     
-    Using a `script` tag:
+    Using a `script` tag placed at the end of the `body`:
     
     ```html
     <!-- this automatically registers the component in the window as mechanical-ragger -->

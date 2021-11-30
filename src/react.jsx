@@ -5,7 +5,7 @@
  * @author Oak Studios
  */
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 import MechanicalRaggerCore from "./core";
 
 export const MechanicalRaggerReact = (props) => {
@@ -13,7 +13,7 @@ export const MechanicalRaggerReact = (props) => {
   const ragger = useRef();
   const [exclusionCSS, setExlusionCSS] = useState({});
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (containerEl.current) {
       ragger.current = new MechanicalRaggerCore({
         container: containerEl.current,
