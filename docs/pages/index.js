@@ -133,7 +133,7 @@ export default function Home() {
               sizes. This unlimited interactive screen view brings convenience,
               but it could be forbidden for typesetting. In some extreme
               context, the display screen would show one word at each line.
-              Like reading a message from a
+              Like reading a message from a{" "}
               <HoverImage src={appleWatchMessage} alt="Apple Watch Message">40mm Apple Watch</HoverImage>{" "}
               (394x324px), a medium lengthed paragraph would be divided into
               multiple lines, produces a difficult reading material regardless of

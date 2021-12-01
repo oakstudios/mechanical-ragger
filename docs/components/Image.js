@@ -5,6 +5,7 @@ const Image = (props) => {
   return (
     <NextImage
       {...props}
+      unoptimized
       loader={(opts) => opts.src}
     />
   )
