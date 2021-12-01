@@ -4,6 +4,9 @@ module.exports = (phase, { defaultConfig }) => {
   if (phase === PHASE_DEVELOPMENT_SERVER) {
     return {
       reactStrictMode: true,
+      experimental: {
+        esmExternals: true,
+      },
       images: {
         loader: "custom",
       }

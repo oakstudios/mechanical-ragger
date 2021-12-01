@@ -5,10 +5,10 @@
  * @author Oak Studios
  */
 
-import { useState, useRef, useLayoutEffect } from "react";
+import React, { useState, useRef, useLayoutEffect } from "react";
 import MechanicalRaggerCore from "./core";
 
-export const MechanicalRaggerReact = (props) => {
+const MechanicalRaggerReact = (props) => {
   const containerEl = useRef(null);
   const ragger = useRef();
   const [exclusionCSS, setExlusionCSS] = useState({});

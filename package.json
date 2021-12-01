@@ -1,12 +1,12 @@
 {
   "name": "@oakstudios/mechanical-ragger",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A layout tool that automatically rags long text by line",
   "type": "module",
   "exports": {
     ".": "./dist/index.js",
     "./core": "./dist/core.js",
-    "./react": "./dist/react.js",
+    "./react": "./dist/react.jsx",
     "./web-component": "./dist/web-component.js",
     "./web-component-auto-register": "./dist/web-component-auto-register.js"
   },
@@ -14,7 +14,8 @@
     "doc": "docs"
   },
   "peerDependencies": {
-    "react": ">= 16.8.0 < 18.0.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.13",
@@ -23,7 +24,11 @@
     "@babel/preset-env": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
     "@rollup/plugin-babel": "^5.2.3",
-    "rollup": "^2.38.5",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^2.60.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^7.0.2"
   },
   "scripts": {

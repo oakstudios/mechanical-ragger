@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect, useEffect } from "react";
+import React from "react";
 import Image from "../components/Image"
 import friendship2 from "../public/images/friendship2.webp";
 import friendshipCover from "../public/images/friendshipCover.webp";
