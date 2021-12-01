@@ -5,11 +5,6 @@ import useMeasure from "react-use-measure";
 import Link from "next/link"
 import { useRouter } from "next/router";
 
-import PhotoSwipeRoot from "../components/PhotoSwipe";
-// importing here because global CSS can't be imported in inner pages in Next.js
-import "photoswipe/dist/photoswipe.css";
-import "photoswipe/src/css/default-skin/default-skin.scss";
-
 function MyApp({ Component, pageProps }) {
   const [cursorSize, setCursorSize] = useState("normal");
 
@@ -77,7 +72,6 @@ function MyApp({ Component, pageProps }) {
           <div className="minimal-hr" />
         </div>
       </div>
-      <PhotoSwipeRoot />
     </div>
   );
 }
