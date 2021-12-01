@@ -12,26 +12,20 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useLayoutEffect(() => {
-    const elementList = document.querySelectorAll(
-      "img, a, button, .HoverImage"
-    );
+    const elementList = [...document.querySelectorAll(
+      "a, button, .HoverImage"
+    )];
     const hoverCursor = () => setCursorSize("hovered");
     const resetCursor = () => setCursorSize("normal");
-    [...elementList].map((element) => {
+    elementList.forEach((element) => {
       element.addEventListener("mouseenter", hoverCursor);
       element.addEventListener("mouseleave", resetCursor);
-      return true;
     });
 
     return () => {
-      const elementList = document.querySelectorAll(
-        "img, a, button, .hover-title"
-      );
-
-      [...elementList].map((element) => {
+      elementList.forEach((element) => {
         element.removeEventListener("mouseenter", hoverCursor);
         element.removeEventListener("mouseleave", resetCursor);
-        return true;
       });
     };
   }, [router.asPath]);
