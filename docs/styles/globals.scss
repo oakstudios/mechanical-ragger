@@ -1,6 +1,8 @@
 :root {
-  --fg: #d1f0fd;
-  --bg: #67645e;
+  --fg: #fff;
+  --bg: #000;
+  --fg-clamped: #d1f0fd;
+  --bg-clamped: #67645e;
 }
 html {
   font-size: 18px;
@@ -15,6 +17,27 @@ body {
   color: var(--fg);
   margin: 0;
   font-family: "Telegraf-Regular", sans-serif;
+  overflow-x: hidden;
+  &::before {
+    content: "";
+    display: block;
+    position: fixed;
+    inset: 0;
+    mix-blend-mode: screen;
+    background: var(--bg-clamped);
+    z-index: 13;
+    pointer-events: none;
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: fixed;
+    inset: 0;
+    mix-blend-mode: multiply;
+    background: var(--fg-clamped);
+    z-index: 12;
+    pointer-events: none;
+  }
 }
 *,
 *::before,
@@ -356,7 +379,7 @@ body:not(.mobile) .hover-title:hover + .hover-image {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 8;
+  z-index: 15;
   opacity: 0;
   pointer-events: none;
   flex-direction: column;
