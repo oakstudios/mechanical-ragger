@@ -34,6 +34,9 @@ export class MechanicalRaggerWC extends HTMLElement {
   connectedCallback = () => {
     this.ragger.update();
   };
+  disconnectedCallback = () => {
+    this.ragger.destroy();
+  }
 
   setExclusionStyles = (value) => {
     Object.assign(this.exclusion.style, value);

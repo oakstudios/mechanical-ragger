@@ -20,7 +20,12 @@ const MechanicalRaggerReact = (props) => {
         onUpdate: setExlusionCSS,
       });
     }
-  }, []);
+    return () => {
+      if (ragger.current) {
+        ragger.current.destroy();
+      }
+    };
+  }, [containerEl.current]);
 
   return (
     <div ref={containerEl}>
