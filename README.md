@@ -14,21 +14,21 @@ npm i @oakstudios/mechanical-ragger
     
     ```html
     <!-- this automatically registers the component in the window as mechanical-ragger -->
-    <script src="https://unpkg.com/@oakstudios/mechanical-ragger@0.1.6/dist/web-component-auto-register.js"></script>
+    <script src="https://unpkg.com/@oakstudios/mechanical-ragger@0.2.2/dist/web-component-auto-register.js"></script>
     ```
     
     _OR_ importing the same auto-register function in JS:
     
     ```js
-    import "@oakstudios/mechanical-ragger/dist/web-component-auto-register";
+    import "@oakstudios/mechanical-ragger/web-component-auto-register";
     ```
     
     _OR_ registering the component manually:
     
     ```js
-    import { MechanicalRaggerWC } from "@oakstudios/mechanical-ragger";
+    import MechanicalRagger from "@oakstudios/mechanical-ragger/web-component";
     
-    customElements.define("mechanical-ragger", MechanicalRaggerWC);
+    customElements.define("mechanical-ragger", MechanicalRagger);
     ```
 
 2. Then add it to your HTML:
@@ -42,7 +42,7 @@ npm i @oakstudios/mechanical-ragger
 ### React Component
 
 ```jsx
-import { MechanicalRaggerReact as MechanicalRagger } from "@oakstudios/mechanical-ragger";
+import MechanicalRagger from "@oakstudios/mechanical-ragger/react";
 
 export default () => {
   return <MechanicalRagger>Lorem ipsum dolor sit amet.</MechanicalRagger>;
@@ -56,7 +56,7 @@ While web components can be used in most any framework, if you'd like deep integ
 The npm package also exposes the `MechanicalRaggerCore` module that these use. eg:
 
 ```js
-import { MechanicalRaggerCore } from "@oakstudios/mechanical-ragger";
+import MechanicalRaggerCore from "@oakstudios/mechanical-ragger/core";
 ```
 
 ## Options
