@@ -1,4 +1,5 @@
-import React, { useState, useLayoutEffect, useEffect } from "react";
+import React, { useState, useLayoutEffect } from "react";
+import Head from "next/head";
 import "../styles/globals.scss";
 import "../utils/cursorPosition.js";
 import useMeasure from "react-use-measure";
@@ -37,6 +38,9 @@ function MyApp({ Component, pageProps }) {
         "--header-height": `${headerBounds.height}px`,
       }}
     >
+      <Head>
+        <link rel="shortcut icon" href="favicon.png" type="image/png" />
+      </Head>
       <span className={`cursor state--${cursorSize}`} />
       <header
         className="grid navigation wrapper vertical-padder"
