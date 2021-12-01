@@ -6,7 +6,13 @@ const HoverImage = ({ src, alt, children }) => {
     <span className="HoverImage">
       <span className="hover-title">{children}</span>
       <span className="hover-image">
-        <Image src={src} alt={alt} loader={(props) => props.src} />
+        <Image
+          layout="fill"
+          objectFit="contain"
+          src={src}
+          alt={alt}
+          loader={(props) => props.src}
+        />
       </span>
     </span>
   )
