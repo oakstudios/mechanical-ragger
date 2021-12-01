@@ -252,16 +252,16 @@ article {
   color: #d1f0fd;
 }
 
-/* invert cursor */
-* {
-  cursor: none;
-}
-
-a.link {
-  cursor: none;
-}
-
 @media (pointer: fine) {
+  /* invert cursor */
+  * {
+    cursor: none;
+  }
+
+  a.link {
+    cursor: none;
+  }
+
   .cursor {
     position: absolute;
     top: 0;
@@ -285,8 +285,25 @@ a.link {
       transition: transform 0.2s ease;
       will-change: transform;
     }
-    &.state--hovered::before {
-      transform: translate(-50%, -50%) scale(0.4, 0.4);
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #67645e;
+      transition: opacity 0.2s ease;
+    }
+    &.state--hovered {
+      &::before {
+        transform: translate(-50%, -50%) scale(0.4, 0.4);
+      }
+      &::after {
+        opacity: 0;
+      }
     }
   }
 }
