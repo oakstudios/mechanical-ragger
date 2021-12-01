@@ -248,8 +248,7 @@ article {
 
 /* text highlight */
 ::selection {
-  background: #d1f0fd;
-  color: #d1f0fd;
+  background: var(--fg);
 }
 
 @media (pointer: fine) {
@@ -279,7 +278,7 @@ article {
       left: 0;
       width: 80px;
       height: 80px;
-      background: #d1f0fd;
+      background: var(--fg);
       border-radius: 50%;
       transform: translate(-50%, -50%);
       transition: transform 0.2s ease;
@@ -294,7 +293,7 @@ article {
       width: 4px;
       height: 4px;
       border-radius: 50%;
-      background: #67645e;
+      background: var(--bg);
       transition: opacity 0.2s ease;
     }
     &.state--hovered {
@@ -388,7 +387,7 @@ body:not(.mobile) .hover-title:hover + .hover-image {
   .footnote {
     padding-right: 0px;
     line-height: 12pt;
-    border-top: 2px dotted #d1f0fd;
+    border-top: 2px dotted var(--fg);
     margin-bottom: 20pt;
     grid-column: span 7;
   }
