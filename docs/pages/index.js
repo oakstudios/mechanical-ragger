@@ -71,16 +71,12 @@ export default function Home() {
             </p>
             <p className="paragraph-indent">
               A few years ago, team collaboration on design projects was challenging.
-              One designer focuses on the design, and the rest might be offering
-              leadership and giving guidance. No design tool allowed multiple users to
-              update, edit, and revise at the same time. This era of design finally
-              ended when collaborative design software emerged from the market
-              around 2015. Figma was one of the few that grabbed the
-              golden spoon, interlinked designers and developers, produced the
-              first site to assist designers participating in team projects
-              without installation of extra software, and allowing multiple
-              designers to work on a project at the same time, same
-              speed, and under the same unified environment.
+              One designer focused on the design, while others might be giving feedback
+              on snapshots of their work, but no design tool allowed multiple users to
+              update a design at the same time. Figma emerged as one of the most popular
+              design applications thanks to its focus on collaboration and portability.
+              It gave entire teams the ability to work on a project at the same time,
+              without needing to sync assets or even install it.
             </p>
             <p>
               Since then, graphic design has been in a stage of steadfast
