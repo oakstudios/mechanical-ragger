@@ -156,7 +156,7 @@ export default function Home() {
               vehicle to begin our digital ragging component concept.
             </p>
             <p className="paragraph-indent">
-              After few weeks of research and development, we decided on a javascript component
+              After few weeks of research and development, we decided on a JavaScript component
               that automatically trims the line
               endings. Put this more simply, each line of text was extracted and
               calculated, and the even lines were selected. After that,
