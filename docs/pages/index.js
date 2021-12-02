@@ -15,7 +15,7 @@ export default function Home() {
       <section className="grid wrapper vertical-padder">
         <p className="column-span-4 overview">
           <MechanicalRagger>
-            This site serves as a portfolio for Mechanical Ragger, a component
+            This site serves as a demonstration of Mechanical Ragger, a component
             developed by <HoverImage src={oakLogo} alt="Oak Studios">Oak Studios</HoverImage>.
             Mechanical Ragger adjusts paragraphs{" "}
             <HoverImage src={harmonia} alt="harmonia">to be balanced</HoverImage>,
@@ -64,13 +64,13 @@ export default function Home() {
           </header>
           <MechanicalRagger>
             <p>
-              From stop-motion to animating graphics with After Effects, carving
+              From stop motion to animating graphics with After Effects, carving
               letters on wood blocks to create scalable vectorized letters with
               Glyphs, RoboFont, or FontLab, design tooling is accelerating faster
               than at any other time in history.
             </p>
             <p className="paragraph-indent">
-              A few years ago, team collaboration on design projects were challenging.
+              A few years ago, team collaboration on design projects was challenging.
               One designer focuses on the design, and the rest might be offering
               leadership and giving guidance. No design tool allowed multiple users to
               update, edit, and revise at the same time. This era of design finally
@@ -94,7 +94,7 @@ export default function Home() {
               methodology has only been leveraged in the field of print and traditional
               design. In the digital world, it is almost invisible. It
               make sense; there are no convenient typeset editing
-              methods in digital media. Typically,
+              methods in web environoments. Typically,
               developers would be asked to apply a typeface on a website,
               adjust the font-size, and maybe justify the alignment and font-weight.
               If developers want to implement more advanced settings to a
@@ -123,7 +123,7 @@ export default function Home() {
               the, are, is...” should not appear at the end of each line by this logic.
             </p>
             <p>
-              Back to our case, typesetting in digital media can be quite
+              Back to our case, typesetting on the web can be quite
               complicated. The interactive display is limitless, different than
               a static frame on a piece of paper; its size varies to fit in any
               display. When web designers design a website, the website
