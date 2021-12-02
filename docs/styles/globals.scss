@@ -11,6 +11,7 @@ html {
   /* background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" height="100px" width="100px"> <g> <line x1="0" y1="0" x2="100" y2="0" stroke="black" stroke-width="5px" /> </g> </svg>'); */
   background-repeat: repeat-y;
   background-size: 100% 20px;
+  overflow-x: hidden;
 }
 
 body {
@@ -23,12 +24,6 @@ body {
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-#root {
-  grid-template-columns: repeat(7, 1fr);
-  gap: 20px;
-  display: grid;
 }
 
 @font-face {
@@ -100,6 +95,8 @@ a {
 }
 
 .wrapper {
+  max-width: 1280px;
+  margin: auto;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -146,9 +143,7 @@ section {
 }
 
 .minimal-hr {
-  // height: 100px;
   border: 1px solid var(--fg);
-  // border-left: 0px solid transparent;
 }
 
 /* Overview section */
@@ -157,7 +152,6 @@ section {
   -webkit-font-smoothing: antialiased;
   font-size: 28pt;
   line-height: 30pt;
-  // margin-top: 28pt;
 }
 
 .App-header {

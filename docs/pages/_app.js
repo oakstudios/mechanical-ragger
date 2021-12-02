@@ -43,20 +43,22 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <span className={`cursor state--${cursorSize}`} />
       <header
-        className="grid navigation wrapper vertical-padder"
+        className="navigation vertical-padder"
         ref={headerRef}
       >
-        <h1 className="column-span-4 siteTitle">
-          <Link href="/">
-            <a>
-              Mechanical Ragging Component<br />
-              First Edition
-            </a>
-          </Link>
-        </h1>
-        <div className="column-span-3 siteNav">
-          <Link href="/"><a>Overview</a></Link>{", "}
-          <Link href="/examples"><a>Editorial Examples</a></Link>
+        <div className="grid wrapper">
+          <h1 className="column-span-4 siteTitle">
+            <Link href="/">
+              <a>
+                Mechanical Ragging Component<br />
+                First Edition
+              </a>
+            </Link>
+          </h1>
+          <div className="column-span-3 siteNav">
+            <Link href="/"><a>Overview</a></Link>{", "}
+            <Link href="/examples"><a>Editorial Examples</a></Link>
+          </div>
         </div>
       </header>
       <div className="tabs">
