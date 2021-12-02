@@ -3,9 +3,9 @@
  */
 
 import { fixture } from "@open-wc/testing-helpers";
-import {render} from '@testing-library/react'
-import "../web-component-auto-register"
+import {render, screen} from '@testing-library/react'
 import MechanicalRaggerReact from "../react"
+import "../web-component-auto-register"
 
 // Mock ResizeObserver for the test.
 class ResizeObserver {
