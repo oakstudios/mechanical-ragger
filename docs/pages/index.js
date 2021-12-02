@@ -36,21 +36,18 @@ export default function Home() {
             default paragraph on the essay below.)
           </h1>
         </div>
-        <div className="column-span-5">
-          <div className={"button-container " + (ragged && "ragged")}>
-            <button
-              className="circle-button rag-on"
-              onClick={() => setRagging(true)}
-            >
-              Text currently unragged
-            </button>
-            <button
-              className="circle-button rag-off"
-              onClick={() => setRagging(false)}
-            >
-              Text currently ragged
-            </button>
-          </div>
+        <div className={"button-container " + (ragged ? "ragged" : "unragged")}>
+          <button
+            className="circle-button"
+            onClick={() => setRagging(!ragged)}
+          >
+            <svg viewBox="0 0 2 2">
+              <ellipse className="on-circle" rx="1" cx="1" ry="1" cy="1" />
+              <ellipse className="off-circle" rx="1" cx="1" ry="1" cy="1" />
+            </svg>
+            <span className="button-text on-text">Text currently ragged</span>
+            <span className="button-text off-text">Text currently unragged</span>
+          </button>
         </div>
       </section>
       <div className="minimal-hr" />
