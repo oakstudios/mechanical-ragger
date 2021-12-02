@@ -93,7 +93,7 @@ export default function Home() {
               distant from the modern digital design circles. Typically, typesetting
               methodology has only been leveraged in the field of print and traditional
               design. In the digital world, it is almost invisible. It
-              make sense; there are no convenient typeset editing
+              makes sense; there are no convenient typeset editing
               methods in web environoments. Typically,
               developers would be asked to apply a typeface on a website,
               adjust the font-size, and maybe justify the alignment and font-weight.
