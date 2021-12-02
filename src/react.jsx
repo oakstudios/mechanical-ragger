@@ -28,7 +28,7 @@ const MechanicalRaggerReact = (props) => {
   }, [containerEl.current]);
 
   return (
-    <div ref={containerEl}>
+    <div ref={containerEl} data-testid="mechanical-ragger">
       <div style={exclusionCSS} />
       {props.children}
     </div>
