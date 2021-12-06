@@ -17,15 +17,18 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.12.13",
-    "@babel/core": "^7.12.13",
+    "@babel/core": "^7.16.0",
     "@babel/plugin-proposal-class-properties": "^7.12.13",
-    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.12.13",
     "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-node-resolve": "^13.0.6",
+    "@testing-library/jest-dom": "^5.15.1",
+    "@testing-library/react": "^12.1.2",
+    "babel-jest": "^27.4.2",
+    "jest": "^27.4.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rollup": "^2.60.2",
@@ -34,7 +37,8 @@
   },
   "scripts": {
     "build": "rm -rf dist/* && rollup --config",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watch",
+    "test:ci": "jest --ci"
   },
   "repository": {
     "type": "git",
