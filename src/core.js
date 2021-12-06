@@ -34,7 +34,6 @@ export class MechanicalRaggerCore {
    */
 
   get exclusionPolygon() {
-    const { height } = this.containerBounds;
     const ragAxis = this.ragAxis;
     const containerStyles = document.defaultView.getComputedStyle(
       this.container,
@@ -43,7 +42,7 @@ export class MechanicalRaggerCore {
     const leading = Math.floor(
       parseFloat(containerStyles.getPropertyValue("line-height"))
     );
-    const lineCount = Math.floor(height / leading);
+    const lineCount = Math.floor(this.blockSize / leading);
     const lineArray = Array(lineCount).fill();
     let inlineStart = "0%",
       inlineEnd = "100%";
@@ -166,6 +165,14 @@ export class MechanicalRaggerCore {
     }
   }
 
+  get blockSize() {
+    if (this.ragAxis === "y") {
+      return this.containerBounds.width;
+    } else {
+      return this.containerBounds.height;
+    }
+  }
+
   get cssProperties() {
     const shape = this.exclusionPolygon;
     const float = {
@@ -174,15 +181,12 @@ export class MechanicalRaggerCore {
       bottom: "right",
       top: "left",
     }[this.ragDirection];
-    const blockSize = ["right", "left"].includes(this.ragDirection)
-      ? this.containerBounds.height
-      : this.containerBounds.width;
 
     return {
       clipPath: `polygon(${shape})`,
       shapeOutside: `polygon(${shape})`,
       inlineSize: "var(--ragging-width, 1em)",
-      blockSize: `${blockSize}px`,
+      blockSize: `${this.blockSize}px`,
       background: "blue",
       float,
     };
