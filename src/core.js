@@ -42,6 +42,7 @@ export class MechanicalRaggerCore {
     const leading = Math.floor(
       parseFloat(containerStyles.getPropertyValue("line-height"))
     );
+    const writingMode = containerStyles.getPropertyValue("writing-mode");
     const lineCount = Math.floor(this.blockSize / leading);
     const lineArray = Array(lineCount).fill();
     let inlineStart = "0%",
@@ -50,6 +51,16 @@ export class MechanicalRaggerCore {
       inlineStart = "100%";
       inlineEnd = "0%";
     }
+    const blockSize = this.blockSize;
+    const scaleBlockPosition = (blockPosition) => {
+      // vertical-rl is opposite the cartesian coordinates of our
+      // point group calculation, so we invert the coordinates
+      if (writingMode === "vertical-rl") {
+        return blockSize - blockPosition;
+      } else {
+        return blockPosition;
+      }
+    };
 
     const pointGroups = [
       ...lineArray.map((line, i) => {
@@ -61,17 +72,18 @@ export class MechanicalRaggerCore {
         if (isEven) {
           // creates shape: |
           return [
-            [inlineEnd, `${blockPosition0}px`],
-            [inlineEnd, `${blockPosition1}px`],
+            [inlineEnd, `${scaleBlockPosition(blockPosition0)}px`],
+            [inlineEnd, `${scaleBlockPosition(blockPosition1)}px`],
           ];
         } else {
           // creates shape: <
-          return [[inlineStart, `${blockMidpoint}px`]];
+          return [[inlineStart, `${scaleBlockPosition(blockMidpoint)}px`]];
         }
       }),
       // last point to prevent a wonky connection to first point
-      [[inlineEnd, `${lineCount * leading}px`]],
+      [[inlineEnd, `${scaleBlockPosition(this.blockSize)}px`]],
     ];
+
     return pointGroups
       .map((pointGroup) => {
         return pointGroup.map((point) => {
@@ -187,7 +199,6 @@ export class MechanicalRaggerCore {
       shapeOutside: `polygon(${shape})`,
       inlineSize: "var(--ragging-width, 1em)",
       blockSize: `${this.blockSize}px`,
-      background: "blue",
       float,
     };
   }
