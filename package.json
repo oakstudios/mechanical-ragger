@@ -1,6 +1,6 @@
 {
   "name": "@oakstudios/mechanical-ragger",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "A layout tool that automatically rags long text by line",
   "type": "module",
   "exports": {
