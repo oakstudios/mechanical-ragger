@@ -6,6 +6,10 @@
  */
 
 export class MechanicalRaggerCore {
+  /**
+   * @param {HTMLElement} container
+   * @param {(value) => void} onUpdate
+   */
   constructor({ container, onUpdate } = {}) {
     if (typeof window === "undefined") return;
     this.sizeListener = new ResizeObserver(this.sizeListenerCallback);
@@ -17,9 +21,9 @@ export class MechanicalRaggerCore {
   }
 
   /**
-   * Public Properties
+   * Reference to the ResizeObserver target
+   * @returns {HTMLElement}
    */
-
   get container() {
     return this._container;
   }
@@ -30,9 +34,9 @@ export class MechanicalRaggerCore {
   }
 
   /**
-   * Derived Properties
+   * The exclusion shape added to the styles of the container
+   * @returns {string}
    */
-
   get exclusionPolygon() {
     const ragAxis = this.ragAxis;
     const containerStyles = document.defaultView.getComputedStyle(
@@ -69,6 +73,11 @@ export class MechanicalRaggerCore {
         const blockPosition1 = blockPosition0 + leading;
         const blockMidpoint = blockPosition0 + leading / 2;
 
+        // shapes
+        //  |
+        // <
+        //  |
+        // <
         if (isEven) {
           // creates shape: |
           return [
@@ -97,6 +106,10 @@ export class MechanicalRaggerCore {
       .join(",");
   }
 
+  /**
+   * The side of the container that the rag exclusion is going to be placed
+   * @returns {string} "left" | "right" | "top" | "bottom"
+   */
   get ragDirection() {
     const containerStyles = document.defaultView.getComputedStyle(
       this.container,
@@ -169,6 +182,10 @@ export class MechanicalRaggerCore {
     }
   }
 
+  /**
+   * The axis along which the rag is excluding
+   * @returns {string} "x" or "y"
+   */
   get ragAxis() {
     if (this.ragDirection === "top" || this.ragDirection === "bottom") {
       return "y";
@@ -177,6 +194,10 @@ export class MechanicalRaggerCore {
     }
   }
 
+  /**
+   * The size of the container along the block axis
+   * @returns {number} size in pixels
+   */
   get blockSize() {
     if (this.ragAxis === "y") {
       return this.containerBounds.width;
@@ -185,6 +206,10 @@ export class MechanicalRaggerCore {
     }
   }
 
+  /**
+   * The styles that needs to be applied to the exclusion element
+   * @returns {CSSStyleDeclaration}
+   */
   get cssProperties() {
     const shape = this.exclusionPolygon;
     const float = {
@@ -204,9 +229,9 @@ export class MechanicalRaggerCore {
   }
 
   /**
-   * Methods
+   * The function called when the container size changes
+   * @param {ResizeObserverEntry[]} entries
    */
-
   sizeListenerCallback = (entries) => {
     for (let entry of entries) {
       /**
@@ -218,6 +243,9 @@ export class MechanicalRaggerCore {
     this.update();
   };
 
+  /**
+   * Recalculates the exclusion shape
+   */
   update = () => {
     const styles = this.cssProperties;
     if (styles) {
@@ -225,10 +253,19 @@ export class MechanicalRaggerCore {
     }
   };
 
+  /**
+   * Attaches a `ResizeObserver` to the instance's `container`
+   */
   attachSizeListener = () => {
     this.sizeListener.observe(this.container);
   };
 
+  /**
+   * Disconnects the `ResizeObserver` from the instance's `container`.
+   *
+   * ⚠️ You only really need to call this if you're using the `core` package in an
+   * unsupported environment.
+   */
   destroy = () => {
     this.sizeListener.disconnect();
   };

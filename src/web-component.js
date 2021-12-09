@@ -8,11 +8,33 @@
 import MechanicalRaggerCore from "./core";
 
 /**
+ * MechanicalRagger web component
+ *
+ * ```
  * <mechanical-ragger>
  *   #shadow-root
  *     <this.exclusion />
  *     <this.textRoot />
  * </mechanical-ragger>
+ * ```
+ *
+ * @example ### Basic Usage
+ * ```html
+ *   <p>
+ *     <mechanical-ragger>
+ *       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+ *     </mechanical-ragger>
+ *   </p>
+ * ```
+ *
+ * @example ### Manual Updating
+ * Mechanical Ragger's core package is exposed on `mechanical-ragger.ragger`:
+ *
+ * ```js
+ *   const component = document.querySelector("mechanical-ragger")
+ *   if (component) { component.ragger.update() }
+ * ```
+ *
  */
 export class MechanicalRaggerWC extends HTMLElement {
   constructor() {
