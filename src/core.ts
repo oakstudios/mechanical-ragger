@@ -6,24 +6,27 @@
  */
 
 export class MechanicalRaggerCore {
-  /**
-   * @param {HTMLElement} container
-   * @param {(value) => void} onUpdate
-   */
-  constructor({ container, onUpdate } = {}) {
-    if (typeof window === "undefined") return;
-    this.sizeListener = new ResizeObserver(this.sizeListenerCallback);
-
-    this.containerBounds = {};
+  constructor({
+    container,
+    onUpdate,
+  }: {
+    container: HTMLElement;
+    onUpdate: (value: Partial<CSSStyleDeclaration>) => void;
+  }) {
     this.container = container;
-
+    this.sizeListener = new ResizeObserver(this.sizeListenerCallback);
     this.updateCallback = onUpdate || function () {};
   }
 
+  sizeListener: ResizeObserver;
+  containerBounds: DOMRect = new DOMRect(0, 0, 0, 0);
+  updateCallback: (value: Partial<CSSStyleDeclaration>) => void = () => {};
+
   /**
-   * Reference to the ResizeObserver target
-   * @returns {HTMLElement}
+   * Reference to the ResizeObserver target.
+   * Setting a new container will automatically attach the ResizeObserver to the new element.
    */
+  _container!: HTMLElement;
   get container() {
     return this._container;
   }
@@ -35,20 +38,17 @@ export class MechanicalRaggerCore {
 
   /**
    * The exclusion shape added to the styles of the container
-   * @returns {string}
    */
   get exclusionPolygon() {
+    if (typeof window === "undefined") return "";
     const ragAxis = this.ragAxis;
-    const containerStyles = document.defaultView.getComputedStyle(
-      this.container,
-      null
-    );
+    const containerStyles = window.getComputedStyle(this.container, null);
     const leading = Math.floor(
       parseFloat(containerStyles.getPropertyValue("line-height"))
     );
     const writingMode = containerStyles.getPropertyValue("writing-mode");
     const lineCount = Math.floor(this.blockSize / leading);
-    const lineArray = Array(lineCount).fill();
+    const lineArray = Array(lineCount).fill(null);
     let inlineStart = "0%",
       inlineEnd = "100%";
     if (this.ragDirection === "left" || this.ragDirection === "top") {
@@ -56,7 +56,7 @@ export class MechanicalRaggerCore {
       inlineEnd = "0%";
     }
     const blockSize = this.blockSize;
-    const scaleBlockPosition = (blockPosition) => {
+    const scaleBlockPosition = (blockPosition: number) => {
       // vertical-rl is opposite the cartesian coordinates of our
       // point group calculation, so we invert the coordinates
       if (writingMode === "vertical-rl") {
@@ -108,13 +108,10 @@ export class MechanicalRaggerCore {
 
   /**
    * The side of the container that the rag exclusion is going to be placed
-   * @returns {string} "left" | "right" | "top" | "bottom"
    */
   get ragDirection() {
-    const containerStyles = document.defaultView.getComputedStyle(
-      this.container,
-      null
-    );
+    if (typeof window === "undefined") return "right";
+    const containerStyles = window.getComputedStyle(this.container, null);
 
     const textAlign = containerStyles.getPropertyValue("text-align"),
       writingMode = containerStyles.getPropertyValue("writing-mode"),
@@ -180,11 +177,11 @@ export class MechanicalRaggerCore {
           }
         }
     }
+    return "right"; // default if all else fails
   }
 
   /**
    * The axis along which the rag is excluding
-   * @returns {string} "x" or "y"
    */
   get ragAxis() {
     if (this.ragDirection === "top" || this.ragDirection === "bottom") {
@@ -196,9 +193,9 @@ export class MechanicalRaggerCore {
 
   /**
    * The size of the container along the block axis
-   * @returns {number} size in pixels
+   * @returns size in pixels
    */
-  get blockSize() {
+  get blockSize(): number {
     if (this.ragAxis === "y") {
       return this.containerBounds.width;
     } else {
@@ -208,9 +205,8 @@ export class MechanicalRaggerCore {
 
   /**
    * The styles that needs to be applied to the exclusion element
-   * @returns {CSSStyleDeclaration}
    */
-  get cssProperties() {
+  get cssProperties(): Partial<CSSStyleDeclaration> {
     const shape = this.exclusionPolygon;
     const float = {
       right: "right",
@@ -230,9 +226,8 @@ export class MechanicalRaggerCore {
 
   /**
    * The function called when the container size changes
-   * @param {ResizeObserverEntry[]} entries
    */
-  sizeListenerCallback = (entries) => {
+  sizeListenerCallback = (entries: ResizeObserverEntry[]) => {
     for (let entry of entries) {
       /**
        * @todo use entry.contentBoxSize for vertical writing modes

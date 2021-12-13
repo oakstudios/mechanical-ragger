@@ -53,6 +53,10 @@ export class MechanicalRaggerWC extends HTMLElement {
     });
   }
 
+  exclusion: HTMLDivElement;
+  textRoot: HTMLDivElement;
+  ragger: InstanceType<typeof MechanicalRaggerCore>;
+
   connectedCallback = () => {
     this.ragger.update();
   };
@@ -60,7 +64,7 @@ export class MechanicalRaggerWC extends HTMLElement {
     this.ragger.destroy();
   };
 
-  setExclusionStyles = (value) => {
+  setExclusionStyles = (value: Partial<CSSStyleDeclaration>) => {
     Object.assign(this.exclusion.style, value);
   };
 }

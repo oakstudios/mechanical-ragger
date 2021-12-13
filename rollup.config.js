@@ -1,67 +1,47 @@
 // rollup.config.js
 // import { terser } from "rollup-plugin-terser";
-import resolve from '@rollup/plugin-node-resolve';
+import resolve from "@rollup/plugin-node-resolve";
+import typescript from "rollup-plugin-typescript2";
 import babel, { getBabelOutputPlugin } from "@rollup/plugin-babel";
-import { terser } from 'rollup-plugin-terser';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import { terser } from "rollup-plugin-terser";
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import pkg from "./package.json";
 
 export default [
-  { // @oakstudios/mechanical-ragger/core
-    input: "src/core.js",
-    plugins: [
-      resolve(),
-      babel({
-        extensions: [".jsx", ".js", ".tsx"],
-        babelHelpers: "bundled"
-      }),
-      terser(),
-    ],
+  {
+    // @oakstudios/mechanical-ragger/core
+    input: "src/core.ts",
+    plugins: [typescript()],
     output: {
-      file: "./dist/core.js",
+      dir: "./dist",
       format: "esm",
       name: "mechanical-ragger",
     },
   },
-  { // @oakstudios/mechanical-ragger/react
-    input: "src/react.jsx",
-    plugins: [
-      babel({
-        presets: ['@babel/preset-react'],
-        babelHelpers: "bundled"
-      }),
-      peerDepsExternal(),
-      resolve(),
-    ],
-    external: ["react"],
+  {
+    // @oakstudios/mechanical-ragger/react
+    input: "src/react-component.tsx",
+    plugins: [resolve(), peerDepsExternal(), typescript()],
     output: {
-      file: "./dist/react.jsx",
+      dir: "./dist",
       format: "esm",
     },
   },
-  { // @oakstudios/mechanical-ragger/web-component
-    input: "src/web-component.js",
-    plugins: [
-      resolve(),
-      babel({
-        extensions: [".jsx", ".js", ".tsx"],
-        babelHelpers: "bundled"
-      }),
-      terser(),
-    ],
+  {
+    // @oakstudios/mechanical-ragger/web-component
+    input: "src/web-component.ts",
+    plugins: [typescript()],
     output: {
-      file: "./dist/web-component.js",
+      dir: "./dist",
       format: "esm",
-      plugins: [getBabelOutputPlugin({ presets: ["@babel/preset-env"] })],
     },
   },
-  { // @oakstudios/mechanical-ragger/web-component-auto-register
-    input: "src/web-component-auto-register.js",
-    plugins: [
-      resolve(),
-      terser()
-    ],
+  {
+    // @oakstudios/mechanical-ragger/web-component-auto-register
+    input: "src/web-component-auto-register.ts",
+    plugins: [typescript()],
     output: {
-      file: "./dist/web-component-auto-register.js",
+      dir: "./dist",
       format: "iife",
       name: "MechanicalRagger",
     },
