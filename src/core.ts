@@ -13,8 +13,8 @@ export class MechanicalRaggerCore {
     container: HTMLElement;
     onUpdate: (value: Partial<CSSStyleDeclaration>) => void;
   }) {
-    this.container = container;
     this.sizeListener = new ResizeObserver(this.sizeListenerCallback);
+    this.container = container;
     this.updateCallback = onUpdate || function () {};
   }
 
