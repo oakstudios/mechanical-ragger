@@ -25,7 +25,6 @@
     "@babel/preset-react": "^7.12.13",
     "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-node-resolve": "^13.0.6",
-    "@rollup/plugin-typescript": "^8.3.0",
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.3",
@@ -39,15 +38,13 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.1",
-    "ts-jest": "^27.1.1",
     "tslib": "^2.3.1",
     "typescript": "^4.5.3"
   },
   "scripts": {
     "build": "rm -rf dist/* && rollup --config",
     "test": "jest --watch",
-    "test:ci": "jest --ci",
-    "tsc": "tsc --noEmit"
+    "test:ci": "jest --ci"
   },
   "repository": {
     "type": "git",
@@ -62,8 +59,5 @@
   "keywords": [
     "typesetting",
     "typography"
-  ],
-  "dependencies": {
-    "@babel/preset-typescript": "^7.16.0"
-  }
+  ]
 }
