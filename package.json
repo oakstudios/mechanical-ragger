@@ -1,13 +1,13 @@
 {
   "name": "@oakstudios/mechanical-ragger",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A layout tool that automatically rags long text by line",
   "type": "module",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": "./dist/index.js",
     "./core": "./dist/core.js",
-    "./react": "./dist/react.jsx",
+    "./react": "./dist/react-component.js",
     "./web-component": "./dist/web-component.js",
     "./web-component-auto-register": "./dist/web-component-auto-register.js"
   },
