@@ -10,7 +10,7 @@ import MechanicalRaggerCore from "./core";
 /**
  * Mechanical Ragger React Component
  */
-const MechanicalRaggerReact = ({
+export const MechanicalRaggerReact = ({
   children,
 }: {
   children: React.ReactNode;

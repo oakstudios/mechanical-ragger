@@ -27,6 +27,10 @@ const configs = [
     input: "src/web-component.ts",
   },
   {
+    // @oakstudios/mechanical-ragger
+    input: "src/index.ts",
+  },
+  {
     // @oakstudios/mechanical-ragger/web-component-auto-register
     input: "src/web-component-auto-register.ts",
     output: {
