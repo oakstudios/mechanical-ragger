@@ -13,7 +13,7 @@ import MechanicalRaggerCore from "./core";
 const MechanicalRaggerReact = ({
   children,
 }: {
-  children: React.ReactChildren;
+  children: React.ReactNode;
 }) => {
   const containerEl = React.useRef<HTMLDivElement | null>(null);
   const ragger = React.useRef<InstanceType<typeof MechanicalRaggerCore> | null>(
