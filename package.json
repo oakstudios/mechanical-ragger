@@ -11,6 +11,9 @@
     "./web-component": "./dist/web-component.js",
     "./web-component-auto-register": "./dist/web-component-auto-register.js"
   },
+  "engines": {
+    "node": ">=14.17.0"
+  },
   "directories": {
     "doc": "docs"
   },
