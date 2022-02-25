@@ -1,3 +1,3 @@
 export * from "./core";
-export * from "./react-component";
+export * from "./react";
 export * from "./web-component";

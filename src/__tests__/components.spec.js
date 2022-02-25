@@ -4,7 +4,7 @@
 
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import MechanicalRaggerReact from "../react-component";
+import MechanicalRaggerReact from "../react";
 import MechanicalRagger from "../web-component";
 
 // Mock ResizeObserver for the test.

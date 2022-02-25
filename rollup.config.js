@@ -20,7 +20,7 @@ const configs = [
   },
   {
     // @oakstudios/mechanical-ragger/react
-    input: "src/react-component.tsx",
+    input: "src/react.tsx",
   },
   {
     // @oakstudios/mechanical-ragger/web-component
