@@ -3,14 +3,14 @@
   "version": "0.4.0",
   "description": "A layout tool that automatically rags long text by line",
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "exports": {
-    ".": "./dist/index.js",
-    "./core": "./dist/core.js",
-    "./react": "./dist/react-component.js",
-    "./web-component": "./dist/web-component.js",
-    "./web-component-auto-register": "./dist/web-component-auto-register.js"
+    ".": "./index.js",
+    "./core": "./core.js",
+    "./react": "./react.js",
+    "./web-component": "./web-component.js",
+    "./web-component-auto-register": "./web-component-auto-register.js"
   },
   "engines": {
     "node": ">=14.17.0"

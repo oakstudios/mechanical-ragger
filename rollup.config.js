@@ -7,7 +7,7 @@ import merge from "lodash/merge";
 const defaultOptions = {
   plugins: [resolve(), peerDepsExternal(), typescript()],
   output: {
-    dir: "./dist",
+    dir: "./",
     format: "esm",
     plugins: [terser()],
   },
