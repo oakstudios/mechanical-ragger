@@ -5,15 +5,23 @@
  * @author Oak Studios
  */
 
-import React, { useState, useRef, useLayoutEffect } from "react";
+import * as React from "react";
 import MechanicalRaggerCore from "./core";
+/**
+ * Mechanical Ragger React Component
+ */
+export const MechanicalRaggerReact = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
+  const containerEl = React.useRef<HTMLDivElement | null>(null);
+  const ragger = React.useRef<InstanceType<typeof MechanicalRaggerCore> | null>(
+    null
+  );
+  const [exclusionCSS, setExlusionCSS] = React.useState({});
 
-const MechanicalRaggerReact = (props) => {
-  const containerEl = useRef(null);
-  const ragger = useRef();
-  const [exclusionCSS, setExlusionCSS] = useState({});
-
-  useLayoutEffect(() => {
+  React.useLayoutEffect(() => {
     if (containerEl.current) {
       ragger.current = new MechanicalRaggerCore({
         container: containerEl.current,
@@ -30,7 +38,7 @@ const MechanicalRaggerReact = (props) => {
   return (
     <div ref={containerEl} data-testid="mechanical-ragger">
       <div style={exclusionCSS} />
-      {props.children}
+      {children}
     </div>
   );
 };

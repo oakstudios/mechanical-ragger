@@ -1,14 +1,19 @@
 {
   "name": "@oakstudios/mechanical-ragger",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A layout tool that automatically rags long text by line",
   "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "exports": {
-    ".": "./dist/index.js",
-    "./core": "./dist/core.js",
-    "./react": "./dist/react.jsx",
-    "./web-component": "./dist/web-component.js",
-    "./web-component-auto-register": "./dist/web-component-auto-register.js"
+    ".": "./index.js",
+    "./core": "./core.js",
+    "./react": "./react.js",
+    "./web-component": "./web-component.js",
+    "./web-component-auto-register": "./web-component-auto-register.js"
+  },
+  "engines": {
+    "node": ">=14.17.0"
   },
   "directories": {
     "doc": "docs"
@@ -23,17 +28,24 @@
     "@babel/plugin-proposal-class-properties": "^7.12.13",
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.12.13",
+    "@babel/preset-typescript": "^7.16.7",
     "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.0.3",
+    "@types/react": "^17.0.37",
     "babel-jest": "^27.4.2",
     "jest": "^27.4.3",
+    "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rollup": "^2.60.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.31.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.3"
   },
   "scripts": {
     "build": "rm -rf dist/* && rollup --config",
