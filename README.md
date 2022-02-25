@@ -14,7 +14,7 @@ npm i @oakstudios/mechanical-ragger
     
     ```html
     <!-- this automatically registers the component in the window as mechanical-ragger -->
-    <script src="https://unpkg.com/@oakstudios/mechanical-ragger@0.2.2/dist/web-component-auto-register.js"></script>
+    <script src="https://unpkg.com/@oakstudios/mechanical-ragger@0.4.0/web-component-auto-register.js"></script>
     ```
     
     _OR_ importing the same auto-register function in JS:
@@ -130,7 +130,7 @@ Chrome and other browsers do not allow for floating-point decimal line-heights. 
 
 ### Package
 
-`npm run build` in the root directory. To see the resulting modules generated from the `src/` directory, check `dist/`.
+`npm run build` in the root directory. The resulting modules are generated from the `src/` directory, to the root directory. This is the structure used in the npm package.
 
 ### Docs
 
