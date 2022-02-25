@@ -3,6 +3,7 @@
   "version": "0.4.0",
   "description": "A layout tool that automatically rags long text by line",
   "type": "module",
+  "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": "./dist/index.js",
