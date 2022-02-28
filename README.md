@@ -1,5 +1,7 @@
 # Mechanical Ragger
 
+**[Demo](https://oakstudios.github.io/mechanical-ragger/#essay)**
+
 ## Installation
 
 ```
@@ -14,7 +16,7 @@ npm i @oakstudios/mechanical-ragger
     
     ```html
     <!-- this automatically registers the component in the window as mechanical-ragger -->
-    <script src="https://unpkg.com/@oakstudios/mechanical-ragger@0.4.0/web-component-auto-register.js"></script>
+    <script src="https://unpkg.com/@oakstudios/mechanical-ragger@0.4.1/web-component-auto-register.js"></script>
     ```
     
     _OR_ importing the same auto-register function in JS:
