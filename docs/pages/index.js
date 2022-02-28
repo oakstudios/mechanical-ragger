@@ -215,9 +215,9 @@ export default function Home() {
       <div className="minimal-hr" />
       <section className="grid wrapper vertical-padder">
         <div className="column-span-4">
-          <a href="https://oak.is/">Oak Studios LLC</a>
-          <p>67 35th St b503, Brooklyn, NY 11232</p>
-          <a href="mailto:info@oakmade.com">info@oakmade.com</a>
+          <a href="https://oak.is/">Oak Studios, LLC</a>
+          <p>Brooklyn, New York</p>
+          <a href="mailto:info@oakmade.com">info@oak.is</a>
         </div>
         <div className="column-span-2">
           <p>Daniel Gamage</p>
@@ -225,8 +225,8 @@ export default function Home() {
           <p>Mika Busante</p>
         </div>
         <div className="column-span-1">
-          <a href="https://github.com/oakstudios/Mechanical-Text-Ragger">
-            Github
+          <a href="https://github.com/oakstudios/mechanical-ragger">
+            GitHub
           </a>
           <br></br>
           <a href="https://www.instagram.com/oakstudios/">Instagram</a>
