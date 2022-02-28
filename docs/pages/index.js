@@ -9,56 +9,40 @@ import MechanicalRagger from "@oakstudios/mechanical-ragger/react";
 console.log({ MechanicalRagger });
 
 export default function Home() {
-  const [ragged, setRagging] = useState(true);
   return (
-    <div style={{ "--ragging-width": ragged ? "2rem" : "0px" }}>
+    <div>
       <section className="grid wrapper vertical-padder">
-        <p className="column-span-4 overview">
-          <MechanicalRagger>
-            This site serves as a demonstration of Mechanical Ragger, a
-            component developed by{" "}
-            <HoverImage src={oakLogo} alt="Oak Studios">
-              Oak Studios
-            </HoverImage>
-            . Mechanical Ragger adjusts paragraphs{" "}
-            <HoverImage src={harmonia} alt="harmonia">
-              to be balanced
-            </HoverImage>
-            , following the{" "}
-            <HoverImage src={raggerExample} alt="RaggerExample">
-              long-short-long-short
-            </HoverImage>{" "}
-            sequence. Paragraph ragging has a strong influence on print media,
-            so we have cut off the boundary and delivered it to the digital
-            design world.
-          </MechanicalRagger>
-        </p>
+        <div className="column-span-4 overview">
+          <p className="overview-lede">
+            <MechanicalRagger>
+              This site serves as a demonstration of Mechanical Ragger, a
+              component developed by{" "}
+              <HoverImage src={oakLogo} alt="Oak Studios">
+                Oak Studios
+              </HoverImage>
+              . Mechanical Ragger adjusts paragraphs{" "}
+              <HoverImage src={harmonia} alt="harmonia">
+                to be balanced
+              </HoverImage>
+              , following the{" "}
+              <HoverImage src={raggerExample} alt="RaggerExample">
+                long-short-long-short
+              </HoverImage>{" "}
+              sequence. Paragraph ragging has a strong influence on print media,
+              so we have cut off the boundary and delivered it to the digital
+              design world.
+            </MechanicalRagger>
+          </p>
+          <p>
+            <a href="https://oak.is/thinking/mechanical-ragger/">
+              Read the announcement on oak.is.
+            </a>
+          </p>
+        </div>
       </section>
       <div className="minimal-hr" />
       <section className="grid wrapper vertical-padder">
         <h1 className="column-span-2">Reference</h1>
-      </section>
-      <div className="minimal-hr" />
-      <section className="grid button-section wrapper vertical-padder">
-        <div className="column-span-2">
-          <h1>Toggle</h1>
-          <h1>
-            (Flip the circle to see the difference between ragged paragraph and
-            default paragraph on the essay below.)
-          </h1>
-        </div>
-        <div className={"button-container " + (ragged ? "ragged" : "unragged")}>
-          <button className="circle-button" onClick={() => setRagging(!ragged)}>
-            <svg viewBox="0 0 2 2">
-              <ellipse className="on-circle" rx="1" cx="1" ry="1" cy="1" />
-              <ellipse className="off-circle" rx="1" cx="1" ry="1" cy="1" />
-            </svg>
-            <span className="button-text on-text">Text currently ragged</span>
-            <span className="button-text off-text">
-              Text currently unragged
-            </span>
-          </button>
-        </div>
       </section>
       <div className="minimal-hr" />
       <article className="grid wrapper">
@@ -70,65 +54,70 @@ export default function Home() {
           <MechanicalRagger>
             <p>
               From stop motion to animating graphics with After Effects, carving
-              letters on wood blocks to create scalable vectorized letters with
-              Glyphs, RoboFont, or FontLab, design tooling is accelerating
-              faster than at any other time in history.
+              letters on wood blocks to create scalable vector&shy;ized letters
+              with Glyphs, RoboFont, or&nbsp;FontLab, design tooling is
+              accel&shy;erating faster than at any other time in history.
             </p>
             <p>
-              A few years ago, team collaboration on design projects was
-              challenging. One designer focused on the design, while others
-              might be giving feedback on snapshots of their work, but no design
-              tool allowed multiple users to update a design at the same time.
-              Figma emerged as one of the most popular design applications
-              thanks to its focus on collaboration and portability. It gave
-              entire teams the ability to work on a project at the same time,
-              without needing to sync assets or even install it.
+              A few years ago, team collab&shy;oration on design projects was
+              challen&shy;ging. One&nbsp;designer focused on the design, while
+              others might be giving feed&shy;back on snapshots of their work,
+              but no design tool allowed multiple users to update a design at
+              the same time. Figma emerged as one of the most popular design
+              appli&shy;cations thanks to its focus on collab&shy;oration and
+              porta&shy;bility. It&nbsp;gave entire teams the ability to work on
+              a project at the same time, without needing to sync assets or even
+              install&nbsp;it.
             </p>
             <p>
               Since then, graphic design has been in a stage of steadfast
               development in many media; typography, printing, 3D design, AR/VR,
-              etc. Every design media is advancing internationally and globally.
+              etc. Every design media is advancing inter&shy;natio&shy;nally and
+              globally.
             </p>
             {/* <hr className="ellipses-hr" /> */}
             <p>
-              Nevertheless, typesetting has been standing considerably distant
-              from the modern digital design circles. Typically, typesetting
-              methodology has only been leveraged in the field of print and
-              traditional design. In the digital world, it is almost invisible.
-              It makes sense; there are no convenient typeset editing methods in
-              web environoments. Typically, developers would be asked to apply a
-              typeface on a website, adjust the font-size, and maybe justify the
-              alignment and font-weight. If developers want to implement more
-              advanced settings to a paragraph, like controlling the paragraph
-              flow, they might hit a brick wall because standard{" "}
+              Nevertheless, type&shy;setting has been standing considerably
+              distant from the modern digital design circles. Typically,
+              type&shy;setting metho&shy;dology has only been leveraged in the
+              field of print and traditional design. In&nbsp;the digital world,
+              it is almost invisible. It&nbsp;makes sense; there are no
+              con&shy;venient typeset editing methods in web environ&shy;ments.
+              Typically, developers would be asked to apply a typeface on a
+              website, adjust the font-size, and maybe justify the alignment and
+              font-weight. If&nbsp;developers want to implement more advanced
+              settings to a paragraph, like controlling the paragraph flow, they
+              might hit a brick wall because standard{" "}
               <abbr
                 title="Cascading Style
               Sheets"
               >
                 CSS
               </abbr>{" "}
-              cannot accommodate these features.
+              cannot accommodate these&nbsp;features.
             </p>
             <p>
-              For typesetting, its roles include visual displays, communication,
-              coherence, and establishing a framework for the design. In the
-              current digital world, the choice of typeface, font size, font
-              leading, and type alignment are all within our purview. However,
-              we do not have ready control over the flow of a paragraph.
+              For type&shy;setting, its roles include visual displays,
+              communication, coherence, and establishing a framework for the
+              design. In&nbsp;the current digital world, the choice of typeface,
+              font size, font leading, and type alignment are all within our
+              purview. However, we do not have ready control over the flow of
+              a&nbsp;paragraph.
             </p>
             <p>
               The flow of a paragraph is limited to only left-aligned,
               right-aligned, and center-aligned text; it does not relate to
               justified text, in which each line of the text stays the same
-              length. A properly manual ragged paragraph would flow in a
-              balanced composition of alternating line lengths; one long, one
-              short. It flows without forcing the eyes to jump, which would
-              hamper the readability of the text. More advanced typesetting
-              would even consider the meaning of the text and associate it with
-              the actual appearance. Even further, some designers would prefer
-              not to put a short word at the end of each line for better
-              readability. Short words like “a, an, of, the, are, is...” should
-              not appear at the end of each line by this logic.
+              length. A&nbsp;properly manual ragged paragraph would flow in a
+              balanced composition of alter&shy;nating line lengths; one long,
+              one short. It&nbsp;flows without forcing the eyes to jump, which
+              would hamper the reada&shy;bility of the text. More advanced
+              type&shy;setting would even consider the meaning of the text and
+              associate it with the actual appearance. Even further, some
+              designers would prefer not to put a short word at the end of each
+              line for better readability. Short words like “a, an, of, the,
+              are, is...” should not appear at the end of each line by
+              this&nbsp;logic.
             </p>
             <p>
               Back to our case, typesetting on the web can be quite complicated.
@@ -141,11 +130,12 @@ export default function Home() {
               show only one word on each line. Reading a message from a{" "}
               <HoverImage src={appleWatchMessage} alt="Apple Watch Message">
                 40mm Apple Watch
-              </HoverImage>{" "}
-              (394x324px), a medium-length paragraph would be divided into
+              </HoverImage>
+              &nbsp;(394x324px), a medium-length paragraph would be divided into
               multiple lines, produces a difficult reading experience regardless
               of its actual content. Under such conditions, using a more
-              balanced paragraph rag would reduce the difficulty in reading.{" "}
+              balanced paragraph rag would reduce the difficulty
+              in&nbsp;reading.{" "}
             </p>
             <p>
               The idea of balanced text rag, or long-short-long-short ragging
@@ -156,12 +146,12 @@ export default function Home() {
               books establish a clear systematic design layout, and of course,
               typesetting is within their realm. Swiss design systems later
               encourage more designers to take part in thinking of typesetting
-              as a fundamental building block of design.
+              as a fundamental building block of&nbsp;design.
             </p>
             <p>
               Text ragging is well-defined, so we started by investigating the
               technical end and seeking the right vehicle to begin our digital
-              ragging component concept.
+              ragging componentv&nbsp;concept.
             </p>
             <p>
               After few weeks of research and development, we decided on a
@@ -169,7 +159,7 @@ export default function Home() {
               Put this more simply, each line of text was extracted and
               calculated, and the even lines were selected. After that,
               extrusion formulated coordinates the font size and its leading,
-              matching the exact line spacing with the text.
+              matching the exact line spacing with the&nbsp;text.
             </p>
             <p>
               We named this web add-on as Mechanical Ragger. As the name
@@ -177,7 +167,7 @@ export default function Home() {
               of the optimizations mentioned above like removing short letters
               at the end of a line or typesetting a paragraph based on its
               content. In the future, though, we may find ways to handle these
-              tasks automatically.
+              tasks&nbsp;automatically.
             </p>
           </MechanicalRagger>
         </div>
@@ -239,7 +229,7 @@ export default function Home() {
         <div className="column-span-1">
           <a href="https://github.com/oakstudios/mechanical-ragger">GitHub</a>
           <br></br>
-          <a href="https://www.instagram.com/oakstudios/">Instagram</a>
+          <a href="https://oak.is/thinking/mechanical-ragger/">Announcement</a>
         </div>
       </section>
     </div>

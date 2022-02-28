@@ -1,3 +1,14 @@
+@mixin min-width($bp) {
+  @media only screen and (min-width: $bp + 1px) {
+    @content;
+  }
+}
+@mixin max-width($bp) {
+  @media only screen and (max-width: $bp) {
+    @content;
+  }
+}
+$bp-mobile: 840px;
 :root {
   --fg: #d1f0fd;
   --bg: #67645e;
@@ -8,7 +19,6 @@
 html {
   font-size: 18px;
   line-height: 20px;
-  /* background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" height="100px" width="100px"> <g> <line x1="0" y1="0" x2="100" y2="0" stroke="black" stroke-width="5px" /> </g> </svg>'); */
   background-repeat: repeat-y;
   background-size: 100% 20px;
   overflow-x: hidden;
@@ -72,7 +82,6 @@ img {
 
 /* Link */
 a {
-  // font-family: "Telegraf-Regular", sans-serif;
   text-decoration: none;
   line-height: inherit;
   font-size: inherit;
@@ -87,6 +96,14 @@ a {
   position: fixed;
   width: 100%;
   z-index: 3;
+}
+.siteNav {
+  @include max-width($bp-mobile) {
+    grid-column: span 4;
+    a {
+      white-space: nowrap;
+    }
+  }
 }
 
 .App {
@@ -121,6 +138,9 @@ a {
 }
 .column-span-2 {
   grid-column: span 2;
+  @include max-width($bp-mobile) {
+    grid-column: span 7;
+  }
 }
 .column-span-3 {
   grid-column: span 3;
@@ -146,22 +166,52 @@ section {
   border: 1px solid var(--fg);
 }
 
-/* Overview section */
-.overview {
-  hyphens: none;
+.overview-lede {
   -webkit-font-smoothing: antialiased;
   font-size: 28pt;
   line-height: 30pt;
+  @include max-width($bp-mobile) {
+    font-size: 14pt;
+    line-height: 16pt;
+    padding-right: 20px;
+  }
+  margin-bottom: 1em;
+}
+.overview {
+  hyphens: manual;
+
+  @include max-width($bp-mobile) {
+    grid-column: span 7;
+  }
+  @include min-width(1200px) {
+    grid-column: span 4;
+  }
 }
 
 .App-header {
 }
 
+.toggle {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+  justify-content: flex-end;
+  @include max-width($bp-mobile) {
+    order: 1;
+    grid-column: span 3;
+  }
+}
 /* Circle Button */
 .button-container {
-  grid-column: span 2;
   position: relative;
+  width: 40px;
   aspect-ratio: 1 / 1;
+  @include max-width(640px) {
+    grid-column: span 4;
+  }
+  @include max-width(1024px) {
+    grid-column: span 1;
+  }
 }
 
 .circle-button {
@@ -178,7 +228,9 @@ section {
   --duration: 0.6s;
   --duration-in: calc(var(--duration) / 3 * 2);
   --duration-out: calc(var(--duration) / 3);
-
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
   svg {
     position: absolute;
     inset: 0;
@@ -200,12 +252,17 @@ section {
         transition-delay: var(--duration-out);
       }
       &.on-circle {
-        fill: transparent;
-      }
-      &.off-circle {
         fill: var(--fg);
       }
+      &.off-circle {
+        fill: transparent;
+      }
     }
+  }
+  .hidden {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
   }
   .button-text {
     position: absolute;
@@ -231,11 +288,6 @@ section {
   }
 }
 
-/* cancel the circle button border when hovering */
-.circle-button:focus {
-  outline: none;
-}
-
 /* Article */
 article {
   padding-right: 20px;
@@ -246,10 +298,6 @@ article {
   padding-right: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
-  // padding-top: 20px;
-  // * + * {
-  //   margin-top: 20px;
-  // }
   p:nth-child(2n + 1) {
     padding-left: 60px;
   }
@@ -396,23 +444,7 @@ body:not(.mobile) .hover-title:hover + .hover-image {
   height: calc(100vh - 10rem);
 }
 
-@media (max-width: 1024px) {
-  .button-container {
-    grid-column: span 3 / -1;
-  }
-}
-@media (max-width: 840px) {
-  .overview {
-    font-size: 14pt;
-    line-height: 16pt;
-    padding-right: 20px;
-    grid-column: span 7;
-  }
-
-  .column-span-2 {
-    grid-column: span 7;
-  }
-
+@include max-width($bp-mobile) {
   .articleBody {
     padding-right: 0px;
     grid-column: span 7;
@@ -453,21 +485,5 @@ body:not(.mobile) .hover-title:hover + .hover-image {
 
   .siteTitle {
     grid-column: span 7;
-  }
-
-  .siteNav {
-    grid-column: span 7;
-    text-align: right;
-  }
-}
-@media (max-width: 640px) {
-  .button-container {
-    grid-column: span 4;
-  }
-}
-
-@media (min-width: 1200px) {
-  .overview {
-    grid-column: span 4;
   }
 }
