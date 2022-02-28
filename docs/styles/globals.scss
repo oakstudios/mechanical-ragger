@@ -250,6 +250,9 @@ article {
   // * + * {
   //   margin-top: 20px;
   // }
+  p:nth-child(2n + 1) {
+    padding-left: 60px;
+  }
 }
 
 .footnote {
@@ -271,10 +274,6 @@ article {
   &::before {
     content: "[...]";
   }
-}
-
-.paragraph-indent {
-  padding-left: 60px;
 }
 
 /* text highlight */

@@ -69,7 +69,7 @@ export default function Home() {
               Glyphs, RoboFont, or FontLab, design tooling is accelerating faster
               than at any other time in history.
             </p>
-            <p className="paragraph-indent">
+            <p>
               A few years ago, team collaboration on design projects was challenging.
               One designer focused on the design, while others might be giving feedback
               on snapshots of their work, but no design tool allowed multiple users to
@@ -84,7 +84,7 @@ export default function Home() {
               etc. Every design media is advancing internationally and globally.
             </p>
             {/* <hr className="ellipses-hr" /> */}
-            <p className="paragraph-indent">
+            <p>
               Nevertheless, typesetting has been standing considerably
               distant from the modern digital design circles. Typically, typesetting
               methodology has only been leveraged in the field of print and traditional
@@ -105,7 +105,7 @@ export default function Home() {
               leading, and type alignment are all within our purview. However,
               we do not have ready control over the flow of a paragraph.
             </p>
-            <p className="paragraph-indent">
+            <p>
               The flow of a paragraph is limited to only left-aligned,
               right-aligned, and center-aligned text; it does not relate to
               justified text, in which each line of the text stays the same
@@ -134,7 +134,7 @@ export default function Home() {
               its actual content. Under such conditions, using a more
               balanced paragraph rag would reduce the difficulty in reading.{" "}
             </p>
-            <p className="paragraph-indent">
+            <p>
               The idea of balanced text rag, or long-short-long-short
               ragging method, likely originated in handwriting and
               20th-century book designs, along with regulated and balanced
@@ -151,7 +151,7 @@ export default function Home() {
               started by investigating the technical end and seeking the right
               vehicle to begin our digital ragging component concept.
             </p>
-            <p className="paragraph-indent">
+            <p>
               After few weeks of research and development, we decided on a JavaScript component
               that automatically trims the line
               endings. Put this more simply, each line of text was extracted and
