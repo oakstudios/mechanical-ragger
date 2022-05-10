@@ -45,7 +45,7 @@ export class MechanicalRaggerWC extends HTMLElement {
     this.exclusion = shadow.appendChild(document.createElement("div"));
 
     this.textRoot = shadow.appendChild(document.createElement("div"));
-    this.textRoot.innerHTML = this.innerHTML;
+    this.textRoot.innerHTML += `<slot></slot>`;
 
     this.ragger = new MechanicalRaggerCore({
       container: this.textRoot,
