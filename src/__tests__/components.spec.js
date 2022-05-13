@@ -8,11 +8,11 @@ import MechanicalRaggerReact from "../react";
 import MechanicalRagger from "../web-component";
 
 // Mock ResizeObserver for the test.
-class ResizeObserver {
-  observe() {}
-  unobserve() {}
-  disconnect() {}
-}
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
 window.ResizeObserver = ResizeObserver;
 class DOMRect {
   x = 0;
@@ -28,8 +28,16 @@ test("the React component renders without errors.", () => {
   );
 });
 
+customElements.define("mechanical-ragger", MechanicalRagger);
 test("the web component is created without errors.", async () => {
-  customElements.define("mechanical-ragger", MechanicalRagger);
   const el = document.createElement("mechanical-ragger");
+  document.body.appendChild(el);
   expect(el).toHaveProperty("ragger");
+});
+
+test("the web component calls unobserve when it's removed from the DOM.", async () => {
+  const el = document.createElement("mechanical-ragger");
+  document.body.appendChild(el);
+  el.remove();
+  expect(el.ragger.sizeListener.disconnect).toHaveBeenCalled();
 });
