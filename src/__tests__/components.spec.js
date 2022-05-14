@@ -8,11 +8,11 @@ import MechanicalRaggerReact from "../react";
 import MechanicalRagger from "../web-component";
 
 // Mock ResizeObserver for the test.
-class ResizeObserver {
-  observe() {}
-  unobserve() {}
-  disconnect() {}
-}
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
 window.ResizeObserver = ResizeObserver;
 class DOMRect {
   x = 0;
@@ -31,6 +31,7 @@ test("the React component renders without errors.", () => {
 customElements.define("mechanical-ragger", MechanicalRagger);
 test("the web component is created without errors.", async () => {
   const el = document.createElement("mechanical-ragger");
+  document.body.appendChild(el);
   expect(el).toHaveProperty("ragger");
 });
 
@@ -42,6 +43,7 @@ test("the web component reflects updated content.", async () => {
   // el.shadowRoot seems like it's not thoroughly implemented in JSDOM.
   expect(el.shadowRoot).toHaveTextContent("two");
 });
+
 test("the web component's slot element inherit styles.", async () => {
   const container = document.createElement("div");
   const style = (document.createElement(
@@ -54,4 +56,11 @@ test("the web component's slot element inherit styles.", async () => {
   // jsdom doessn't return anything from getComputedStyle beside visibility.
   const borderStyle = window.getComputedStyle(el).border;
   expect(borderStyle).toEqual("1px solid blue");
+});
+
+test("the web component calls unobserve when it's removed from the DOM.", async () => {
+  const el = document.createElement("mechanical-ragger");
+  document.body.appendChild(el);
+  el.remove();
+  expect(el.ragger.sizeListener.disconnect).toHaveBeenCalled();
 });

@@ -46,21 +46,19 @@ export class MechanicalRaggerWC extends HTMLElement {
 
     this.textRoot = shadow.appendChild(document.createElement("div"));
     this.textRoot.innerHTML += `<slot></slot>`;
-
-    this.ragger = new MechanicalRaggerCore({
-      container: this.textRoot,
-      onUpdate: this.setExclusionStyles,
-    });
   }
 
   exclusion: HTMLDivElement;
   textRoot: HTMLDivElement;
   ragger: InstanceType<typeof MechanicalRaggerCore>;
 
-  connectedCallback = () => {
-    this.ragger.update();
+  connectedCallback () {
+    this.ragger = new MechanicalRaggerCore({
+      container: this.textRoot,
+      onUpdate: this.setExclusionStyles,
+    });
   };
-  disconnectedCallback = () => {
+  disconnectedCallback () {
     this.ragger.destroy();
   };
 
