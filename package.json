@@ -29,6 +29,7 @@
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.16.7",
+    "@playwright/test": "^1.22.0",
     "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@testing-library/jest-dom": "^5.15.1",
