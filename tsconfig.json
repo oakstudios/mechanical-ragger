@@ -5,7 +5,7 @@
     "esModuleInterop": true,
     "rootDir": "src",
     "target": "ESNext",
-    "module": "ESNext",
+    "module": "NodeNext",
     "declaration": true,
     "declarationDir": "dist/",
     "jsx": "react"
