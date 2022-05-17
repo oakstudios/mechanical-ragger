@@ -40,12 +40,12 @@ export class MechanicalRaggerWC extends HTMLElement {
   constructor() {
     super();
 
-    const shadow = this.attachShadow({ mode: "closed" });
+    const shadow = this.attachShadow({ mode: "open" });
 
     this.exclusion = shadow.appendChild(document.createElement("div"));
 
     this.textRoot = shadow.appendChild(document.createElement("div"));
-    this.textRoot.innerHTML = this.innerHTML;
+    this.textRoot.innerHTML += `<slot></slot>`;
   }
 
   exclusion: HTMLDivElement;
