@@ -2,7 +2,6 @@
   "name": "@oakstudios/mechanical-ragger",
   "version": "0.5",
   "description": "A layout tool that automatically rags long text by line",
-  "type": "module",
   "main": "./index.js",
   "types": "./index.d.ts",
   "exports": {
@@ -29,6 +28,7 @@
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.16.7",
+    "@playwright/test": "^1.22.0",
     "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@storybook/addon-actions": "^6.4.22",
