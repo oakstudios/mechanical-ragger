@@ -1,0 +1,7 @@
+:root {
+  --ragging-width: 2em;
+}
+html {
+  hyphens: auto;
+  line-height: 1.5rem;
+}
